@@ -42,10 +42,10 @@ def main():
 
     # Decrypt the code now........
     while True:
-        if cipher != "}mv1w-":
+        if cipher != "@mv1w$":
             cipher = input("Enter the code: ")
 
-        if cipher != "}mv1w-":
+        if cipher != "@mv1w$":
             print("Try again, almost out of the loop.....")
             
         else:
