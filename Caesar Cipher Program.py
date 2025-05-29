@@ -15,7 +15,7 @@ def main():
         # Show the final alphabet
         final_alphab = "".join(alphabs)
 
-        # Show the shifted alphabet
+        # Join the shifted alphabet
         final_shifted_alphab = "".join(shifted_alphabs)
 
         # Traslate both final alphabet and final shifted alphabet
