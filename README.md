@@ -1,4 +1,4 @@
-These files are specifically python programs.
+These files are explicitly python programs.
 
 These Python programs are based on the following:
 
