@@ -38,6 +38,6 @@ if command == 'urr':
     os.system('sudo dnf remove rofi')
 
 if command == 'ura':
-    os.system('sudo pacman -R rofi')
+    os.system('sudo pacman -Rns rofi')
 
 # End of Code
