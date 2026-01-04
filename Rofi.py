@@ -8,7 +8,7 @@ import os
 
 command = (input("Enter the command to launch rofi or change its theme: "))
 
-# Install rofi if it's not installed  (Debian, RHEL, or Arch based distributions)
+# Install rofi if it's not installed  (Debian, RHEL, and Arch based distributions)
 
 if command == 'ird':
     os.system('sudo apt install rofi')
@@ -29,7 +29,7 @@ if command == 'lr':
 if command == 'rts':
     os.system('rofi-theme-selector')
 
-# Uninstall rofi (Debian, RHEL, or Arch based distributions)
+# Uninstall rofi (Debian, RHEL, and Arch based distributions)
 
 if command == 'urd':
     os.system('sudo apt remove rofi')
