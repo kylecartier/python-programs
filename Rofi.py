@@ -20,7 +20,7 @@ print('-----------------')
 
 # Lists options for commands or exit
 
-os.system('\necho ird: install rofi on debian based systems; \necho irr: install rofi on rhel based systems; \necho ira: install rofi on arch based systems; \necho lra: launch rofi showing all application on the system; \necho lrf: launch rofi showing all files on the system; \necho lrw: launch rofi showing any open windows on the system; \necho rts: rofi theme selector; \necho urd: uninstall rofi on debian based systems; \necho urr: uninstall rofi on rhel based systems; \necho ura: uninstall rofi on arch based systems')
+os.system('\necho ird: install rofi on debian based systems; \necho irr: install rofi on rhel based systems; \necho ira: install rofi on arch based systems; \necho lra: launch rofi showing all applications on the system; \necho lrf: launch rofi showing all files on the system; \necho lrw: launch rofi showing all open windows on the system; \necho rts: rofi theme selector; \necho urd: uninstall rofi on debian based systems; \necho urr: uninstall rofi on rhel based systems; \necho ura: uninstall rofi on arch based systems')
 
 # Prompt user to install rofi, launch rofi for applications, files, and any open windows, change rofi theme, or uninstall rofi
 
@@ -62,7 +62,7 @@ if command == 'urr':
     os.system('sudo dnf remove rofi')
 
 if command == 'ura':
-    os.system('sudo pacman -R rofi')
+    os.system('sudo pacman -Rns rofi')
     
 else:
     print('\nHave a good day!')
