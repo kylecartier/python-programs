@@ -20,13 +20,13 @@ print('-----------------')
 
 # Lists options for commands or exit
 
-os.system('\necho ird: install rofi on debian based systems; \necho irr: install rofi on rhel based systems; \necho ira: install rofi on arch based systems; \necho lr: launch rofi; \necho rts: rofi theme selector; \necho urd: uninstall rofi on debian based systems; \necho urr: uninstall rofi on rhel based systems; \necho ura: uninstall rofi on arch based systems')
+os.system('\necho ird: install rofi on debian based systems; \necho irr: install rofi on rhel based systems; \necho ira: install rofi on arch based systems; \necho lra: launch rofi showing all application on the system; \necho lrw: lauch rofi showing any open windows on the system; \necho rts: rofi theme selector; \necho urd: uninstall rofi on debian based systems; \necho urr: uninstall rofi on rhel based systems; \necho ura: uninstall rofi on arch based systems')
 
-# Prompt user to install rofi, launch rofi, change rofi theme, or uninstall rofi
+# Prompt user to install rofi, launch rofi for applications and windows, change rofi theme, or uninstall rofi
 
 command = input('\nEnter a command: ')
 
-# Install rofi if it's not installed  (Debian, RHEL, and Arch based distributions)
+# Install rofi if it's not installed  (Debian, RHEL, or Arch based distributions)
 
 if command == 'ird':
     os.system('sudo apt install rofi')
@@ -37,17 +37,20 @@ if command == 'irr':
 if command == 'ira':
     os.system('sudo pacman -S rofi')
 
-# If installed, launch rofi
+# If installed, launch rofi (applications and open windows on the system)
 
-if command == 'lr':
-    os.system ('rofi -show drun -show-icons')
+if command == 'lra':
+    os.system('rofi -show drun -show-icons')
+    
+if command == 'lrw':
+    os.system('rofi -show window -show-icons')
 
-# Launch rofi theme selector
+# Lauch the theme selector
 
 if command == 'rts':
     os.system('rofi-theme-selector')
 
-# Uninstall rofi (Debian, RHEL, and Arch based distributions)
+# Uninstall rofi (Debian, RHEL, or Arch based distributions)
 
 if command == 'urd':
     os.system('sudo apt remove rofi')
