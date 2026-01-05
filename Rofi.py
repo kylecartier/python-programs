@@ -20,9 +20,9 @@ print('-----------------')
 
 # Lists options for commands or exit
 
-os.system('\necho ird: install rofi on debian based systems; \necho irr: install rofi on rhel based systems; \necho ira: install rofi on arch based systems; \necho lra: launch rofi showing all application on the system; \necho lrw: lauch rofi showing any open windows on the system; \necho rts: rofi theme selector; \necho urd: uninstall rofi on debian based systems; \necho urr: uninstall rofi on rhel based systems; \necho ura: uninstall rofi on arch based systems')
+os.system('\necho ird: install rofi on debian based systems; \necho irr: install rofi on rhel based systems; \necho ira: install rofi on arch based systems; \necho lra: launch rofi showing all application on the system; \necho lrf: launch rofi showing all files on the system; \necho lrw: lauch rofi showing any open windows on the system; \necho rts: rofi theme selector; \necho urd: uninstall rofi on debian based systems; \necho urr: uninstall rofi on rhel based systems; \necho ura: uninstall rofi on arch based systems')
 
-# Prompt user to install rofi, launch rofi for applications and windows, change rofi theme, or uninstall rofi
+# Prompt user to install rofi, launch rofi for applications, files, and any open windows, change rofi theme, or uninstall rofi
 
 command = input('\nEnter a command: ')
 
@@ -37,10 +37,13 @@ if command == 'irr':
 if command == 'ira':
     os.system('sudo pacman -S rofi')
 
-# If installed, launch rofi (applications and open windows on the system)
+# If installed, launch rofi (applications, files, and open windows on the system)
 
 if command == 'lra':
     os.system('rofi -show drun -show-icons')
+
+if command == 'lrf':
+    os.system('rofi -show filebrowser -show-icons')
     
 if command == 'lrw':
     os.system('rofi -show window -show-icons')
