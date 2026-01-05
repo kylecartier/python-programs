@@ -20,7 +20,7 @@ print('-----------------')
 
 # Lists options for commands or exit
 
-os.system('\necho ird: install rofi on debian based systems; \necho irr: install rofi on rhel based systems; \necho ira: install rofi on arch based systems; \necho lra: launch rofi showing all applications on the system; \necho lrf: launch rofi showing all files on the system; \necho lrw: launch rofi showing all open windows on the system; \necho rts: rofi theme selector; \necho urd: uninstall rofi on debian based systems; \necho urr: uninstall rofi on rhel based systems; \necho ura: uninstall rofi on arch based systems')
+os.system('\necho ird: install rofi on debian based systems; \necho irr: install rofi on rhel based systems; \necho ira: install rofi on arch based systems; \necho rts: launch rofi theme selector; \necho lra: launch rofi showing all applications on the system; \necho lrf: launch rofi showing all files on the system; \necho lrw: launch rofi showing all open windows on the system; \necho urd: uninstall rofi on debian based systems; \necho urr: uninstall rofi on rhel based systems; \necho ura: uninstall rofi on arch based systems')
 
 # Prompt user to install rofi, launch rofi for applications, files, and any open windows, change rofi theme, or uninstall rofi
 
@@ -36,8 +36,13 @@ if command == 'irr':
 
 if command == 'ira':
     os.system('sudo pacman -S rofi')
+    
+# Launch rof theme selector
 
-# If installed, launch rofi (applications, files, and open windows on the system)
+if command == 'rts':
+    os.system('rofi-theme-selector')
+
+# Launch rofi (applications, files, and open windows on the system)
 
 if command == 'lra':
     os.system('rofi -show drun -show-icons')
@@ -47,11 +52,6 @@ if command == 'lrf':
     
 if command == 'lrw':
     os.system('rofi -show window -show-icons')
-
-# Lauch the theme selector
-
-if command == 'rts':
-    os.system('rofi-theme-selector')
 
 # Uninstall rofi (Debian, RHEL, or Arch based distributions)
 
