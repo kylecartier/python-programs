@@ -37,7 +37,7 @@ if command == 'irr':
 if command == 'ira':
     os.system('sudo pacman -S rofi')
     
-# Launch rof theme selector
+# Launch rofi theme selector
 
 if command == 'rts':
     os.system('rofi-theme-selector')
