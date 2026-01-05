@@ -12,7 +12,7 @@ os.system('echo What would you like to do?')
 
 print()
 
-# Choose command(s) to execute 
+# Choose command to execute 
 
 os.system('\necho Choose a command:')
 
