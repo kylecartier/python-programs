@@ -26,7 +26,7 @@ os.system('\necho ird: install rofi on debian based systems; \necho irr: install
 
 command = input('\nEnter a command: ')
 
-# Install rofi if it's not installed  (Debian, RHEL, or Arch based distributions)
+# Install rofi if it's not installed  (Debian, RHEL, and Arch based distributions)
 
 if command == 'ird':
     os.system('sudo apt install rofi')
@@ -42,12 +42,12 @@ if command == 'ira':
 if command == 'lr':
     os.system ('rofi -show drun -show-icons')
 
-# Lauch the theme selector
+# Launch rofi theme selector
 
 if command == 'rts':
     os.system('rofi-theme-selector')
 
-# Uninstall rofi (Debian, RHEL, or Arch based distributions)
+# Uninstall rofi (Debian, RHEL, and Arch based distributions)
 
 if command == 'urd':
     os.system('sudo apt remove rofi')
