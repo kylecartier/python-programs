@@ -116,6 +116,7 @@ button_12.grid(row=9, column=5, padx=10, pady=10)
 exit_button = tk.Button(frame, text="Exit", padx=50, pady=10, fg="#282828", bg="#928374", activebackground="#928374", activeforeground="#282828", command=Exit)
 exit_button.grid(row=10, column=3, padx=10, pady=10)
 
+root.mainloop()
+
 # End of code
 
-root.mainloop()
