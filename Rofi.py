@@ -63,6 +63,8 @@ if command == 'urr':
 
 if command == 'ura':
     os.system('sudo pacman -Rns rofi')
+
+# Once the program is finished executing
     
 else:
     print('\nHave a good day!')
