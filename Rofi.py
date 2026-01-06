@@ -29,13 +29,13 @@ command = input('\nEnter a command: ')
 # Install rofi if it's not installed  (Debian, RHEL, or Arch based distributions)
 
 if command == 'ird':
-    os.system('sudo apt install rofi')
+    os.system('sudo apt install rofi -y')
 
 if command == 'irr':
-    os.system('sudo dnf install rofi')
+    os.system('sudo dnf install rofi -y')
 
 if command == 'ira':
-    os.system('sudo pacman -S rofi')
+    os.system('sudo pacman -S rofi -y')
     
 # Launch rofi theme selector
 
@@ -56,13 +56,13 @@ if command == 'lrw':
 # Uninstall rofi (Debian, RHEL, or Arch based distributions)
 
 if command == 'urd':
-    os.system('sudo apt remove rofi')
+    os.system('sudo apt remove rofi -y')
 
 if command == 'urr':
-    os.system('sudo dnf remove rofi')
+    os.system('sudo dnf remove rofi -y')
 
 if command == 'ura':
-    os.system('sudo pacman -Rns rofi')
+    os.system('sudo pacman -Rns rofi -y')
 
 # Once the program is finished executing
     
