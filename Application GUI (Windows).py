@@ -5,21 +5,26 @@ import os
 # Disclaimer - Does not run optimally in fullscreen as of yet
 
 # Write Root
+
 root = tk.Tk()
 
 # Make a Window and its characterisiics!
+
 root.title("Applications GUI")
 canvas = tk.Canvas(root, height=625, width=675, bg="#3c3836", borderwidth=0, highlightthickness=0)
 canvas.pack()
 
 # Disables the maximuze button
+
 root.resizable(False, False)
 
 # Make a frame
+
 frame = tk.Frame(root, bg="#3c3836")
 frame.place(relheight=0.95, relwidth=0.92, relx=0.04, rely=0.04)
 
 # Add any labels
+
 Label(frame, text="Welcome!", font=14, bg="#3c3836", fg="#928374").grid(row=1, column=3, padx=5, pady=4)
 Label(frame, text="by Kyle Cartier", bg="#3c3836", fg="#928374").grid(row=2, column=3, padx=3, pady=1)
 Label(frame, text="-------------", bg="#3c3836", fg="#928374").grid(row=3, column=2, padx=3, pady=1)
@@ -33,6 +38,7 @@ Label(frame, text="<-", bg="#3c3836", fg="#928374").grid(row=10, column=4, padx=
 Label(frame, text="Click Exit to close the app", bg="#3c3836", fg="#928374").grid(row=11, column=3, padx=3, pady=1)
 
 # Define functions for buttons
+
 def open_file(): 
     os.system('explorer')
 
@@ -75,6 +81,7 @@ def Exit():
 # Buttons!
   
 # Left Side
+
 button_1 = tk.Button(frame, text="Files", padx=43, pady=10, fg="#282828", bg="#928374", activebackground="#928374", activeforeground="#282828", command=open_file)
 button_1.grid(row=4, column=1, padx=10, pady=10)
 
@@ -94,6 +101,7 @@ button_6 = tk.Button(frame, text="Microsoft Excel", padx=18, pady=10, fg="#28282
 button_6.grid(row=9, column=1, padx=10, pady=10)
 
 # Right Side
+
 button_7 = tk.Button(frame, text="Calendar", padx=34, pady=10, fg="#282828", bg="#928374", activebackground="#928374", activeforeground="#282828", command=open_calendar)
 button_7.grid(row=4, column=5, padx=10, pady=10)
 
@@ -113,10 +121,12 @@ button_12 = tk.Button(frame, text="CMD", padx=50, pady=10, fg="#282828", bg="#92
 button_12.grid(row=9, column=5, padx=10, pady=10)
 
 # Exit Button (In the middle on the bottom)
+
 exit_button = tk.Button(frame, text="Exit", padx=50, pady=10, fg="#282828", bg="#928374", activebackground="#928374", activeforeground="#282828", command=Exit)
 exit_button.grid(row=10, column=3, padx=10, pady=10)
 
 root.mainloop()
 
 # End of code
+
 
