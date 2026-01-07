@@ -4,5 +4,5 @@ These Python programs are based on the following:
 
 - GUI Applications
 - CLI Applications
-- Networking Tools
+- Networking Concepts / Tools
 - Cybersecurity Concepts / Tools
