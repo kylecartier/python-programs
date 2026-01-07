@@ -57,4 +57,5 @@ if first_octet in range(192, 224):
                 print("This is a private class C address.")
 
 
-# End od Codein 
+# End of Code
+
