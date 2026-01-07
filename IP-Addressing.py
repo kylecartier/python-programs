@@ -56,6 +56,4 @@ if first_octet in range(192, 224):
                 ip = (f'192.{second_octet}.{third_octet}.{fourth_octet}')
                 print("This is a private class C address.")
 
-
 # End of Code
-
