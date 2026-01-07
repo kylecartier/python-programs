@@ -9,7 +9,7 @@ second_octet = int(input('Enter the second octet '))
 third_octet = int(input('Enter the third octet: '))
 fourth_octet = int(input('Enter the fourth octet: '))
 
-# If Else staatements for IP classes, loopback address, APIPA address, and Private IP addresses
+# If staatements for IP classes, loopback address, APIPA address, and Private IP addresses
 
 # Class A, Loopback, and Class A (Private)
 
@@ -55,5 +55,6 @@ if first_octet in range(192, 224):
             if first_octet == 192 and fourth_octet <= 255:
                 ip = (f'192.{second_octet}.{third_octet}.{fourth_octet}')
                 print("This is a private class C address.")
+
 
 # End od Codein 
