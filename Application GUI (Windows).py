@@ -4,7 +4,7 @@ import os
 
 # Disclaimer - Does not run optimally in fullscreen as of yet
 
-# Write Root
+# Make root variable
 
 root = tk.Tk()
 
@@ -128,5 +128,6 @@ exit_button.grid(row=10, column=3, padx=10, pady=10)
 root.mainloop()
 
 # End of code
+
 
 
