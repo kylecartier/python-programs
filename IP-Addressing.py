@@ -22,10 +22,10 @@ if first_octet in range(1, 128):
                 print(result)
             if first_octet == 127 and fourth_octet <= 255:
                 ip = (f'127.{second_octet}.{third_octet}.{fourth_octet}')
-                print("This is a loopback address.")
+                print("This is also a loopback address.")
             if first_octet == 10 and fourth_octet <= 255:
                 ip = (f'10.{second_octet}.{third_octet}.{fourth_octet}')
-                print("This is a private class A address.")
+                print("This is also a private class A address.")
 
 # Class B, APIPA, and Class B (Private)
 
@@ -38,10 +38,10 @@ if first_octet in range(128, 192):
                 print(result)
             if first_octet == 169 and fourth_octet <= 255:
                 ip = (f'169.{second_octet}.{third_octet}.{fourth_octet}')
-                print("This is an APIPA address.") 
+                print("This is also an APIPA address.") 
             if first_octet == 172 and fourth_octet <= 255:
                 ip = (f'172.{second_octet}.{third_octet}.{fourth_octet}')
-                print("This is a private class B address.")
+                print("This is also a private class B address.")
 
 # Class C and Class C (Private)
 
@@ -54,6 +54,7 @@ if first_octet in range(192, 224):
                 print(result)
             if first_octet == 192 and fourth_octet <= 255:
                 ip = (f'192.{second_octet}.{third_octet}.{fourth_octet}')
-                print("This is a private class C address.")
+                print("This is also a private class C address.")
 
 # End of Code
+
