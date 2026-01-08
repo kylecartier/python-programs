@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# Subnet Masking
+# Subnetting
 
 first_octet = input("Enter the first octet: ")
 second_octet = input("Enter the second octet: ")
@@ -58,5 +58,6 @@ try:
                     print("This subnet mask is used with ip addresses that range from 192 to 223.")
 except:
     exit(0)
+
 
 # End of Code
