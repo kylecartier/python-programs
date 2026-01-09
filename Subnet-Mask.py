@@ -72,6 +72,5 @@ try:
                     print("This subnet mask is used with ip addresses that range from 192 to 223.")
 except:
     exit(0)
-
-
+    
 # End of Code
