@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# Subnet Masks!
+# Subnet Mask!
 
 first_octet = input("Enter the first octet: ")
 second_octet = input("Enter the second octet: ")
@@ -61,4 +61,5 @@ except:
 
 
 # End of Code
+
 
