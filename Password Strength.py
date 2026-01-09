@@ -1,12 +1,15 @@
 def main():
     
     # Prompt user for password 
+    
     password = input("Enter the password: ")
 
     # Length of password
+    
     length = len(password)
 
     # If Else Statement
+    
     if length <= 1:
         print("Make a password....")
         password = input("Set a password: ")
@@ -26,6 +29,7 @@ def main():
     else:
         print("Have a good day!")
 
-    # End of Code    
-
 main()
+
+# End of Code    
+
