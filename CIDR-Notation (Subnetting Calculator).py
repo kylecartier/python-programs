@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# CIDR Notation
+# CIDR Notation (Subnetting Calculator)
 
 cidr_notation = input("Enter the cidr notation: ")
 
@@ -278,3 +278,4 @@ except:
 print("\nHave a good day!")
 
 # End of Code
+
