@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# IP Addressing
+# IP Classes
 
 # Prompt user to put in an IP address (Each individual octet)
 
@@ -83,4 +83,5 @@ except:
     exit(0)
 
 # End of Code
+
 
