@@ -28,7 +28,7 @@ try:
             if third_octet in zero:
                 if fourth_octet in zero:
                     subnet_mask_a = (f'{first_octet}.{second_octet}.{third_octet}.{fourth_octet}')
-                    result_a = (f'{subnet_mask_a} is a class A subnet.')
+                    result_a = (f'{subnet_mask_a} is a class A subnet mask.')
                     print(result_a)
                     print("This subnet mask is used with ip addresses that range from 1 to 127.")
 
@@ -48,7 +48,7 @@ try:
             if third_octet in zero:
                 if fourth_octet in zero:
                     subnet_mask_b = (f'{first_octet}.{second_octet}.0.0')
-                    result_b = (f'{subnet_mask_b} is a class B subnet.')
+                    result_b = (f'{subnet_mask_b} is a class B subnet mask.')
                     print(result_b)
                     print("This subnet mask is used with ip addresses that range from 128 to 191.")
 except:
@@ -67,11 +67,12 @@ try:
             if third_octet in octet_numbers:
                 if fourth_octet in zero:
                     subnet_mask_c = (f'{first_octet}.{second_octet}.{third_octet}.{fourth_octet}')
-                    result_c = (f'{subnet_mask_c} is a class C subnet.')
+                    result_c = (f'{subnet_mask_c} is a class C subnet mask.')
                     print(result_c)
                     print("This subnet mask is used with ip addresses that range from 192 to 223.")
 except:
     exit(0)
     
 # End of Code
+
 
