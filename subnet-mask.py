@@ -15,7 +15,7 @@ zero = (0, )
 
 # If staatements for subnet classes
 
-# Class A Subnet
+# Class A Subnet Mask
 
 try:
     first_octet = int(first_octet)
@@ -35,7 +35,7 @@ try:
 except:
     exit(0)
 
-# Class B Subnet
+# Class B Subnet Mask
 
 try:
     first_octet = int(first_octet)
@@ -54,7 +54,7 @@ try:
 except:
     exit(0)
 
-# Class C Subnet
+# Class C Subnet Mask
 
 try:
     first_octet = int(first_octet)
@@ -74,5 +74,6 @@ except:
     exit(0)
     
 # End of Code
+
 
 
