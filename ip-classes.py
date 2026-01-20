@@ -50,11 +50,11 @@ try:
                     ip = (f'{first_octet}.{second_octet}.{third_octet}.{fourth_octet}')
                     result = (f'{ip} is a class B address.')
                     print(result)
-                if first_octet == 169 and fourth_octet <= 255:
-                    ip = (f'169.{second_octet}.{third_octet}.{fourth_octet}')
+                if first_octet == 169 and second_octet == 254:
+                    ip = (f'{first_octet}.{second_octet}.{third_octet}.{fourth_octet}')
                     print("This is also an APIPA address.") 
-                if first_octet == 172 and fourth_octet <= 255:
-                    ip = (f'172.{second_octet}.{third_octet}.{fourth_octet}')
+                if first_octet == 172 and second_octet in range (16, 32):
+                    ip = (f'{first_octet}.{second_octet}.{third_octet}.{fourth_octet}')
                     print("This is also a private class B address.")
 
 except:
@@ -75,14 +75,11 @@ try:
                     ip = (f'{first_octet}.{second_octet}.{third_octet}.{fourth_octet}')
                     result = (f'{ip} is a class C address.')
                     print(result)
-                if first_octet == 192 and fourth_octet <= 255:
-                    ip = (f'192.{second_octet}.{third_octet}.{fourth_octet}')
+                if first_octet == 192 and second_octet == 168:
+                    ip = (f'{first_octet}.{second_octet}.{third_octet}.{fourth_octet}')
                     print("This is also a private class C address.")
 
 except:
     exit(0)
 
 # End of Code
-
-
-
