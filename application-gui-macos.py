@@ -26,17 +26,17 @@ frame.place(relheight=0.95, relwidth=0.92, relx=0.04, rely=0.04)
 
 # Add any labels
 
-Label(frame, text="Welcome!", font=14, bg="#1d1d1d", fg="#928374").grid(row=1, column=3, padx=5, pady=4)
-Label(frame, text="by Kyle Cartier", bg="#1d1d1d", fg="#928374").grid(row=2, column=3, padx=3, pady=1)
-Label(frame, text="-------------", bg="#1d1d1d", fg="#928374").grid(row=3, column=2, padx=3, pady=1)
-Label(frame, text="-------------", bg="#1d1d1d", fg="#928374").grid(row=3, column=3, padx=3, pady=1)
-Label(frame, text="-------------", bg="#1d1d1d", fg="#928374").grid(row=3, column=4, padx=3, pady=1)
-Label(frame, text="Main Apps", bg="#1d1d1d", fg="#928374").grid(row=3, column=1, padx=3, pady=1)
-Label(frame, text="Other Apps", bg="#1d1d1d", fg="#928374").grid(row=3, column=5, padx=3, pady=1)
-Label(frame, text="Other Apps", bg="#1d1d1d", fg="#928374").grid(row=3, column=5, padx=3, pady=1)
-Label(frame, text="->", bg="#1d1d1d", fg="#928374").grid(row=10, column=2, padx=3, pady=1)
-Label(frame, text="<-", bg="#1d1d1d", fg="#928374").grid(row=10, column=4, padx=3, pady=1)
-Label(frame, text="Click Exit to close the app", bg="#1d1d1d", fg="#928374").grid(row=11, column=3, padx=3, pady=1)
+Label(frame, text="Welcome!", font=14, bg="#1d1d1d", fg="#555555").grid(row=1, column=3, padx=5, pady=4)
+Label(frame, text="by Kyle Cartier", bg="#1d1d1d", fg="#555555").grid(row=2, column=3, padx=3, pady=1)
+Label(frame, text="-------------", bg="#1d1d1d", fg="#555555").grid(row=3, column=2, padx=3, pady=1)
+Label(frame, text="-------------", bg="#1d1d1d", fg="#555555").grid(row=3, column=3, padx=3, pady=1)
+Label(frame, text="-------------", bg="#1d1d1d", fg="#555555").grid(row=3, column=4, padx=3, pady=1)
+Label(frame, text="Main Apps", bg="#1d1d1d", fg="#555555").grid(row=3, column=1, padx=3, pady=1)
+Label(frame, text="Other Apps", bg="#1d1d1d", fg="#555555").grid(row=3, column=5, padx=3, pady=1)
+Label(frame, text="Other Apps", bg="#1d1d1d", fg="#555555").grid(row=3, column=5, padx=3, pady=1)
+Label(frame, text="->", bg="#1d1d1d", fg="#555555").grid(row=10, column=2, padx=3, pady=1)
+Label(frame, text="<-", bg="#1d1d1d", fg="#555555").grid(row=10, column=4, padx=3, pady=1)
+Label(frame, text="Click Exit to close the app", bg="#1d1d1d", fg="#555555").grid(row=11, column=3, padx=3, pady=1)
 
 # Define functions for buttons
 
