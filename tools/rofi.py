@@ -20,7 +20,7 @@ print('-----------------')
 
 # Lists options for commands or exit
 
-os.system('\necho ird: install rofi on debian based systems; \necho irr: install rofi on rhel based systems; \necho ira: install rofi on arch based systems; \necho rts: launch rofi theme selector; \necho lra: launch rofi showing all applications on the system; \necho lrf: launch rofi showing all files on the system; \necho lrw: launch rofi showing all open windows on the system; \necho urd: uninstall rofi on debian based systems; \necho urr: uninstall rofi on rhel based systems; \necho ura: uninstall rofi on arch based systems')
+os.system('\necho 1. install rofi on debian based systems; \necho 2. install rofi on rhel based systems; \necho 3. install rofi on arch based systems; \necho 4. launch rofi theme selector; \necho 5. launch rofi showing all applications on the system; \necho 6. launch rofi showing all files on the system; \necho 7. launch rofi showing all open windows on the system; \necho 8. uninstall rofi on debian based systems; \necho 9. uninstall rofi on rhel based systems; \necho 10. uninstall rofi on arch based systems')
 
 # Prompt user to install rofi, launch rofi for applications, files, and any open windows, change rofi theme, or uninstall rofi
 
@@ -28,40 +28,40 @@ command = input('\nEnter a command: ')
 
 # Install rofi if it's not installed  (Debian, RHEL, or Arch based distributions)
 
-if command == 'ird':
+if command == '1':
     os.system('sudo apt install rofi -y')
 
-if command == 'irr':
+if command == '2':
     os.system('sudo dnf install rofi -y')
 
-if command == 'ira':
+if command == '3':
     os.system('sudo pacman -S rofi -y')
     
 # Launch rofi theme selector
 
-if command == 'rts':
+if command == '4':
     os.system('rofi-theme-selector')
 
 # Launch rofi (applications, files, and open windows on the system)
 
-if command == 'lra':
+if command == '5':
     os.system('rofi -show drun -show-icons')
 
-if command == 'lrf':
+if command == '6':
     os.system('rofi -show filebrowser -show-icons')
     
-if command == 'lrw':
+if command == '7':
     os.system('rofi -show window -show-icons')
 
 # Uninstall rofi (Debian, RHEL, or Arch based distributions)
 
-if command == 'urd':
+if command == '8':
     os.system('sudo apt remove rofi -y')
 
-if command == 'urr':
+if command == '9':
     os.system('sudo dnf remove rofi -y')
 
-if command == 'ura':
+if command == '10':
     os.system('sudo pacman -Rns rofi -y')
 
 # Once the program is finished executing
