@@ -18,7 +18,7 @@ print('-----------------------')
 
 # Lists options for tools or exit 
 
-os.system('\necho 1. Administration Tools; \n echo 2. Files and Directories; \n echo 3. Networking Tools; \necho 4. Security Tools')
+os.system('\necho 1. Administration Tools; \necho 2. Files and Directories; \necho 3. Networking Tools; \necho 4. Security Tools')
 
 # Prompts user to enter a command
 
