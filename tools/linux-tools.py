@@ -238,7 +238,7 @@ if category == '4':
     
     if security_tool == '1':
         print('\nWhat would you like to do?')
-        print('--------------')
+        print('-------------------------')
         print('1. add, delete, and limit rules')
         print('2. identify ufw status')
         print('3. install ufw')
