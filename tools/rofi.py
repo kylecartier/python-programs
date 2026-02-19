@@ -20,7 +20,7 @@ print('-----------------')
 
 # Lists options for commands or exit
 
-os.system('\necho 1. install rofi on debian based systems; \necho 2. install rofi on rhel based systems; \necho 3. install rofi on arch based systems; \necho 4. launch rofi theme selector; \necho 5. launch rofi showing all applications on the system; \necho 6. launch rofi showing all files on the system; \necho 7. launch rofi showing all open windows on the system; \necho 8. uninstall rofi on debian based systems; \necho 9. uninstall rofi on rhel based systems; \necho 10. uninstall rofi on arch based systems')
+os.system('\necho 1.  install rofi on debian based systems; \necho 2.  install rofi on rhel based systems; \necho 3.  install rofi on arch based systems; \necho 4.  launch rofi theme selector; \necho 5.  launch rofi showing all applications on the system; \necho 6.  launch rofi showing all files on the system; \necho 7.  launch rofi showing all open windows on the system; \necho 8.  uninstall rofi on debian based systems; \necho 9.  uninstall rofi on rhel based systems; \necho 10. uninstall rofi on arch based systems')
 
 # Prompt user to install rofi, launch rofi for applications, files, and any open windows, change rofi theme, or uninstall rofi
 
