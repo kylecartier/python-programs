@@ -122,6 +122,7 @@ if category == '2':
     print('--------------------')
     print('1. add and delete files ')
     print('2. add and delete directories')
+    print('3. make files executable or not executable')
     
     files_command = input('\nChoose a tool to run: ')
     
@@ -164,7 +165,27 @@ if category == '2':
                 os.system('rm -r ' + folder + '/')
             if empty == 'yes':
                 os.system('rmdir ' + folder + '/')
-    
+                
+    if files_command == '3':
+        print('\nWhat would you like to do?')
+        print('-------------------------')
+        print('1. make files executable')
+        print('2. make files not executable')
+        
+        files_execute_command = input('\nChoose an option: ')
+        
+        if files_execute_command == '1':
+            file = input('Enter file to modify: ')
+            command = input('Enter command: ')
+            if command == 'chmod +x':
+                os.system(command + ' ' + file)
+            
+        if files_execute_command == '2':
+            file = input('Enter file to modify: ')
+            command = input('Enter command: ')
+            if command == 'chmod -x':
+                os.system(command + ' ' + file)     
+      
 if category == '3':
     print('\nNetworking Tools')
     print('----------------')
@@ -238,7 +259,7 @@ if category == '4':
     
     if security_tool == '1':
         print('\nWhat would you like to do?')
-        print('-------------------------')
+        print('--------------')
         print('1. add, delete, and limit rules')
         print('2. identify ufw status')
         print('3. install ufw')
