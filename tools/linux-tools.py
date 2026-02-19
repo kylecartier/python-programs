@@ -32,9 +32,9 @@ if category == '1':
     print('3.  hostnamectl')
     print('4.  htop')
     print('5.  install package(s)')
-    print('6.  maintenance')
-    print('7.  localectl')
-    print('8.  ls')
+    print('6.  localectl')
+    print('7.  ls')
+    print('8.  maintenance')
     print('9.  pwd')
     print('10. reboot system')
     print('11. shutdown system')
@@ -66,18 +66,18 @@ if category == '1':
         os.system('sudo apt install ' + package)
         
     if admin_tool == '6':
-        os.system('sudo apt update && sudo apt upgrade; sudo apt autoremove')
-        
-    if admin_tool == '7':
         os.system('localectl')
         
-    if admin_tool == '8':
+    if admin_tool == '7':
         flag = input('Enter ls flag: ')
         directory = input('Enter directory to see contents of it: ') 
         if directory != '':
             os.system('ls ' + flag + ' ' + directory + '/')
         else:
             os.system('ls' + flag)
+
+    if admin_tool == '8':
+        os.system('sudo apt update && sudo apt upgrade; sudo apt autoremove')
         
     if admin_tool == '9':
         os.system('pwd')
