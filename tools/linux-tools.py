@@ -122,7 +122,7 @@ if category == '2':
     print('--------------------')
     print('1. add and delete files ')
     print('2. add and delete directories')
-    print('3. make files executable or not executable')
+    print('3. make files executable and not executable')
     
     files_command = input('\nChoose an option: ')
     
