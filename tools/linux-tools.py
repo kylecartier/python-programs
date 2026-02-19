@@ -124,7 +124,7 @@ if category == '2':
     print('2. add and delete directories')
     print('3. make files executable or not executable')
     
-    files_command = input('\nChoose a tool to run: ')
+    files_command = input('\nChoose an option: ')
     
     if files_command == '1':
         print('\nWhat would you like to do?')
