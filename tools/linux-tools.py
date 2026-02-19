@@ -18,7 +18,7 @@ print('-----------------------')
 
 # Lists options for tools or exit 
 
-os.system('\necho 1. Administration Tools; \n echo 2. Networking Tools; \necho 3. Security Tools')
+os.system('\necho 1. Administration Tools; \n echo 2. Files and Directories; \n echo 3. Networking Tools; \necho 4. Security Tools')
 
 # Prompts user to enter a command
 
@@ -28,135 +28,238 @@ if category == '1':
     print('\nAdministration Tools')
     print('--------------------')
     print('1.  change password')
-    print('2.  free')
-    print('3.  hostnamectl')
-    print('4.  htop')
-    print('5.  install package(s)')
-    print('6.  localectl')
-    print('7.  ls')
-    print('8.  maintenance')
-    print('9.  pwd')
-    print('10. reboot system')
-    print('11. shutdown system')
-    print('12. systemctl')
-    print('13. timedatectl')
-    print('14. top')
-    print('15. uname')
-    print('16. uptime')
-    print('17. whoami')
+    print('2.  df')
+    print('3.  free')
+    print('4.  hostnamectl')
+    print('5.  htop')
+    print('6.  install package(s)')
+    print('7.  maintenance')
+    print('8.  localectl')
+    print('9.  ls')
+    print('10. pwd')
+    print('11. reboot system')
+    print('12. shutdown system')
+    print('13. systemctl')
+    print('14. timedatectl')
+    print('15. top')
+    print('16. uname')
+    print('17. uptime')
+    print('18. whoami')
     
     admin_tool = input('\nChoose a tool to run: ')
     
     if admin_tool == '1':
         user = input('Enter user: ')
         os.system('passwd ' + user)
-         
+        
     if admin_tool == '2':
+        flag = input('Enter df flag: ')
+        os.system('df ' + flag)
+         
+    if admin_tool == '3':
         flag = input('Enter free flag: ')
         os.system('free ' + flag)
         
-    if admin_tool == '3':
+    if admin_tool == '4':
         os.system('hostnamectl')
         
-    if admin_tool == '4':
+    if admin_tool == '5':
         os.system('htop')
         
-    if admin_tool == '5':
+    if admin_tool == '6':
         package = input('Enter package to install: ')
         os.system('sudo apt install ' + package)
         
-    if admin_tool == '6':
+    if admin_tool == '7':
+        os.system('sudo apt update && sudo apt upgrade; sudo apt autoremove')
+        
+    if admin_tool == '8':
         os.system('localectl')
         
-    if admin_tool == '7':
+    if admin_tool == '9':
         flag = input('Enter ls flag: ')
         directory = input('Enter directory to see contents of it: ') 
         if directory != '':
             os.system('ls ' + flag + ' ' + directory + '/')
         else:
             os.system('ls' + flag)
-
-    if admin_tool == '8':
-        os.system('sudo apt update && sudo apt upgrade; sudo apt autoremove')
-        
-    if admin_tool == '9':
-        os.system('pwd')
         
     if admin_tool == '10':
+        os.system('pwd')
+        
+    if admin_tool == '11':
         minutes = input("Enter minutes: ")
         os.system('shutdown -r ' + minutes)
         
-    if admin_tool == '11':
+    if admin_tool == '12':
         minutes = input('Enter minutes: ')
         os.system('shutdown -h ' + minutes)
         
-    if admin_tool == '12':
+    if admin_tool == '13':
         service = input('Enter service: ')
         command = input('Enter command: ')
         os.system('sudo systemctl ' + command + ' ' + service)
         
-    if admin_tool == '13':
+    if admin_tool == '14':
         os.system('timedatectl')
         
-    if admin_tool == '14':
+    if admin_tool == '15':
         os.system('top')
 
-    if admin_tool == '15':
+    if admin_tool == '16':
         flag = input('Enter uname flag: ')
         os.system('uname ' + flag)
 
-    if admin_tool == '16':
+    if admin_tool == '17':
         flag = input('Enter uptime flag: ')
         os.system('uptime ' + flag)
 
-    if admin_tool == '17':
+    if admin_tool == '18':
         os.system('whoami')
-
+        
 if category == '2':
+    print('\nFiles and Directories')
+    print('--------------------')
+    print('1. add and delete files ')
+    print('2. add and delete directories')
+    
+    files_command = input('\nChoose a tool to run: ')
+    
+    if files_command == '1':
+        print('\nWhat would you like to do?')
+        print('-------------------------')
+        print('1. add files')
+        print('2. delete files')
+        
+        add_or_del_files = input('\nChoose an option: ')
+        
+        if add_or_del_files == '1':
+            file = input('Enter file to modify: ')
+            command = input('Enter command: ')
+            if command == 'touch':
+                os.system(command + ' ' + file)
+        
+        if add_or_del_files == '2':
+            file = input('Enter file to modify: ')
+            command = input('Enter command: ')
+            if command == 'rm':
+                os.system(command + ' ' + file)
+                
+    if files_command == '2':
+        print('\nWhat would you like to do?')
+        print('-------------------------')
+        print('1. add directories')
+        print('2. delete directories')
+        
+        add_or_del_folders = input('\nChoose an option: ')
+        
+        if add_or_del_folders == '1':
+            folder = input('Enter folder to modify: ')
+            os.system('mkdir ' + folder + '/')
+    
+        if add_or_del_folders == '2':
+            folder = input('Enter folder to modify: ')
+            empty = input('Is the folder empty: ')
+            if empty == 'no':
+                os.system('rm -r ' + folder + '/')
+            if empty == 'yes':
+                os.system('rmdir ' + folder + '/')
+    
+if category == '3':
     print('\nNetworking Tools')
     print('----------------')
-    print('1. arp')
-    print('2. ifconfig')
-    print('3. ip a')
-    print('4. nmap')
-    print('5. netstat')
-    print('6. ping')
-    print('7. traceroute')
+    print('1.  arp')
+    print('2.  dig')
+    print('3.  ifconfig')
+    print('4.  ip a')
+    print('5.  netstat')
+    print('6.  nmap')
+    print('7.  nslookup')
+    print('8.  ping')
+    print('9.  tcpdump')
+    print('10. traceroute')
     
     network_tool = input('\nChoose a tool to run: ')
     
     if network_tool == '1':
         flag = input('Enter arp flag: ')
         os.system('arp ' + flag)
-            
+        
     if network_tool == '2':
+        url = input("Enter url: ")
+        os.system('dig ' + url)
+            
+    if network_tool == '3':
         os.system('ifconfig')
      
-    if network_tool == '3':
+    if network_tool == '4':
         os.system('ip a')
         
-    if network_tool == '4':
+    if network_tool == '5':
+        flag = input('Enter netstat flag: ')
+        os.system('netstat ' + flag)
+        
+    if network_tool == '6':
         nmap_command = input('Enter nmap commnad: ')
         os.system(nmap_command)
         
-    if network_tool == '5':
-        os.system('netstat')
-        
-    if network_tool == '6':
-        address = input("Enter ip address: ")
-        os.system('ping ' + address)
-        
     if network_tool == '7':
+        url = input("Enter url: ")
+        os.system('nslookup ' + url)
+        
+    if network_tool == '8':
+        address = input("Enter ip address: ")
+        packet_num = input('How many packets to capture?: ')
+        if packet_num != '':
+            os.system('ping -c ' + packet_num + ' ' + address)
+        else:
+            os.system('ping ' + address)
+        
+    if network_tool == '9':
+        interface = input('Enter network interface: ')
+        if interface == '':
+            os.system('sudo tcpdump -D')
+        else:
+            os.system('sudo tcpdump -i ' + interface)
+        
+    if network_tool == '10':
         address = input("Enter ip address: ")
         os.system('traceroute ' + address)
             
-if category == '3':
+if category == '4':
     print('\nSecurity Tools')
     print('--------------')
-    
-    security_tool = input('\nChoose a tool to run:  ')
+    print('1. ufw (gufw too!)')
     
 
+
+
+    security_tool = input('\nChoose a tool to run: ')
+    
+    if security_tool == '1':
+        print('\nWhat would you like to do?')
+        print('--------------')
+        print('1. add and delete rules')
+        print('2. identify ufw status')
+        print('3. install ufw')
+        print('4. install gufw (graphical ufw)')
+        
+        ufw_command = input('\nChoose an option: ')
+        
+        if ufw_command == '1':
+            rule = input('Enter a rule to modify: ')
+            command = input('What do you want to do?: ')
+            os.system('sudo ufw ' + command + ' ' + rule)
+            
+        if ufw_command == '2':
+            os.system('sudo ufw status')
+
+        if ufw_command == '3':
+            os.system('sudo apt install ufw')
+            
+        if ufw_command == '4':
+            os.system('sudo apt install gufw')
+       
 else:
     exit(0)
 
