@@ -354,8 +354,11 @@ if category == '4':
             os.system('sudo apt install gufw')
             
 if category == '0':
-    tool = input('What command do you need help with?: ')
-    if tool != '':
+
+    command_list = ('passwd', 'sudo', 'df', 'free', 'hostnamectl', 'htop', 'apt', 'dnf', 'pacman', 'localectl', 'ls', 'lsblk', 'ls', 'lsblk', 'lscpu', 'lshw', 'lsmem', 'lsmod', 'lspci', 'lsusb', 'pwd', 'shutdown', 'systemctl', 'timedatectl', 'top', 'touch', 'rm', 'rmdir', 'chmod', 'cat', 'ufw', 'arp', 'dig', 'ifconfig', 'ip', 'netstat', 'nmap', 'nslookup', 'ping', 'tcpdump', 'traceroute' )
+    
+    command = input('What command do you need help with?: ')
+    if command in command_list:
         os.system('man' + ' ' + tool)
       
 else:
