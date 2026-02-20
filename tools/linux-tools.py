@@ -14,15 +14,15 @@ print()
 
 os.system('\necho Choose a tool category or ask for help: ')
 
-print('-----------------------')
+print('--------------------------------------')
 
 # Lists options for tools or exit 
 
-os.system('\necho 1. Administration Tools; \necho 2. Files and Directories; \necho 3. Networking Tools; \necho 4. Security Tools; \necho ; \necho Need Help?; \necho -----------------------; \necho 0. Man Page')
+os.system('\necho 1. Administration Tools; \necho 2. Files and Directories; \necho 3. Networking Tools; \necho 4. Security Tools; \necho ; \necho Need Help?; \necho --------------------------------------; \necho 0. Man Page')
 
 # Prompts user to enter a command
 
-category = input('\nEnter a tool category to continue: ')
+category = input('\nChoose an option: ')
 
 if category == '1':
     print('\nAdministration Tools')
