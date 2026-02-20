@@ -12,13 +12,13 @@ print()
 
 # Choose tool category to execute 
 
-os.system('\necho Choose a tool category: ')
+os.system('\necho Choose a tool category or ask for help: ')
 
 print('-----------------------')
 
 # Lists options for tools or exit 
 
-os.system('\necho 1. Administration Tools; \necho 2. Files and Directories; \necho 3. Networking Tools; \necho 4. Security Tools; \necho 5. Man Pages')
+os.system('\necho 1. Administration Tools; \necho 2. Files and Directories; \necho 3. Networking Tools; \necho 4. Security Tools; \necho ; \necho Need Help?; \necho -----------------------; \necho 0. Man Page')
 
 # Prompts user to enter a command
 
@@ -77,8 +77,8 @@ if category == '1':
         os.system('localectl')
         
     if admin_tool == '9':
-        print('\nls')
-        print('--')
+        print('\nCommands')
+        print('--------')
         print('1. ls')
         print('2. lsblk')
         print('3. lscpu')
@@ -148,11 +148,17 @@ if category == '1':
         
     if admin_tool == '11':
         minutes = input("Enter minutes: ")
-        os.system('shutdown -r ' + minutes)
+        if minutes != '':
+            os.system('shutdown -r ' + minutes)
+        else:
+            os.system('reboot now')
         
     if admin_tool == '12':
         minutes = input('Enter minutes: ')
-        os.system('shutdown -h ' + minutes)
+        if minutes != '':
+            os.system('shutdown -h ' + minutes)
+        else:
+            os.system('shutdown now')
         
     if admin_tool == '13':
         service = input('Enter service: ')
@@ -347,8 +353,8 @@ if category == '4':
         if ufw_command == '4':
             os.system('sudo apt install gufw')
             
-if category == '5':
-    tool = input('What tool do you need help with?: ')
+if category == '0':
+    tool = input('What command do you need help with?: ')
     if tool != '':
         os.system('man' + ' ' + tool)
       
