@@ -46,7 +46,7 @@ if category == '1':
     print('17. uptime')
     print('18. whoami')
     
-    admin_tool = input('\nChoose a tool to run: ')
+    admin_tool = input('\nChoose an option: ')
     
     if admin_tool == '1':
         user = input('Enter user: ')
@@ -272,7 +272,7 @@ if category == '3':
     print('9.  tcpdump')
     print('10. traceroute')
     
-    network_tool = input('\nChoose a tool to run: ')
+    network_tool = input('\nChoose an option: ')
     
     if network_tool == '1':
         flag = input('Enter arp flag: ')
@@ -327,7 +327,7 @@ if category == '4':
 
 
 
-    security_tool = input('\nChoose a tool to run: ')
+    security_tool = input('\nChoose an option: ')
     
     if security_tool == '1':
         print('\nWhat would you like to do?')
