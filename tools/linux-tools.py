@@ -18,7 +18,7 @@ print('-----------------------')
 
 # Lists options for tools or exit 
 
-os.system('\necho 1. Administration Tools; \necho 2. Files and Directories; \necho 3. Networking Tools; \necho 4. Security Tools')
+os.system('\necho 1. Administration Tools; \necho 2. Files and Directories; \necho 3. Networking Tools; \necho 4. Security Tools; \necho 5. Man Pages')
 
 # Prompts user to enter a command
 
@@ -77,12 +77,71 @@ if category == '1':
         os.system('localectl')
         
     if admin_tool == '9':
-        flag = input('Enter ls flag: ')
-        directory = input('Enter directory to see contents of it: ') 
-        if directory != '':
-            os.system('ls ' + flag + ' ' + directory + '/')
-        else:
-            os.system('ls' + flag)
+        print('\nls')
+        print('--')
+        print('1. ls')
+        print('2. lsblk')
+        print('3. lscpu')
+        print('4. lshw')
+        print('5. lsmem')
+        print('6. lsmod')
+        print('7. lspci')
+        print('8. lsusb')
+        
+        ls_command = input('\nChoose an option: ')
+        
+        if ls_command == '1':
+            flag = input('Enter ls flag: ')
+            directory = input('Enter directory to see contents of it: ') 
+            if directory != '':
+                os.system('ls ' + flag + ' ' + directory + '/')
+            else:
+                os.system('ls' + flag)
+            
+        if ls_command == '2':
+            flag = input('Enter lsblk flag: ')
+            if flag != '':
+                os.system('lsblk' + ' ' + flag)
+            else:
+                os.system('lsblk')
+                    
+        if ls_command == '3':
+            flag = input('Enter lscpu flag: ')
+            if flag != '':
+                os.system('lscpu' + ' ' + flag)
+            else:
+                os.system('lscpu')
+                
+        if ls_command == '4':
+            flag = input('Enter lshw flag: ')
+            if flag != '':
+                os.system('lshw' + ' ' + flag)
+            else:
+                os.system('lshw')
+                    
+        if ls_command == '5':
+            flag = input('Enter lsmem flag: ')
+            if flag != '':
+                os.system('lsmem' + ' ' + flag)
+            else:
+                os.system('lsmem')
+                
+        if ls_command == '6':
+            os.system('lsmod')
+                          
+        if ls_command == '7':
+            flag = input('Enter lspci flag: ')
+            if flag != '':
+                os.system('lspci' + ' ' + flag)
+            else:
+                os.system('lspci')
+                    
+        if ls_command == '8':
+            flag = input('Enter lsusb flag: ')
+            if flag != '':
+                os.system('lsusb' + ' ' + flag)
+            else:
+                os.system('lsusb')
         
     if admin_tool == '10':
         os.system('pwd')
@@ -287,7 +346,12 @@ if category == '4':
             
         if ufw_command == '4':
             os.system('sudo apt install gufw')
-       
+            
+if category == '5':
+    tool = input('What tool do you need help with?: ')
+    if tool != '':
+        os.system('man' + ' ' + tool)
+      
 else:
     exit(0)
 
