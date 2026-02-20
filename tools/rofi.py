@@ -65,13 +65,13 @@ if rofi_command == '2':
         os.system('rofi-theme-selector')
         
 if rofi_command == '3':
-    print('Uninstall')
+    print('\nUninstall')
     print('---------')
     print('1. uninstall on arch system')
     print('2. uninstall on debian system')
     print('3. uninstall on rhel system')
 
-    uninstall_command = input('Choose an option: ')
+    uninstall_command = input('\nChoose an option: ')
     
     if uninstall_command == '1':
         os.system('sudo pacman -Rns rofi -y')
