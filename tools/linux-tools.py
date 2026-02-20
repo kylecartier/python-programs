@@ -12,7 +12,7 @@ print()
 
 # Choose tool category to execute 
 
-os.system('\necho Choose a tool category or ask for help: ')
+os.system('\necho Choose a tool category: ')
 
 print('--------------------------------------')
 
