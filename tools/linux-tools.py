@@ -123,6 +123,7 @@ if category == '2':
     print('1. add and delete files ')
     print('2. add and delete directories')
     print('3. make files executable and not executable')
+    print('4. read files')
     
     files_command = input('\nChoose an option: ')
     
@@ -185,6 +186,12 @@ if category == '2':
             command = input('Enter command: ')
             if command == 'chmod -x':
                 os.system(command + ' ' + file)     
+                
+    if files_command == '4':
+        file = input('Enter file to read it: ')
+        command = input('Enter command: ')
+        if command == 'cat':
+            os.system(command + ' ' + file)
       
 if category == '3':
     print('\nNetworking Tools')
