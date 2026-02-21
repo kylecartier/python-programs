@@ -63,7 +63,7 @@ if category == '1':
         os.system('htop')
         
     if admin_tool == '5':
-        print('\nCommands')
+        print('\nPackage Mangers')
         print('-------------------------------------')
         print('1. apt')
         print('2. dnf')
@@ -82,7 +82,7 @@ if category == '1':
             os.system('sudo pacman -S ' + package)
         
     if admin_tool == '6':
-        print('\nCommands')
+        print('\nPackage Managers')
         print('-------------------------------------')
         print('1. apt')
         print('2. dnf')
