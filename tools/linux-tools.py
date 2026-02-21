@@ -28,41 +28,51 @@ if category == '1':
     print('\nAdministration Tools')
     print('-------------------------------------')
     print('1.  df')
-    print('2.  free')
-    print('3.  hostnamectl')
-    print('4.  htop')
-    print('5.  install package(s)')
-    print('6.  maintenance')
-    print('7.  localectl')
-    print('8.  ls')
-    print('9.  pwd')
-    print('10. reboot system')
-    print('11. shutdown system')
-    print('12. systemctl')
-    print('13. timedatectl')
-    print('14. top')
-    print('15. uname')
-    print('16. uptime')
-    print('17. user accounts')
-    print('18. whoami')
+    print('2.  echo')
+    print('3.  free')
+    print('4.  hostnamectl')
+    print('5.  htop')
+    print('6.  id')
+    print('7.  install package(s)')
+    print('8.  maintenance')
+    print('9.  localectl')
+    print('10. ls')
+    print('11. pwd')
+    print('12. reboot system')
+    print('13. shutdown system')
+    print('14. systemctl')
+    print('15. timedatectl')
+    print('16. top')
+    print('17. uname')
+    print('18. uptime')
+    print('19. user accounts')
+    print('20. whoami')
     
     admin_tool = input('\nChoose an option: ')
         
     if admin_tool == '1':
         flag = input('Enter df flag: ')
         os.system('df ' + flag)
-         
+
     if admin_tool == '2':
+        echo_command = input('Enter echo command: ')
+        os.system('echo ' + echo_command)
+         
+    if admin_tool == '3':
         flag = input('Enter free flag: ')
         os.system('free ' + flag)
         
-    if admin_tool == '3':
+    if admin_tool == '4':
         os.system('hostnamectl')
         
-    if admin_tool == '4':
-        os.system('htop')
-        
     if admin_tool == '5':
+        os.system('htop')
+
+    if admin_tool == '6':
+        flag = input('Enter id flag: ')
+        os.system('id ' + flag)
+        
+    if admin_tool == '7':
         print('\nPackage Managers')
         print('-------------------------------------')
         print('1. apt')
@@ -81,7 +91,7 @@ if category == '1':
         if package_manager == '3':
             os.system('sudo pacman -S ' + package)
         
-    if admin_tool == '6':
+    if admin_tool == '8':
         print('\nPackage Managers')
         print('-------------------------------------')
         print('1. apt')
@@ -99,10 +109,10 @@ if category == '1':
         if package_manager == '3':
             os.system('sudo pacman -Syyu')
         
-    if admin_tool == '7':
+    if admin_tool == '9':
         os.system('localectl')
         
-    if admin_tool == '8':
+    if admin_tool == '10':
         print('\nCommands')
         print('-------------------------------------')
         print('1. ls')
@@ -169,24 +179,24 @@ if category == '1':
             else:
                 os.system('lsusb')
         
-    if admin_tool == '9':
+    if admin_tool == '11':
         os.system('pwd')
         
-    if admin_tool == '10':
+    if admin_tool == '12':
         minutes = input("Enter minutes: ")
         if minutes != '':
             os.system('shutdown -r ' + minutes)
         else:
             os.system('reboot now')
         
-    if admin_tool == '11':
+    if admin_tool == '13':
         minutes = input('Enter minutes: ')
         if minutes != '':
             os.system('shutdown -h ' + minutes)
         else:
             os.system('shutdown now')
         
-    if admin_tool == '12':
+    if admin_tool == '14':
         service = input('Enter service: ')
         command = input('Enter command: ')
         if service != '' and command == 'is-active':
@@ -198,21 +208,21 @@ if category == '1':
         else:
             exit(0)
         
-    if admin_tool == '13':
+    if admin_tool == '15':
         os.system('timedatectl')
         
-    if admin_tool == '14':
+    if admin_tool == '16':
         os.system('top')
 
-    if admin_tool == '15':
+    if admin_tool == '17':
         flag = input('Enter uname flag: ')
         os.system('uname ' + flag)
 
-    if admin_tool == '16':
+    if admin_tool == '18':
         flag = input('Enter uptime flag: ')
         os.system('uptime ' + flag)
 
-    if admin_tool == '17':
+    if admin_tool == '19':
         print('\nCommands')
         print('-------------------------------------')
         print('1. change password for user account')
@@ -250,7 +260,7 @@ if category == '1':
             else:
                 os.system('sudo usermod -L ' + user)
 
-    if admin_tool == '18':
+    if admin_tool == '20':
         os.system('whoami')
         
 if category == '2':
