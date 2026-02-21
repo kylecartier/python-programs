@@ -27,56 +27,52 @@ category = input('\nChoose an option: ')
 if category == '1':
     print('\nAdministration Tools')
     print('-------------------------------------')
-    print('1.  change password')
-    print('2.  df')
-    print('3.  free')
-    print('4.  hostnamectl')
-    print('5.  htop')
-    print('6.  install package(s)')
-    print('7.  maintenance')
-    print('8.  localectl')
-    print('9.  ls')
-    print('10. pwd')
-    print('11. reboot system')
-    print('12. shutdown system')
-    print('13. systemctl')
-    print('14. timedatectl')
-    print('15. top')
-    print('16. uname')
-    print('17. uptime')
+    print('1.  df')
+    print('2.  free')
+    print('3.  hostnamectl')
+    print('4.  htop')
+    print('5.  install package(s)')
+    print('6.  maintenance')
+    print('7.  localectl')
+    print('8.  ls')
+    print('9.  pwd')
+    print('10. reboot system')
+    print('11. shutdown system')
+    print('12. systemctl')
+    print('13. timedatectl')
+    print('14. top')
+    print('15. uname')
+    print('16. uptime')
+    print('17. user accounts')
     print('18. whoami')
     
     admin_tool = input('\nChoose an option: ')
-    
-    if admin_tool == '1':
-        user = input('Enter user: ')
-        os.system('passwd ' + user)
         
-    if admin_tool == '2':
+    if admin_tool == '1':
         flag = input('Enter df flag: ')
         os.system('df ' + flag)
          
-    if admin_tool == '3':
+    if admin_tool == '2':
         flag = input('Enter free flag: ')
         os.system('free ' + flag)
         
-    if admin_tool == '4':
+    if admin_tool == '3':
         os.system('hostnamectl')
         
-    if admin_tool == '5':
+    if admin_tool == '4':
         os.system('htop')
         
-    if admin_tool == '6':
+    if admin_tool == '5':
         package = input('Enter package to install: ')
         os.system('sudo apt install ' + package)
         
-    if admin_tool == '7':
+    if admin_tool == '6':
         os.system('sudo apt update && sudo apt upgrade; sudo apt autoremove')
         
-    if admin_tool == '8':
+    if admin_tool == '7':
         os.system('localectl')
         
-    if admin_tool == '9':
+    if admin_tool == '8':
         print('\nCommands')
         print('-------------------------------------')
         print('1. ls')
@@ -143,24 +139,24 @@ if category == '1':
             else:
                 os.system('lsusb')
         
-    if admin_tool == '10':
+    if admin_tool == '9':
         os.system('pwd')
         
-    if admin_tool == '11':
+    if admin_tool == '10':
         minutes = input("Enter minutes: ")
         if minutes != '':
             os.system('shutdown -r ' + minutes)
         else:
             os.system('reboot now')
         
-    if admin_tool == '12':
+    if admin_tool == '11':
         minutes = input('Enter minutes: ')
         if minutes != '':
             os.system('shutdown -h ' + minutes)
         else:
             os.system('shutdown now')
         
-    if admin_tool == '13':
+    if admin_tool == '12':
         service = input('Enter service: ')
         command = input('Enter command: ')
         if service and command != '':
@@ -168,19 +164,40 @@ if category == '1':
         else:
             os.system('systemctl --version')
         
-    if admin_tool == '14':
+    if admin_tool == '13':
         os.system('timedatectl')
         
-    if admin_tool == '15':
+    if admin_tool == '14':
         os.system('top')
 
-    if admin_tool == '16':
+    if admin_tool == '15':
         flag = input('Enter uname flag: ')
         os.system('uname ' + flag)
 
-    if admin_tool == '17':
+    if admin_tool == '16':
         flag = input('Enter uptime flag: ')
         os.system('uptime ' + flag)
+
+    if admin_tool == '17':
+        print('\nCommands')
+        print('-------------------------------------')
+        print('1. change password for user account')
+        print('2. lock user account')
+        print('3. unlock user account')
+
+        user_command = input('\nChoose an option: ')
+
+        if user_command == '1':
+            user = input('Enter user: ')
+            os.system('passwd ' + user)
+
+        if user_command == '2':
+            user = input('Enter user: ')
+            os.system('sudo usermod -L ' + user)
+
+        if user_command == '3':
+            user = input('Enter user: ')
+            os.system('sudo usermod -U ' + user)
 
     if admin_tool == '18':
         os.system('whoami')
@@ -358,7 +375,7 @@ if category == '4':
             
 if category == '0':
 
-    command_list = ('passwd', 'sudo', 'df', 'free', 'hostnamectl', 'htop', 'apt', 'dnf', 'pacman', 'localectl', 'ls', 'lsblk', 'ls', 'lsblk', 'lscpu', 'lshw', 'lsmem', 'lsmod', 'lspci', 'lsusb', 'pwd', 'shutdown', 'systemctl', 'timedatectl', 'top', 'touch', 'rm', 'rmdir', 'chmod', 'cat', 'ufw', 'arp', 'dig', 'ifconfig', 'ip', 'netstat', 'nmap', 'nslookup', 'ping', 'tcpdump', 'traceroute' )
+    command_list = ('passwd', 'usermod', 'sudo', 'df', 'free', 'hostnamectl', 'htop', 'apt', 'dnf', 'pacman', 'localectl', 'ls', 'lsblk', 'ls', 'lsblk', 'lscpu', 'lshw', 'lsmem', 'lsmod', 'lspci', 'lsusb', 'pwd', 'shutdown', 'systemctl', 'timedatectl', 'top', 'touch', 'rm', 'rmdir', 'chmod', 'cat', 'ufw', 'arp', 'dig', 'ifconfig', 'ip', 'netstat', 'nmap', 'nslookup', 'ping', 'tcpdump', 'traceroute' )
     
     command = input('What command do you need help with?: ')
     if command in command_list:
