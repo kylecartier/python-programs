@@ -20,7 +20,7 @@ print('-------------------------------------')
 
 os.system('\necho 1. Administration Tools; \necho 2. Files and Directories; \necho 3. Networking Tools; \necho 4. Security Tools; \necho ; \necho Need some help?; \necho -------------------------------------; \necho 0. Man Page; \necho ; \necho Exit; \necho -------------------------------------; \necho Type Exit or exit to do so, thanks.')
 
-# Prompts user to enter a command
+# Prompts user to enter a category or exit
 
 category = input('\nChoose an option: ')
 
