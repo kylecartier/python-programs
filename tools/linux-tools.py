@@ -107,7 +107,7 @@ if category == '1':
             os.system('sudo dnf update && sudo dnf autoremove')
 
         if package_manager == '3':
-            os.system('sudo pacman -Syyu')
+            os.system('sudo pacman -Syu')
         
     if admin_tool == '9':
         os.system('localectl')
