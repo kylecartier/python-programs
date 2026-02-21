@@ -20,7 +20,7 @@ print('-------------')
 
 # Lists options for commands or exit
 
-os.system('\necho 1. Installation; \necho 2. Options; \necho 3. Uninstall')
+os.system('\necho 1. Installation; \necho 2. Options; \necho 3. Uninstall; \necho ; \necho Need Help?; \necho -------------; \necho 0. Man Page')
 
 # Prompt user to install rofi, launch rofi for applications, files, and any open windows, change rofi theme, or uninstall rofi
 
@@ -81,6 +81,9 @@ if rofi_command == '3':
 
     if uninstall_command == '3':
         os.system('sudo dnf remove rofi -y')
+        
+if rofi_command == '0':
+    os.system('man rofi')   
 
 # Once the program is finished executing
     
