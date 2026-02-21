@@ -12,7 +12,7 @@ print()
 
 # Choose tool category to execute 
 
-os.system('\necho Choose a tool category')
+os.system('\necho Linux Tools')
 
 print('-------------------------------------')
 
@@ -63,7 +63,7 @@ if category == '1':
         os.system('htop')
         
     if admin_tool == '5':
-        print('\nPackage Mangers')
+        print('\nPackage Managers')
         print('-------------------------------------')
         print('1. apt')
         print('2. dnf')
