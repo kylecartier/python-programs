@@ -4,7 +4,7 @@ import os
 
 # Rofi Launcher!
 
-# Welcome!
+# What do you want to do?
 
 print() 
 
@@ -12,15 +12,15 @@ os.system('echo Welcome!')
 
 print()
 
-# Rofi Launcher
+# Choose command to execute 
 
 os.system('\necho Rofi Launcher')
 
 print('-------------------------------------')
 
-# Lists options or exit
+# Lists options for commands or exit
 
-os.system('\necho 1. Installation; \necho 2. Options; \necho 3. Uninstall; \necho ; \necho Need some help?; \necho -------------------------------------; \necho 0. Man Page; \necho ; \necho Exit; \necho -------------------------------------; \necho Type Exit or exit to do so, thanks.')
+os.system('\necho 1. Installation; \necho 2. Options; \necho 3. Uninstall; \necho ; \necho Need some help?; \necho -------------------------------------; \necho 0. Man Page')
 
 # Prompt user to install rofi, launch rofi for applications, files, and any open windows, change rofi theme, or uninstall rofi
 
@@ -84,9 +84,6 @@ if rofi_command == '3':
         
 if rofi_command == '0':
     os.system('man rofi')   
-
-if rofi_command == 'Exit' or 'exit':
-    exit(0)
 
 # Once the program is finished executing
     
