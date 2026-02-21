@@ -63,11 +63,41 @@ if category == '1':
         os.system('htop')
         
     if admin_tool == '5':
-        package = input('Enter package to install: ')
-        os.system('sudo apt install ' + package)
+        print('\nCommands')
+        print('-------------------------------------')
+        print('1. apt')
+        print('2. dnf')
+        print('3. pacman')
+        
+        package = input('\nEnter package to install: ')
+        package_manager = input('Enter package manager: ')
+        
+        if package_manager == '1':
+            os.system('sudo apt install ' + package)
+
+        if package_manager == '2':
+            os.system('sudo dnf install ' + package)
+
+        if package_manager == '3':
+            os.system('sudo pacman -S ' + package)
         
     if admin_tool == '6':
-        os.system('sudo apt update && sudo apt upgrade; sudo apt autoremove')
+        print('\nCommands')
+        print('-------------------------------------')
+        print('1. apt')
+        print('2. dnf')
+        print('3. pacman')
+       
+        package_manager = input('\nEnter package manager: ')
+        
+        if package_manager == '1':
+            os.system('sudo apt update && sudo apt upgrade; sudo apt autoremove')
+
+        if package_manager == '2':
+            os.system('sudo dnf update && sudo dnf autoremove')
+
+        if package_manager == '3':
+            os.system('sudo pacman -Syyu')
         
     if admin_tool == '7':
         os.system('localectl')
@@ -226,6 +256,7 @@ if category == '2':
     print('2. add and delete directories')
     print('3. make files executable and not executable')
     print('4. read files')
+    print('5. text editors')
     
     files_command = input('\nChoose an option: ')
     
@@ -294,6 +325,30 @@ if category == '2':
         command = input('Enter command: ')
         if command == 'cat':
             os.system(command + ' ' + file)
+
+    if files_command == '5':
+        print('\nCommands')
+        print('-------------------------------------')
+        print('1. nano')
+        print('2. vi')
+        print('3. vim') 
+        
+        editor_command = input('/nChoose an option: ')
+
+        if editor_command == '1':
+            file = input('Enter file to edit it: ')
+            if file != '':
+                os.system('nano ' + file)
+
+        if editor_command == '2':
+            file = input('Enter file to edit it: ')
+            if file != '':
+                os.system('vi ' + file)
+
+        if editor_command == '3':
+            file = input('Enter file to edit it: ')
+            if file != '':
+                os.system('vi ' + file)
       
 if category == '3':
     print('\nNetworking Tools')
