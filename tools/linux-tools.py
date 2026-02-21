@@ -284,15 +284,11 @@ if category == '2':
         
         if add_or_del_files == '1':
             file = input('Enter file to modify: ')
-            command = input('Enter command: ')
-            if command == 'touch':
-                os.system(command + ' ' + file)
+            os.system('touch' + ' ' + file)
         
         if add_or_del_files == '2':
             file = input('Enter file to modify: ')
-            command = input('Enter command: ')
-            if command == 'rm':
-                os.system(command + ' ' + file)
+            os.system('rm' + ' ' + file)
                 
     if files_command == '2':
         print('\nWhat would you like to do?')
