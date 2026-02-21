@@ -18,7 +18,7 @@ print('-------------------------------------')
 
 # Lists options or exit 
 
-os.system('\necho 1. Administration Tools; \necho 2. Files and Directories; \necho 3. Networking Tools; \necho 4. Security Tools; \necho ; \necho Need some help?; \necho -------------------------------------; \necho 0. Man Page; \necho ; \necho Exit; \necho -------------------------------------; \necho Type Exit or exit to do so, thanks.')
+os.system('\necho 1. Administration Tools; \necho 2. Files and Directories; \necho 3. Networking Tools; \necho 4. Security Tools; \necho ; \necho Need some help?; \necho -------------------------------------; \necho 0. Man Page')
 
 # Prompts user to enter a category or exit
 
@@ -457,9 +457,6 @@ if category == '0':
     if command in command_list:
         os.system('man' + ' ' + command)
 
-if category == 'Exit' or 'exit':
-    exit(0)
-      
 else:
     exit(0)
 
