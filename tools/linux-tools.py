@@ -189,10 +189,14 @@ if category == '1':
     if admin_tool == '12':
         service = input('Enter service: ')
         command = input('Enter command: ')
-        if service and command != '':
+        if service != '' and command == 'is-active':
             os.system('sudo systemctl ' + command + ' ' + service)
-        else:
+        if service != '' and command == 'is-enabled':
+            os.system('sudo systemctl ' + command + ' ' + service)
+        if service == '' and command == '':
             os.system('systemctl --version')
+        else:
+            exit(0)
         
     if admin_tool == '13':
         os.system('timedatectl')
