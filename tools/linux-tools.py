@@ -14,11 +14,11 @@ print()
 
 os.system('\necho Choose a tool category')
 
-print('--------------------------------------')
+print('-------------------------------------')
 
 # Lists options for tools or exit 
 
-os.system('\necho 1. Administration Tools; \necho 2. Files and Directories; \necho 3. Networking Tools; \necho 4. Security Tools; \necho ; \necho Need Help?; \necho --------------------------------------; \necho 0. Man Page')
+os.system('\necho 1. Administration Tools; \necho 2. Files and Directories; \necho 3. Networking Tools; \necho 4. Security Tools; \necho ; \necho Need some help?; \necho -------------------------------------; \necho 0. Man Page')
 
 # Prompts user to enter a command
 
@@ -26,7 +26,7 @@ category = input('\nChoose an option: ')
 
 if category == '1':
     print('\nAdministration Tools')
-    print('--------------------')
+    print('-------------------------------------')
     print('1.  change password')
     print('2.  df')
     print('3.  free')
@@ -78,7 +78,7 @@ if category == '1':
         
     if admin_tool == '9':
         print('\nCommands')
-        print('--------')
+        print('-------------------------------------')
         print('1. ls')
         print('2. lsblk')
         print('3. lscpu')
@@ -184,7 +184,7 @@ if category == '1':
         
 if category == '2':
     print('\nFiles and Directories')
-    print('--------------------')
+    print('-------------------------------------')
     print('1. add and delete files ')
     print('2. add and delete directories')
     print('3. make files executable and not executable')
@@ -194,7 +194,7 @@ if category == '2':
     
     if files_command == '1':
         print('\nWhat would you like to do?')
-        print('-------------------------')
+        print('-------------------------------------')
         print('1. add files')
         print('2. delete files')
         
@@ -214,7 +214,7 @@ if category == '2':
                 
     if files_command == '2':
         print('\nWhat would you like to do?')
-        print('-------------------------')
+        print('-------------------------------------')
         print('1. add directories')
         print('2. delete directories')
         
@@ -234,7 +234,7 @@ if category == '2':
                 
     if files_command == '3':
         print('\nWhat would you like to do?')
-        print('-------------------------')
+        print('-------------------------------------')
         print('1. make files executable')
         print('2. make files not executable')
         
@@ -260,7 +260,7 @@ if category == '2':
       
 if category == '3':
     print('\nNetworking Tools')
-    print('----------------')
+    print('-------------------------------------')
     print('1.  arp')
     print('2.  dig')
     print('3.  ifconfig')
@@ -321,7 +321,7 @@ if category == '3':
             
 if category == '4':
     print('\nSecurity Tools')
-    print('--------------')
+    print('-------------------------------------')
     print('1. ufw (gufw too!)')
     
 
@@ -331,7 +331,7 @@ if category == '4':
     
     if security_tool == '1':
         print('\nWhat would you like to do?')
-        print('--------------')
+        print('--------------------------------------')
         print('1. add, delete, and limit rules')
         print('2. identify ufw status')
         print('3. install ufw')
