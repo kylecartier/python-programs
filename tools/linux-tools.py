@@ -190,11 +190,17 @@ if category == '1':
 
         if user_command == '1':
             user = input('Enter user: ')
-            os.system('passwd ' + user)
+            if user == '' or 'root':
+                os.system('passwd root')
+            else:
+                os.system('passwd ' + user)
 
         if user_command == '2':
             user = input('Enter user: ')
-            os.system('sudo usermod -L ' + user)
+            if user == '' or 'root':
+                os.system('sudo usermod -L root')
+            else:
+                os.system('sudo usermod -L ' + user)
 
         if user_command == '3':
             user = input('Enter user: ')
@@ -205,7 +211,10 @@ if category == '1':
 
         if user_command == '4':
             user = input('Enter user: ')
-            os.system('sudo usermod -U ' + user)
+            if user == '' or 'root':
+                os.system('sudo usermod -L root')
+            else:
+                os.system('sudo usermod -L ' + user)
 
     if admin_tool == '18':
         os.system('whoami')
