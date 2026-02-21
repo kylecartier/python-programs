@@ -333,7 +333,7 @@ if category == '2':
         print('2. vi')
         print('3. vim') 
         
-        editor_command = input('/nChoose an option: ')
+        editor_command = input('\nChoose an option: ')
 
         if editor_command == '1':
             file = input('Enter file to edit it: ')
