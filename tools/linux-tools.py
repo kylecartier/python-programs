@@ -183,7 +183,8 @@ if category == '1':
         print('-------------------------------------')
         print('1. change password for user account')
         print('2. lock user account')
-        print('3. unlock user account')
+        print('3. switch to another user account')
+        print('4. unlock user account')
 
         user_command = input('\nChoose an option: ')
 
@@ -196,6 +197,13 @@ if category == '1':
             os.system('sudo usermod -L ' + user)
 
         if user_command == '3':
+            user = input('Enter user: ')
+            if user == '' or 'root':
+                os.system('su')
+            else:
+                os.system('su ' + user)
+
+        if user_command == '4':
             user = input('Enter user: ')
             os.system('sudo usermod -U ' + user)
 
