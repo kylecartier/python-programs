@@ -69,8 +69,8 @@ if category == '1':
         print('2. dnf')
         print('3. pacman')
         
-        package = input('\nEnter package to install: ')
-        package_manager = input('Enter package manager: ')
+        package_manager = input('\nEnter package manager: ')
+        package = input('Enter package to install: ')
         
         if package_manager == '1':
             os.system('sudo apt install ' + package)
