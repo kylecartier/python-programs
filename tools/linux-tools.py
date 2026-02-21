@@ -6,7 +6,7 @@ import os
 
 print() 
 
-os.system('echo What would you like to do?')
+os.system('echo Welcome!')
 
 print()
 
