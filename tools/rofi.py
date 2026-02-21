@@ -4,7 +4,7 @@ import os
 
 # Rofi Launcher!
 
-# What do you want to do?
+# Welcome!
 
 print() 
 
@@ -12,13 +12,13 @@ os.system('echo Welcome!')
 
 print()
 
-# Choose command to execute 
+# Rofi Launcher
 
 os.system('\necho Rofi Launcher')
 
 print('-------------------------------------')
 
-# Lists options for commands or exit
+# Lists options or exit
 
 os.system('\necho 1. Installation; \necho 2. Options; \necho 3. Uninstall; \necho ; \necho Need some help?; \necho -------------------------------------; \necho 0. Man Page; \necho ; \necho Exit; \necho -------------------------------------; \necho Type Exit or exit to do so, thanks.')
 
