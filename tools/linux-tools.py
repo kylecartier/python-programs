@@ -359,7 +359,7 @@ if category == '0':
     
     command = input('What command do you need help with?: ')
     if command in command_list:
-        os.system('man' + ' ' + tool)
+        os.system('man' + ' ' + command)
       
 else:
     exit(0)
