@@ -440,11 +440,16 @@ if category == '3':
             os.system('ping ' + address)
         
     if network_tool == '9':
+        flag = input('Enter tcpdump flag: ')
         interface = input('Enter network interface: ')
-        if interface == '':
-            os.system('sudo tcpdump -D')
+        if flag and interface != '':
+            os.system('sudo tcpdump ' + flag + ' ' + interface)
+        
+        if flag == '' and interace != '':
+            os.system('sudo tcpdump ' + interface)
+        
         else:
-            os.system('sudo tcpdump -i ' + interface)
+            exit(0)
         
     if network_tool == '10':
         address = input("Enter ip address: ")
