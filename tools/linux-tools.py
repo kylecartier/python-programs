@@ -24,6 +24,8 @@ os.system('\necho 1. Administration Tools; \necho 2. Files and Directories; \nec
 
 category = input('\nChoose an option: ')
 
+# Administration Tools
+
 if category == '1':
     print('\nAdministration Tools')
     print('-------------------------------------')
@@ -273,6 +275,8 @@ if category == '1':
     if admin_tool == '20':
         os.system('whoami')
         
+# Files and Directories
+        
 if category == '2':
     print('\nFiles and Directories')
     print('-------------------------------------')
@@ -382,6 +386,8 @@ if category == '2':
         
         else:
             exit(0)
+            
+# Networking Tools
       
 if category == '3':
     print('\nNetworking Tools')
@@ -443,6 +449,8 @@ if category == '3':
     if network_tool == '10':
         address = input("Enter ip address: ")
         os.system('traceroute ' + address)
+        
+# Security Tools
             
 if category == '4':
     print('\nSecurity Tools')
@@ -528,6 +536,8 @@ if category == '4':
 
             if package_manager == '3':
                 os.system('sudo pacman -S gufw')
+                
+# Need some help?
             
 if category == '0':
 
