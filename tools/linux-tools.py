@@ -434,7 +434,7 @@ if category == '4':
     if security_tool == '1':
         print('\nCommands')
         print('--------------------------------------')
-        print('1. allow, deny, and limit rules')
+        print('1. allow, deny, limit, and reject rules')
         print('2. identify ufw status')
         print('3. install ufw')
         print('4. install gufw (graphical ufw)')
@@ -453,17 +453,58 @@ if category == '4':
             if command == 'limit':
                 os.system('sudo ufw limit ' + rule)
                 
+            if command == 'reject':
+                os.system('sudo ufw reject ' + rule)
+                
             else:
                 exit(0)
             
         if ufw_command == '2':
-            os.system('sudo ufw status numbered')
-
+            numbers_command = input('Show in numbered format?: ')
+            if numbers_command == 'y':
+                os.system('sudo ufw status numbered')
+                
+            if numbers_command == 'n':
+                os.system('sudo ufw status')
+                
+            else:
+                exit(0)
+                
         if ufw_command == '3':
-            os.system('sudo apt install ufw')
+            print('\nPackage Managers')
+            print('-------------------------------------')
+            print('1. apt')
+            print('2. dnf')
+            print('3. pacman')
+       
+            package_manager = input('\nEnter package manager: ')
+        
+            if package_manager == '1':
+                os.system('sudo apt install ufw')
+
+            if package_manager == '2':
+                os.system('sudo dnf install ufw')
+
+            if package_manager == '3':
+                os.system('sudo pacman -S ufw')
             
         if ufw_command == '4':
-            os.system('sudo apt install gufw')
+            print('\nPackage Managers')
+            print('-------------------------------------')
+            print('1. apt')
+            print('2. dnf')
+            print('3. pacman')
+       
+            package_manager = input('\nEnter package manager: ')
+        
+            if package_manager == '1':
+                os.system('sudo apt install gufw')
+
+            if package_manager == '2':
+                os.system('sudo dnf install gufw')
+
+            if package_manager == '3':
+                os.system('sudo pacman -S gufw')
             
 if category == '0':
 
