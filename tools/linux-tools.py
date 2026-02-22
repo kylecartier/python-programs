@@ -389,7 +389,7 @@ if category == '3':
     print('1.  arp')
     print('2.  dig')
     print('3.  ifconfig')
-    print('4.  ip a')
+    print('4.  ip addr')
     print('5.  netstat')
     print('6.  nmap')
     print('7.  nslookup')
@@ -411,7 +411,7 @@ if category == '3':
         os.system('ifconfig')
      
     if network_tool == '4':
-        os.system('ip a')
+        os.system('ip addr')
         
     if network_tool == '5':
         flag = input('Enter netstat flag: ')
