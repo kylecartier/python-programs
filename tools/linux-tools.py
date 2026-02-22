@@ -374,8 +374,12 @@ if category == '2':
     if files_command == '6':
         flag = input('Enter tree flag: ')
         directory = input('Enter directory: ')
+        if flag == '':
+            os.system('tree ' + directory)
+        
         if directory and flag != '':
             os.system('tree ' + flag + ' ' + directory)
+        
         else:
             exit(0)
       
