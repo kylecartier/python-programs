@@ -281,6 +281,7 @@ if category == '2':
     print('3. make files executable and not executable')
     print('4. read files')
     print('5. text editors')
+    print('6. tree')
     
     files_command = input('\nChoose an option: ')
     
@@ -369,6 +370,14 @@ if category == '2':
             file = input('Enter file to edit it: ')
             if file != '':
                 os.system('vi ' + file)
+                
+    if files_command == '6':
+        flag = input('Enter tree flag: ')
+        directory = input('Enter directory: ')
+        if directory and flag != '':
+            os.system('tree ' + flag + ' ' + directory)
+        else:
+            exit(0)
       
 if category == '3':
     print('\nNetworking Tools')
@@ -518,7 +527,7 @@ if category == '4':
             
 if category == '0':
 
-    command_list = ('passwd', 'usermod', 'sudo', 'su', 'df', 'free', 'echo', 'id', 'hostnamectl', 'htop', 'apt', 'dnf', 'pacman', 'install', 'remove', 'localectl', 'ls', 'lsblk', 'ls', 'lsblk', 'lscpu', 'lshw', 'lsmem', 'lsmod', 'lspci', 'lsusb', 'pwd', 'shutdown', 'systemctl', 'timedatectl', 'top', 'touch', 'rm', 'rmdir', 'chmod', 'cat', 'ufw', 'gufw', 'arp', 'dig', 'ifconfig', 'ip', 'netstat', 'nmap', 'nslookup', 'ping', 'tcpdump', 'traceroute', 'nano', 'vi', 'vim')
+    command_list = ('passwd', 'usermod', 'sudo', 'su', 'df', 'free', 'echo', 'id', 'hostnamectl', 'htop', 'apt', 'dnf', 'pacman', 'install', 'remove', 'localectl', 'ls', 'lsblk', 'ls', 'lsblk', 'lscpu', 'lshw', 'lsmem', 'lsmod', 'lspci', 'lsusb', 'pwd', 'shutdown', 'systemctl', 'timedatectl', 'top', 'touch', 'rm', 'rmdir', 'chmod', 'cat', 'ufw', 'gufw', 'arp', 'dig', 'ifconfig', 'ip', 'netstat', 'nmap', 'nslookup', 'ping', 'tcpdump', 'traceroute', 'nano', 'vi', 'vim', 'tree')
     
     command = input('Enter command to need help with?: ')
     if command in command_list:
