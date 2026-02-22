@@ -444,9 +444,9 @@ if category == '3':
         interface = input('Enter network interface: ')
         if flag and interface != '':
             os.system('sudo tcpdump ' + flag + ' ' + interface)
-        
-        if flag == '' and interace != '':
-            os.system('sudo tcpdump ' + interface)
+            
+        if flag != '' and interface == '':
+            os.system('sudo tcpdump ' + flag)
         
         else:
             exit(0)
