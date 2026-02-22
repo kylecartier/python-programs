@@ -33,10 +33,10 @@ if category == '1':
     print('4.  hostnamectl')
     print('5.  htop')
     print('6.  id')
-    print('7.  install package(s)')
-    print('8.  maintenance')
-    print('9.  localectl')
-    print('10. ls')
+    print('7.  maintenance')
+    print('8.  localectl')
+    print('9.  ls')
+    print('10. package management')
     print('11. pwd')
     print('12. reboot system')
     print('13. shutdown system')
@@ -78,25 +78,6 @@ if category == '1':
         print('1. apt')
         print('2. dnf')
         print('3. pacman')
-        
-        package_manager = input('\nEnter package manager: ')
-        package = input('Enter package to install: ')
-        
-        if package_manager == '1':
-            os.system('sudo apt install ' + package)
-
-        if package_manager == '2':
-            os.system('sudo dnf install ' + package)
-
-        if package_manager == '3':
-            os.system('sudo pacman -S ' + package)
-        
-    if admin_tool == '8':
-        print('\nPackage Managers')
-        print('-------------------------------------')
-        print('1. apt')
-        print('2. dnf')
-        print('3. pacman')
        
         package_manager = input('\nEnter package manager: ')
         
@@ -109,10 +90,10 @@ if category == '1':
         if package_manager == '3':
             os.system('sudo pacman -Syu')
         
-    if admin_tool == '9':
+    if admin_tool == '8':
         os.system('localectl')
         
-    if admin_tool == '10':
+    if admin_tool == '9':
         print('\nCommands')
         print('-------------------------------------')
         print('1. ls')
@@ -178,7 +159,36 @@ if category == '1':
                 os.system('lsusb' + ' ' + flag)
             else:
                 os.system('lsusb')
+                
+    if admin_tool == '10':
+        print('\nPackage Managers')
+        print('-------------------------------------')
+        print('1. apt')
+        print('2. dnf')
+        print('3. pacman')
         
+        package_manager = input('\nEnter package manager: ')
+        package = input('Enter name of package: ')
+        command = input('Want to install or remove package?: ')
+        
+        if package_manager == '1':
+            if command == 'install':
+                os.system('sudo apt install ' + package)
+            if command == 'remove':
+                os.system('sudo apt remove ' + package)
+
+        if package_manager == '2':
+            if command == 'install':
+                os.system('sudo dnf install ' + package)
+            if command == 'remove':
+                os.system('sudo dnf remove ' + package)
+
+        if package_manager == '3':
+            if command == 'install':
+                os.system('sudo pacman -S ' + package)
+            if command == 'remove':
+                os.system('sudo pacman -Rns ' + package)
+
     if admin_tool == '11':
         os.system('pwd')
         
