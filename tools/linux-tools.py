@@ -453,7 +453,7 @@ if category == '4':
         
         if ufw_command == '1':
             rule = input('Enter a rule to modify: ')
-            command = input('Want to allow, deny, or limit the firewall rule?: ')
+            command = input('Want to allow, deny, limit, or reject the firewall rule?: ')
             if command == 'allow':
                 os.system('sudo ufw allow ' + rule)
                 
