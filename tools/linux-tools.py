@@ -275,7 +275,7 @@ if category == '2':
     files_command = input('\nChoose an option: ')
     
     if files_command == '1':
-        print('\nWhat would you like to do?')
+        print('\nCommands')
         print('-------------------------------------')
         print('1. add files')
         print('2. delete files')
@@ -291,7 +291,7 @@ if category == '2':
             os.system('rm' + ' ' + file)
                 
     if files_command == '2':
-        print('\nWhat would you like to do?')
+        print('\nCommands')
         print('-------------------------------------')
         print('1. add directories')
         print('2. delete directories')
@@ -311,7 +311,7 @@ if category == '2':
                 os.system('rmdir ' + folder + '/')
                 
     if files_command == '3':
-        print('\nWhat would you like to do?')
+        print('\nCommands')
         print('-------------------------------------')
         print('1. make files executable')
         print('2. make files not executable')
@@ -432,9 +432,9 @@ if category == '4':
     security_tool = input('\nChoose an option: ')
     
     if security_tool == '1':
-        print('\nWhat would you like to do?')
+        print('\nCommands')
         print('--------------------------------------')
-        print('1. add, delete, and limit rules')
+        print('1. allow, deny, and limit rules')
         print('2. identify ufw status')
         print('3. install ufw')
         print('4. install gufw (graphical ufw)')
@@ -443,11 +443,21 @@ if category == '4':
         
         if ufw_command == '1':
             rule = input('Enter a rule to modify: ')
-            command = input('What do you want to do?: ')
-            os.system('sudo ufw ' + command + ' ' + rule)
+            command = input('Want to allow, deny, or limit the firewall rule?: ')
+            if command == 'allow':
+                os.system('sudo ufw allow ' + rule)
+                
+            if command == 'deny':
+                os.system('sudo ufw deny ' + rule)
+                
+            if command == 'limit':
+                os.system('sudo ufw limit ' + rule)
+                
+            else:
+                exit(0)
             
         if ufw_command == '2':
-            os.system('sudo ufw status')
+            os.system('sudo ufw status numbered')
 
         if ufw_command == '3':
             os.system('sudo apt install ufw')
@@ -459,7 +469,7 @@ if category == '0':
 
     command_list = ('passwd', 'usermod', 'sudo', 'su', 'df', 'free', 'echo', 'id', 'hostnamectl', 'htop', 'apt', 'dnf', 'pacman', 'install', 'localectl', 'ls', 'lsblk', 'ls', 'lsblk', 'lscpu', 'lshw', 'lsmem', 'lsmod', 'lspci', 'lsusb', 'pwd', 'shutdown', 'systemctl', 'timedatectl', 'top', 'touch', 'rm', 'rmdir', 'chmod', 'cat', 'ufw', 'arp', 'dig', 'ifconfig', 'ip', 'netstat', 'nmap', 'nslookup', 'ping', 'tcpdump', 'traceroute', 'nano', 'vi', 'vim')
     
-    command = input('What command do you need help with?: ')
+    command = input('Enter command to need help with?: ')
     if command in command_list:
         os.system('man' + ' ' + command)
 
