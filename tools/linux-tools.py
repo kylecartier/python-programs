@@ -537,11 +537,11 @@ if category == '4':
         print('-------------------------------------')
         print('1. firewalls')
         
-        security_tool = input('\nChoose an option: ')
+        defensive_tool = input('\nChoose an option: ')
         
-        if security_tool == '1':
+        if defensive_tool == '1':
         
-            print('\nSecurity Tools')
+            print('\nfirewalls')
             print('-------------------------------------')
             print('1. ufw (gufw too!)')
             
@@ -627,7 +627,7 @@ if category == '4':
         print('-------------------------------------')
         print('1. ')
     
-        ufw_option = input('\nChoose an option: ')
+        offensive_tool = input('\nChoose an option: ')
             
                     
 # Need some help?
