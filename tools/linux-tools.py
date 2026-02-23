@@ -68,18 +68,38 @@ if category == '1':
         os.system('hostnamectl')
         
     if admin_tool == '5':
-        os.system('htop')
+        flag = input('Enter htop flag: ')
+        if flag != '':
+            os.system('htop ' + flag)
+        else:
+            os.system('htop')
 
     if admin_tool == '6':
-        flag = input('Enter id flag: ')
-        os.system('id ' + flag)
+        print('\nCommands')
+        print('-------------------------------------')
+        print('1. blkid')
+        print('2. id')
+        
+        id_command = input('\nChoose an option: ')
+        
+        if id_command == '1':
+            flag = input('Enter blkid flag: ')
+            if flag != '':
+                os.system('blkid ' + flag)
+            else:
+                os.system('blkid')
+        
+        if id_command == '2':
+            flag = input('Enter id flag: ')
+            os.system('id ' + flag)
         
     if admin_tool == '7':
         print('\nCommands')
         print('-------------------------------------')
         print('1. dmesg')
-        print('2. journalctl')
-        print('3. update repositories, upgrade packages, and remove no longer needed packages')
+        print('2. history')
+        print('3. journalctl')
+        print('4. update repositories, upgrade packages, and remove no longer needed packages')
         
         maintenance_command = input('\nChoose an option: ')
         
@@ -89,8 +109,11 @@ if category == '1':
                 os.system('sudo dmesg ' + flag)
             else:
                 os.system('sudo dmesg')
-            
+                
         if maintenance_command == '2':
+            os.system('cat -n ~/.bash_history')
+            
+        if maintenance_command == '3':
             flag = input('Enter journalctl flag: ')
             service = input('Enter service: ')
             if flag != '' and service != '':
@@ -102,7 +125,7 @@ if category == '1':
             if flag == '' and service == '':
                 os.system('journalctl')
 
-        if maintenance_command == '3':
+        if maintenance_command == '4':
             print('\nPackage Managers')
             print('-------------------------------------')
             print('1. apt')
@@ -309,7 +332,11 @@ if category == '1':
                 os.system('sudo usermod -L ' + user)
 
     if admin_tool == '20':
-        os.system('whoami')
+        flag = input('Enter whoami flag: ')
+        if flag == '--version':
+            os.system('whoami ' + flag)
+        else:
+            os.system('whoami')
         
 # Files and Directories
         
@@ -383,10 +410,14 @@ if category == '2':
                 
     if files_command == '4':
         file = input('Enter file to read it: ')
-        command = input('Enter command: ')
-        if command == 'cat':
-            os.system(command + ' ' + file)
-
+        flag = input('Enter cat flag: ')
+        if flag != '' and file != '':
+            os.system('cat ' + flag + ' ' + file)
+        if flag == '' and file != '':
+            os.system('cat ' + file)
+        if flag == '' and file == '':
+            exit(0)
+    
     if files_command == '5':
         print('\nCommands')
         print('-------------------------------------')
@@ -582,7 +613,7 @@ if category == '4':
             
 if category == '0':
 
-    command_list = ('passwd', 'usermod', 'sudo', 'su', 'df', 'free', 'echo', 'id', 'hostnamectl', 'htop', 'apt', 'dnf', 'pacman', 'install', 'remove', 'localectl', 'ls', 'lsblk', 'ls', 'lsblk', 'lscpu', 'lshw', 'lsmem', 'lsmod', 'lspci', 'lsusb', 'pwd', 'shutdown', 'systemctl', 'timedatectl', 'top', 'touch', 'rm', 'rmdir', 'chmod', 'cat', 'ufw', 'gufw', 'arp', 'dig', 'ifconfig', 'ip', 'netstat', 'nmap', 'nslookup', 'ping', 'tcpdump', 'traceroute', 'nano', 'vi', 'vim', 'tree', 'dmesg', 'journalctl')
+    command_list = ('passwd', 'usermod', 'sudo', 'su', 'df', 'free', 'echo', 'id', 'hostnamectl', 'htop', 'apt', 'dnf', 'pacman', 'install', 'remove', 'localectl', 'ls', 'lsblk', 'ls', 'lsblk', 'lscpu', 'lshw', 'lsmem', 'lsmod', 'lspci', 'lsusb', 'pwd', 'shutdown', 'systemctl', 'timedatectl', 'top', 'touch', 'rm', 'rmdir', 'chmod', 'cat', 'ufw', 'gufw', 'arp', 'dig', 'ifconfig', 'ip', 'netstat', 'nmap', 'nslookup', 'ping', 'tcpdump', 'traceroute', 'nano', 'vi', 'vim', 'tree', 'dmesg', 'journalctl', 'history', 'blkid')
     
     command = input('Enter command to need help with?: ')
     if command in command_list:
