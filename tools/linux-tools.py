@@ -212,17 +212,17 @@ if category == '1':
         service = input('Enter service: ')
         command = input('Enter command: ')
         if service != '' and command == 'is-active':
-            os.system('sudo systemctl ' + command + ' ' + service)
+            os.system('sudo systemctl is-active ' + service)
         if service != '' and command == 'is-enabled':
-            os.system('sudo systemctl ' + command + ' ' + service)
+            os.system('sudo systemctl is-enabled ' + service)
         if service != '' and command == 'start':
-            os.system('sudo systemctl ' + command + ' ' + service)
+            os.system('sudo systemctl start ' + service)
         if service != '' and command == 'stop':
-            os.system('sudo systemctl ' + command + ' ' + service)
+            os.system('sudo systemctl stop ' + service)
         if service != '' and command == 'restart':
-            os.system('sudo systemctl ' + command + ' ' + service)
+            os.system('sudo systemctl restart ' + service)
         if service != '' and command == 'reload':
-            os.system('sudo systemctl ' + command + ' ' + service)
+            os.system('sudo systemctl reload ' + service)
         if service == '' and command == '':
             os.system('systemctl --version')
         else:
