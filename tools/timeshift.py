@@ -45,7 +45,7 @@ if timeshift_command == '1':
         os.system('sudo dnf install timeshift -y')
         
 if timeshift_command == '2':
-    print('\nCommands')
+    print('\nOptions')
     print('-------------------------------------')
     print('1. check timeshift')
     print('2. delete snapshots')
