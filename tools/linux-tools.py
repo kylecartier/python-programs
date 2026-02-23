@@ -75,22 +75,50 @@ if category == '1':
         os.system('id ' + flag)
         
     if admin_tool == '7':
-        print('\nPackage Managers')
+        print('\nCommands')
         print('-------------------------------------')
-        print('1. apt')
-        print('2. dnf')
-        print('3. pacman')
-       
-        package_manager = input('\nEnter package manager: ')
+        print('1. dmesg')
+        print('2. journalctl')
+        print('3. update repositories, upgrade packages, and remove no longer needed packages')
         
-        if package_manager == '1':
-            os.system('sudo apt update && sudo apt upgrade; sudo apt autoremove')
+        maintenance_command = input('\nChoose an option: ')
+        
+        if maintenance_command == '1':
+            flag = input('Enter dmesg flag: ')
+            if flag != '':
+                os.system('sudo dmesg ' + flag)
+            else:
+                os.system('sudo dmesg')
+            
+        if maintenance_command == '2':
+            flag = input('Enter journalctl flag: ')
+            service = input('Enter service: ')
+            if flag != '' and service != '':
+                os.system('journalctl ' + flag + ' ' + service)
+            
+            if flag != '' and service == '':
+                os.system('journalctl ' + flag)
+                
+            if flag == '' and service == '':
+                os.system('journalctl')
 
-        if package_manager == '2':
-            os.system('sudo dnf update && sudo dnf autoremove')
+        if maintenance_command == '3':
+            print('\nPackage Managers')
+            print('-------------------------------------')
+            print('1. apt')
+            print('2. dnf')
+            print('3. pacman')
+           
+            package_manager = input('\nEnter package manager: ')
+            
+            if package_manager == '1':
+                os.system('sudo apt update && sudo apt upgrade; sudo apt autoremove')
 
-        if package_manager == '3':
-            os.system('sudo pacman -Syu')
+            if package_manager == '2':
+                os.system('sudo dnf update && sudo dnf autoremove')
+
+            if package_manager == '3':
+                os.system('sudo pacman -Syu')
         
     if admin_tool == '8':
         os.system('localectl')
@@ -224,7 +252,7 @@ if category == '1':
         if service != '' and command == 'reload':
             os.system('sudo systemctl reload ' + service)
         if service == '' and command == '':
-            os.system('systemctl --version')
+            os.system('systemd --version')
         else:
             exit(0)
         
@@ -554,7 +582,7 @@ if category == '4':
             
 if category == '0':
 
-    command_list = ('passwd', 'usermod', 'sudo', 'su', 'df', 'free', 'echo', 'id', 'hostnamectl', 'htop', 'apt', 'dnf', 'pacman', 'install', 'remove', 'localectl', 'ls', 'lsblk', 'ls', 'lsblk', 'lscpu', 'lshw', 'lsmem', 'lsmod', 'lspci', 'lsusb', 'pwd', 'shutdown', 'systemctl', 'timedatectl', 'top', 'touch', 'rm', 'rmdir', 'chmod', 'cat', 'ufw', 'gufw', 'arp', 'dig', 'ifconfig', 'ip', 'netstat', 'nmap', 'nslookup', 'ping', 'tcpdump', 'traceroute', 'nano', 'vi', 'vim', 'tree')
+    command_list = ('passwd', 'usermod', 'sudo', 'su', 'df', 'free', 'echo', 'id', 'hostnamectl', 'htop', 'apt', 'dnf', 'pacman', 'install', 'remove', 'localectl', 'ls', 'lsblk', 'ls', 'lsblk', 'lscpu', 'lshw', 'lsmem', 'lsmod', 'lspci', 'lsusb', 'pwd', 'shutdown', 'systemctl', 'timedatectl', 'top', 'touch', 'rm', 'rmdir', 'chmod', 'cat', 'ufw', 'gufw', 'arp', 'dig', 'ifconfig', 'ip', 'netstat', 'nmap', 'nslookup', 'ping', 'tcpdump', 'traceroute', 'nano', 'vi', 'vim', 'tree', 'dmesg', 'journalctl')
     
     command = input('Enter command to need help with?: ')
     if command in command_list:
