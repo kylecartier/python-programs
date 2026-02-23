@@ -621,6 +621,14 @@ if category == '4':
 
                     if package_manager == '3':
                         os.system('sudo pacman -S gufw')
+                        
+    if tools == '2':
+        print('\nOffensive Tools')
+        print('-------------------------------------')
+        print('1. ')
+    
+        ufw_option = input('\nChoose an option: ')
+            
                     
 # Need some help?
             
