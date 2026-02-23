@@ -215,6 +215,14 @@ if category == '1':
             os.system('sudo systemctl ' + command + ' ' + service)
         if service != '' and command == 'is-enabled':
             os.system('sudo systemctl ' + command + ' ' + service)
+        if service != '' and command == 'start':
+            os.system('sudo systemctl ' + command + ' ' + service)
+        if service != '' and command == 'stop':
+            os.system('sudo systemctl ' + command + ' ' + service)
+        if service != '' and command == 'restart':
+            os.system('sudo systemctl ' + command + ' ' + service)
+        if service != '' and command == 'reload':
+            os.system('sudo systemctl ' + command + ' ' + service)
         if service == '' and command == '':
             os.system('systemctl --version')
         else:
