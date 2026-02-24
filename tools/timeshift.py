@@ -47,7 +47,7 @@ if timeshift_command == '1':
 if timeshift_command == '2':
     print('\nOptions')
     print('-------------------------------------')
-    print('1. check timeshift')
+    print('1. check timeshift status')
     print('2. delete snapshots')
     print('3. list snapshots')
     print('4. show timeshift version')
