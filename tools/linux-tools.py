@@ -54,7 +54,10 @@ if category == '1':
         
     if admin_tool == '1':
         flag = input('Enter df flag: ')
-        os.system('df ' + flag)
+        if flag != '':
+            os.system('df ' + flag)
+        else:
+            os.system('df')
 
     if admin_tool == '2':
         echo_command = input('Enter echo command: ')
@@ -62,7 +65,10 @@ if category == '1':
          
     if admin_tool == '3':
         flag = input('Enter free flag: ')
-        os.system('free ' + flag)
+        if flag != '':
+            os.system('free ' + flag)
+        else:
+            os.system('free')
         
     if admin_tool == '4':
         os.system('hostnamectl')
