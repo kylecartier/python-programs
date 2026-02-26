@@ -172,7 +172,7 @@ if category == '1':
                     os.system('sudo pacman -S ssh')
             
             if ssh_command == '5':
-                username = input('\nWhat is the username?: ')
+                username = input('What is the username?: ')
                 ip_address = input('What is the ip address?: ')
                 if username != '' and ip_address != '':
                     os.system('ssh ' + username + '@' + ip_address)
