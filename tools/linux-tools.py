@@ -440,7 +440,7 @@ if category == '2':
         if editor_command == '3':
             file = input('Enter file to edit it: ')
             if file != '':
-                os.system('vi ' + file)
+                os.system('vim ' + file)
                 
     if files_command == '6':
         flag = input('Enter tree flag: ')
