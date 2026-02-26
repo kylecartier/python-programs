@@ -133,12 +133,51 @@ if category == '1':
                 os.system('journalctl')
 
         if maintenance_command == '4':
-            username = input('What is the username?: ')
-            ip_address = input('What is the ip address?: ')
-            if username != '' and ip_address != '':
-                os.system('ssh ' + username + '@' + ip_address)
-            else:
-                exit(0)
+            print('\nCommands')
+            print('-------------------------------------')
+            print('1. disable ssh')
+            print('2. enable ssh')
+            print('3. identify status of ssh')
+            print('4. install ssh')
+            print('5. run ssh')
+            
+            ssh_command = input('\nChoose an option: ')
+            
+            if ssh_command == '1':
+                os.system('sudo systemctl disable ssh')
+            
+            if ssh_command == '2':
+                os.system('sudo systemctl enable ssh')
+                
+            if ssh_command == '3':
+                os.system('sudo systemctl is-active ssh')
+                os.system('sudo systemctl is-enabled ssh')
+                
+            if ssh_command == '4':
+                print('\nPackage Managers')
+                print('-------------------------------------')
+                print('1. apt')
+                print('2. dnf')
+                print('3. pacman')
+               
+                package_manager = input('\nEnter package manager: ')
+                
+                if package_manager == '1':
+                    os.system('sudo apt install ssh')
+
+                if package_manager == '2':
+                    os.system('sudo dnf install ssh')
+
+                if package_manager == '3':
+                    os.system('sudo pacman -S ssh')
+            
+            if ssh_command == '5':
+                username = input('\nWhat is the username?: ')
+                ip_address = input('What is the ip address?: ')
+                if username != '' and ip_address != '':
+                    os.system('ssh ' + username + '@' + ip_address)
+                else:
+                    exit(0)
 
         if maintenance_command == '5':
             print('\nPackage Managers')
