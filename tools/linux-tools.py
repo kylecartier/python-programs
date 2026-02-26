@@ -105,7 +105,8 @@ if category == '1':
         print('1. dmesg')
         print('2. history')
         print('3. journalctl')
-        print('4. update repositories, upgrade packages, and remove no longer needed packages')
+        print('4. ssh')
+        print('5. update repositories, upgrade packages, and remove no longer needed packages')
         
         maintenance_command = input('\nChoose an option: ')
         
@@ -132,6 +133,14 @@ if category == '1':
                 os.system('journalctl')
 
         if maintenance_command == '4':
+            username = input('What is the username?: ')
+            ip_address = input('What is the ip address?: ')
+            if username != '' and ip_address != '':
+                os.system('ssh ' + username + '@' + ip_address)
+            else:
+                exit(0)
+
+        if maintenance_command == '5':
             print('\nPackage Managers')
             print('-------------------------------------')
             print('1. apt')
