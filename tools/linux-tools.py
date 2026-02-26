@@ -646,7 +646,7 @@ if category == '4':
             
 if category == '0':
 
-    command_list = ('passwd', 'usermod', 'sudo', 'su', 'df', 'free', 'echo', 'id', 'hostnamectl', 'htop', 'apt', 'dnf', 'pacman', 'install', 'remove', 'localectl', 'ls', 'lsblk', 'ls', 'lsblk', 'lscpu', 'lshw', 'lsmem', 'lsmod', 'lspci', 'lsusb', 'pwd', 'shutdown', 'systemctl', 'timedatectl', 'top', 'touch', 'rm', 'rmdir', 'chmod', 'cat', 'ufw', 'gufw', 'arp', 'dig', 'ifconfig', 'ip', 'netstat', 'nmap', 'nslookup', 'ping', 'tcpdump', 'traceroute', 'nano', 'vi', 'vim', 'tree', 'dmesg', 'journalctl', 'history', 'blkid')
+    command_list = ('passwd', 'usermod', 'sudo', 'su', 'df', 'free', 'echo', 'id', 'hostnamectl', 'htop', 'apt', 'dnf', 'pacman', 'install', 'remove', 'localectl', 'ls', 'lsblk', 'ls', 'lsblk', 'lscpu', 'lshw', 'lsmem', 'lsmod', 'lspci', 'lsusb', 'pwd', 'shutdown', 'systemctl', 'timedatectl', 'top', 'touch', 'rm', 'rmdir', 'chmod', 'cat', 'ufw', 'gufw', 'arp', 'dig', 'ifconfig', 'ip', 'netstat', 'nmap', 'nslookup', 'ping', 'tcpdump', 'traceroute', 'nano', 'vi', 'vim', 'tree', 'dmesg', 'journalctl', 'history', 'blkid', 'firewalld', 'iptables')
     
     command = input('Enter command to need help with?: ')
     if command in command_list:
