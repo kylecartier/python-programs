@@ -543,17 +543,21 @@ if category == '4':
         
             print('\nfirewalls')
             print('-------------------------------------')
-            print('1. ufw (gufw too!)')
+            print('1. firewalld')
+            print('2. iptables')
+            print('3. ufw (gufw too!)')
             
             ufw_option = input('\nChoose an option: ')
             
-            if ufw_option == '1':
+            if ufw_option == '3':
                 print('\nCommands')
                 print('--------------------------------------')
                 print('1. allow, deny, limit, and reject rules')
-                print('2. identify ufw status')
-                print('3. install ufw')
-                print('4. install gufw (graphical ufw)')
+                print('2. enable ufw')
+                print('3. disable ufw')
+                print('4. identify ufw status')
+                print('5. install ufw')
+                print('6. install gufw (graphical ufw)')
                 
                 ufw_command = input('\nChoose an option: ')
                 
@@ -574,19 +578,27 @@ if category == '4':
                         
                     else:
                         exit(0)
-                    
+                        
                 if ufw_command == '2':
+                    os.system('sudo ufw enable')
+                    
+                if ufw_command == '3':
+                    os.system('sudo ufw disable')
+                    
+                if ufw_command == '4':
                     numbers_command = input('Show in numbered format?: ')
                     if numbers_command == 'y':
+                        os.system('sudo systemctl is-enabled ufw')
                         os.system('sudo ufw status numbered')
                         
                     if numbers_command == 'n':
+                        os.system('sudo systemctl is-enabled ufw')
                         os.system('sudo ufw status')
                         
                     else:
                         exit(0)
                         
-                if ufw_command == '3':
+                if ufw_command == '5':
                     print('\nPackage Managers')
                     print('-------------------------------------')
                     print('1. apt')
@@ -604,7 +616,7 @@ if category == '4':
                     if package_manager == '3':
                         os.system('sudo pacman -S ufw')
                     
-                if ufw_command == '4':
+                if ufw_command == '6':
                     print('\nPackage Managers')
                     print('-------------------------------------')
                     print('1. apt')
