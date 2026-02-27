@@ -4,21 +4,30 @@ import os
 
 # Welcome!
 
-print() 
-
-os.system('echo Welcome!')
-
-print()
-
-# Linux Tools
-
-os.system('\necho Linux Tools')
-
-print('-------------------------------------')
+# Linux Utility
 
 # Lists options or exit 
 
-os.system('\necho 1. Administration Tools; \necho 2. Files and Directories; \necho 3. Networking Tools; \necho 4. Security Tools; \necho ; \necho Need some help?; \necho -------------------------------------; \necho 0. Man Page')
+print() 
+
+print('---------------------------------------------------')
+print('-                                                 -')
+print('-                    Welcome!                     -')
+print('-                                                 -')
+print('-                 Linux Utility                   -')
+print('-                                                 -')
+print('-                  Categories                     -')
+print('- ----------------------------------------------- -')
+print('-             1. Administration Tools             -')
+print('-             2. Files and Directories            -')
+print('-             3. Networking Tools                 -')
+print('-             4. Security Tools                   -')
+print('-                                                 -')
+print('-                Need some help?                  -')
+print('- ----------------------------------------------- -')
+print('-             0. Man Page                         -')
+print('-                                                 -')
+print('---------------------------------------------------')
 
 # Prompts user to enter a category or exit
 
