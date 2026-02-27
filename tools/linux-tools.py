@@ -437,6 +437,8 @@ if category == '2':
                 file = input('Enter file to modify: ')
                 if file != '':
                     os.system('touch ' + file)
+                else:
+                    exit(0)
             
             if add_command == '2':
                 add_file = input('Do you want to make a file from a command / file?: ')
@@ -461,7 +463,10 @@ if category == '2':
         
         if add_or_del_files == '2':
             file = input('Enter file to modify: ')
-            os.system('rm' + ' ' + file)
+            if file != '':
+                os.system('rm' + ' ' + file)
+            else:
+                exit(0)
                 
     if files_command == '2':
         print('\nCommands')
@@ -473,7 +478,10 @@ if category == '2':
         
         if add_or_del_folders == '1':
             folder = input('Enter folder to modify: ')
-            os.system('mkdir ' + folder + '/')
+            if folder != '':
+                os.system('mkdir ' + folder + '/')
+            else:
+                exit(0)
     
         if add_or_del_folders == '2':
             folder = input('Enter folder to modify: ')
