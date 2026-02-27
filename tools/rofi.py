@@ -4,23 +4,32 @@ import os
 
 # Rofi Launcher!
 
-# What do you want to do?
+# Welcome!
+
+# Linux Utility
+
+# Lists options or exit 
 
 print() 
 
-os.system('echo Welcome!')
+print('---------------------------------------------------')
+print('-                                                 -')
+print('-                    Welcome!                     -')
+print('-                                                 -')
+print('-                 Rofi Launcher                   -')
+print('-                                                 -')
+print('-                  Categories                     -')
+print('- ----------------------------------------------- -')
+print('-             1. Installation                     -')
+print('-             2. Options                          -')
+print('-             3. Uninstall                        -')
+print('-                                                 -')
+print('-                Need some help?                  -')
+print('- ----------------------------------------------- -')
+print('-             0. Man Page                         -')
+print('-                                                 -')
+print('---------------------------------------------------')
 
-print()
-
-# Choose command to execute 
-
-os.system('\necho Rofi Launcher')
-
-print('-------------------------------------')
-
-# Lists options for commands or exit
-
-os.system('\necho 1. Installation; \necho 2. Options; \necho 3. Uninstall; \necho ; \necho Need some help?; \necho -------------------------------------; \necho 0. Man Page')
 
 # Prompt user to install rofi, launch rofi for applications, files, and any open windows, change rofi theme, or uninstall rofi
 
