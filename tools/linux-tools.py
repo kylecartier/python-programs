@@ -425,8 +425,39 @@ if category == '2':
         add_or_del_files = input('\nChoose an option: ')
         
         if add_or_del_files == '1':
-            file = input('Enter file to modify: ')
-            os.system('touch' + ' ' + file)
+            print('\nCommands')
+            print('-------------------------------------')
+            print('1. add blank file')
+            print('2. copy command output to a file')
+            print('3. append a file')
+            
+            add_command = input('\nChoose an option: ')
+            
+            if add_command == '1':
+                file = input('Enter file to modify: ')
+                if file != '':
+                    os.system('touch ' + file)
+            
+            if add_command == '2':
+                add_file = input('Do you want to make a file from a command / file?: ')
+                if add_file == 'y':
+                    file = input('Enter file to make: ')
+                    command = input('Enter command to copy output to a file: ')
+                    if file != '' and command != '':
+                        os.system(command + ' > ' + file)
+                if add_file == 'n':
+                    exit(0)
+            
+            if add_command == '3':
+                    append_file = input('Do you want to append an existing file?: ')
+                    if append_file == 'y':
+                        file = input('Enter file to modify: ')
+                        command = input('Enter new command to copy output to the file: ')
+                        if file != '' and command != '':
+                            os.system(command + ' >> ' + file)
+                    if append_file == 'n':
+                        exit(0)
+        
         
         if add_or_del_files == '2':
             file = input('Enter file to modify: ')
