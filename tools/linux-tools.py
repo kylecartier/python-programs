@@ -659,8 +659,8 @@ if category == '4':
                 print('\nCommands')
                 print('--------------------------------------')
                 print('1. allow, deny, limit, and reject rules')
-                print('2. enable ufw')
-                print('3. disable ufw')
+                print('2. disable ufw')
+                print('3. enable ufw')
                 print('4. identify ufw status')
                 print('5. install ufw')
                 print('6. install gufw (graphical ufw)')
@@ -686,10 +686,10 @@ if category == '4':
                         exit(0)
                         
                 if ufw_command == '2':
-                    os.system('sudo ufw enable')
+                    os.system('sudo ufw disable')
                     
                 if ufw_command == '3':
-                    os.system('sudo ufw disable')
+                    os.system('sudo ufw enable')
                     
                 if ufw_command == '4':
                     numbers_command = input('Show in numbered format?: ')
