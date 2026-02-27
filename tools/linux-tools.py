@@ -494,25 +494,33 @@ if category == '2':
     if files_command == '3':
         print('\nCommands')
         print('-------------------------------------')
-        print('1. make files executable')
-        print('2. make files not executable')
-      
+        print('1. directory permssions')
+        print('2. file permissions')
+
         perm_command = input('\nChoose an option: ')
         
-        if perm_command == '1':
-            file = input('Enter file to modify: ')
-            command = input('Enter command: ')
-            if command == 'chmod +x':
-                os.system(command + ' ' + file)
-                    
         if perm_command == '2':
-            file = input('Enter file to modify: ')
-            command = input('Enter command: ')
-            if command == 'chmod -x':
-                os.system(command + ' ' + file)  
-                
-        else:
-            exit(0)
+            print('\nCommands')
+            print('-------------------------------------')
+            print('1. make files executable')
+            print('2. make files not executable')
+          
+            perm_files_command = input('\nChoose an option: ')
+            
+            if perm_files_command == '1':
+                file = input('Enter file to modify: ')
+                command = input('Enter command: ')
+                if command == 'chmod +x':
+                    os.system(command + ' ' + file)
+                        
+            if perm_files_command == '2':
+                file = input('Enter file to modify: ')
+                command = input('Enter command: ')
+                if command == 'chmod -x':
+                    os.system(command + ' ' + file)  
+                    
+            else:
+                exit(0)
                 
     if files_command == '4':
         file = input('Enter file to read it: ')
