@@ -409,7 +409,7 @@ if category == '2':
     print('-------------------------------------')
     print('1. add and delete files ')
     print('2. add and delete directories')
-    print('3. make files executable and not executable')
+    print('3. permissions')
     print('4. read files')
     print('5. text editors')
     print('6. tree')
@@ -488,16 +488,16 @@ if category == '2':
         print('-------------------------------------')
         print('1. make files executable')
         print('2. make files not executable')
+      
+        perm_command = input('\nChoose an option: ')
         
-        files_execute_command = input('\nChoose an option: ')
-        
-        if files_execute_command == '1':
+        if perm_command == '1':
             file = input('Enter file to modify: ')
             command = input('Enter command: ')
             if command == 'chmod +x':
                 os.system(command + ' ' + file)
-            
-        if files_execute_command == '2':
+                    
+        if perm_command == '2':
             file = input('Enter file to modify: ')
             command = input('Enter command: ')
             if command == 'chmod -x':
