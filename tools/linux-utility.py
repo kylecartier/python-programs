@@ -115,7 +115,8 @@ if category == '1':
         print('2. history')
         print('3. journalctl')
         print('4. ssh')
-        print('5. update repositories, upgrade packages, and remove no longer needed packages')
+        print('5. timeshift utility')
+        print('6. update repositories, upgrade packages, and remove no longer needed packages')
         
         maintenance_command = input('\nChoose an option: ')
         
@@ -195,8 +196,94 @@ if category == '1':
                 
             if ssh_command == '7':
                 os.system('sudo systemctl stop ssh')
-
+                
         if maintenance_command == '5':
+            print('\nCommands')
+            print('-------------------------------------')
+            print('1. Installation')
+            print('2. Options')
+            print('3. Uninstall')
+            
+            timeshift_command = input('\nChoose an option: ')
+
+            if timeshift_command == '1':
+                print('\nInstallation')
+                print('-------------------------------------')
+                print('1. installation on arch system')
+                print('2. installation on debian system')
+                print('3. installation on rhel system')
+                
+                install_command = input('\nChoose an option: ')
+                
+                if install_command == '1':
+                    os.system('sudo pacman -S timeshift -y')
+                    
+                if install_command == '2':    
+                    os.system('sudo apt install timeshift -y')
+                
+                if install_command == '3':
+                    os.system('sudo dnf install timeshift -y')
+                    
+            if timeshift_command == '2':
+                print('\nOptions')
+                print('-------------------------------------')
+                print('1. check timeshift status')
+                print('2. delete snapshots')
+                print('3. list snapshots')
+                print('4. show timeshift version')
+                
+                options_command = input('\nChoose an option: ')
+                
+                if options_command == '1':
+                    os.system('sudo timeshift --check')
+                    
+                if options_command == '2':
+                    print('\nCommands')
+                    print('-------------------------------------')
+                    print('1. delete a snapshot')
+                    print('2. delete all snapshots')
+                    
+                    delete_command = input('\nChoose an option: ')
+                    
+                    if delete_command == '1':
+                            os.system('sudo timeshift --delete')
+                            
+                    if delete_command == '2':
+                        os.system('sudo timeshift --delete-all')
+                
+                if options_command == '3':
+                    os.system('sudo timeshift --list')
+                    
+                if options_command == '4':
+                    os.system('timeshift --version')
+                    
+            if timeshift_command == '3':
+                print('\nUninstall')
+                print('-------------------------------------')
+                print('1. uninstall on arch system')
+                print('2. uninstall on debian system')
+                print('3. uninstall on rhel system')
+
+                uninstall_command = input('\nChoose an option: ')
+                
+                if uninstall_command == '1':
+                    os.system('sudo pacman -Rns timeshift -y')
+
+                if uninstall_command == '2':
+                    os.system('sudo apt remove timeshift -y')
+
+                if uninstall_command == '3':
+                    os.system('sudo dnf remove timeshift -y')
+                    
+            if timeshift_command == '0':
+                os.system('sudo timeshift')   
+
+            # Once the program is finished executing
+                
+            else:
+                exit(0)
+
+        if maintenance_command == '6':
             print('\nPackage Managers')
             print('-------------------------------------')
             print('1. apt')
