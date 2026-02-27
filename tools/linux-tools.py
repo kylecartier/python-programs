@@ -501,7 +501,10 @@ if category == '2':
             file = input('Enter file to modify: ')
             command = input('Enter command: ')
             if command == 'chmod -x':
-                os.system(command + ' ' + file)     
+                os.system(command + ' ' + file)  
+                
+        else:
+            exit(0)
                 
     if files_command == '4':
         file = input('Enter file to read it: ')
