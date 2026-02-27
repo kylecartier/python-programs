@@ -2,11 +2,9 @@
 
 import os
 
-# Rofi Launcher!
-
 # Welcome!
 
-# Linux Utility
+# Rofi Launcher
 
 # Lists options or exit 
 
