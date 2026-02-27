@@ -115,7 +115,7 @@ if category == '1':
         print('2. history')
         print('3. journalctl')
         print('4. ssh')
-        print('5. timeshift utility')
+        print('5. timeshift')
         print('6. update repositories, upgrade packages, and remove no longer needed packages')
         
         maintenance_command = input('\nChoose an option: ')
