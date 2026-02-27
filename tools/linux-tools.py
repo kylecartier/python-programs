@@ -702,9 +702,9 @@ if category == '4':
         print('1. ')
     
         offensive_tool = input('\nChoose an option: ')
+
+
         
-        if offensive_tool == '1':
-            
                     
 # Need some help?
             
