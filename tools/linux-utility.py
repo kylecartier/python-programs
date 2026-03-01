@@ -440,7 +440,13 @@ if category == '1':
             exit(0)
         
     if admin_tool == '15':
-        os.system('timedatectl')
+        flag = input('Enter timedatectl flag: ')
+        if flag == 'set-ntp true'):
+            os.system('timdatectl set-ntp true')
+        if flag == 'set-ntp false'):
+            os.system('timedatectl set-ntp false')
+        else:
+            os.system('timedatectl')
         
     if admin_tool == '16':
         os.system('top')
