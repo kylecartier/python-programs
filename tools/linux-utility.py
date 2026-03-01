@@ -440,10 +440,12 @@ if category == '1':
             exit(0)
         
     if admin_tool == '15':
-        flag = input('Enter timedatectl flag: ')
-        if flag == 'set-ntp true'):
+        command = input('Enter timedatectl flag: ')
+        if command == 'America/New_York':
+            os.system('timedatectl set-timezone America/New_York')
+        if command == 'set-ntp true'):
             os.system('timdatectl set-ntp true')
-        if flag == 'set-ntp false'):
+        if command == 'set-ntp false'):
             os.system('timedatectl set-ntp false')
         else:
             os.system('timedatectl')
