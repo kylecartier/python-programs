@@ -56,19 +56,23 @@ if rofi_command == '1':
 if rofi_command == '2':
     print('\nOptions')
     print('-------------------------------------')
-    print('1. run rofi with icons')
-    print('2. show open windows')
-    print('3. theme selector')
+    print('1. reload desktop drun cache')
+    print('2. run rofi with icons')
+    print('3. show open windows')
+    print('4. theme selector')
     
     options_command = input('\nChoose an option: ')
     
-    if options_command == '1':
+    if options_command == '1:
+        os.system('rofi -drun-reload-desktop-cache -show drun')
+    
+    if options_command == '2':
         os.system('rofi -show drun -show-icons')
         
-    if options_command == '2':
+    if options_command == '3':
         os.system('rofi -show window -show-icons')
         
-    if options_command == '3':
+    if options_command == '4':
         os.system('rofi-theme-selector')
         
 if rofi_command == '3':
