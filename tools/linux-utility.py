@@ -18,10 +18,10 @@ print('-                 Linux Utility                   -')
 print('-                                                 -')
 print('-                  Categories                     -')
 print('- ----------------------------------------------- -')
-print('-             1. Administration Tools             -')
+print('-             1. Administration                   -')
 print('-             2. Files and Directories            -')
-print('-             3. Networking Tools                 -')
-print('-             4. Security Tools                   -')
+print('-             3. Networking                       -')
+print('-             4. Security                         -')
 print('-                                                 -')
 print('-                Need some help?                  -')
 print('- ----------------------------------------------- -')
@@ -963,7 +963,7 @@ if category == '1':
             if timezone in timezones:
                 os.system('timedatectl set-timezone ' + timezone)
             else:
-                exit(0)
+                os.system('timedatectl')
         else:
             exit(0)
         
