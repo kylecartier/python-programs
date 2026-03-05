@@ -1034,6 +1034,7 @@ if category == '2':
     print('4. read files')
     print('5. text editors')
     print('6. tree')
+    print('7. wc')
     
     files_command = input('\nChoose an option: ')
     
@@ -1186,6 +1187,13 @@ if category == '2':
         if directory and flag != '':
             os.system('tree ' + flag + ' ' + directory)
         
+        else:
+            exit(0)
+            
+    if files_command == '7':
+        file = input('Enter name of file: ')
+        if file != '':
+            os.system('cat ' + file + ' ' + '| wc')
         else:
             exit(0)
             
