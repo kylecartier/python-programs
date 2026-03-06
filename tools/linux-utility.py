@@ -1127,7 +1127,7 @@ if category == '2':
             
             perm = input('Type a permission: ')
             
-            if perm == 'permissions':
+            if perm in permissions:
                 directory = input('Enter directory to modify: ')
                 if directory != '':
                     os.system('chmod ' + perm + ' ' + directory)  
@@ -1143,7 +1143,7 @@ if category == '2':
             
             perm = input('Type a permission: ')
             
-            if perm == 'permissions':
+            if perm in permissions:
                 file = input('Enter file to modify: ')
                 if file != '':
                     os.system('chmod ' + perm + ' ' + file)    
