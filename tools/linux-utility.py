@@ -1200,8 +1200,11 @@ if category == '2':
             
     if files_command == '7':
         file = input('Enter name of file: ')
-        if file != '':
+        flag = input('Enter wc flag: ')
+        if file != '' and flag == '':
             os.system('cat ' + file + ' ' + '| wc')
+        if file and flag != '':
+            os.system('wc ' + flag + ' ' + file)
         else:
             exit(0)
             
