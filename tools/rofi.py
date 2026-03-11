@@ -63,7 +63,7 @@ if rofi_command == '2':
     
     options_command = input('\nChoose an option: ')
     
-    if options_command == '1:
+    if options_command == '1':
         os.system('rofi -drun-reload-desktop-cache -show drun')
     
     if options_command == '2':
