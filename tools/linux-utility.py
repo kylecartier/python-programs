@@ -203,6 +203,10 @@ if category == '1':
             print('1. Installation')
             print('2. Options')
             print('3. Uninstall')
+            print()
+            print('Need some help?')
+            print('-------------------------------------')
+            print('0. Man Page')
             
             timeshift_command = input('\nChoose an option: ')
 
