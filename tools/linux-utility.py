@@ -434,6 +434,8 @@ if category == '1':
             os.system('sudo systemctl restart ' + service)
         if service != '' and command == 'reload':
             os.system('sudo systemctl reload ' + service)
+        if service != '' and command == 'status':
+            os.system('sudo systemctl status ' + service)
         if service == '' and command == '':
             os.system('systemd --version')
         else:
@@ -1298,7 +1300,7 @@ if category == '4':
             print('\nfirewalls')
             print('-------------------------------------')
             print('1. firewalld')
-            print('2. iptables')
+            print('2.     ')
             print('3. ufw (gufw too!)')
             
             ufw_option = input('\nChoose an option: ')
