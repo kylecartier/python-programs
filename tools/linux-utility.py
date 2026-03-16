@@ -378,34 +378,111 @@ if category == '1':
                 os.system('lsusb')
                 
     if admin_tool == '10':
-        print('\nPackage Managers')
+        print('\nPackage Format')
         print('-------------------------------------')
-        print('1. apt')
-        print('2. dnf')
-        print('3. pacman')
+        print('1. flatpak')
+        print('2. package managers')
+        print('3. snap')
         
-        package_manager = input('\nEnter package manager: ')
-        package = input('Enter name of package: ')
-        command = input('Want to install or remove package?: ')
+        package = input('\nChoose an option: ')
         
-        if package_manager == '1':
-            if command == 'install':
-                os.system('sudo apt install ' + package)
-            if command == 'remove':
-                os.system('sudo apt remove ' + package)
+        if package == '1':
+            flatpak_installed = input('Is flathub installed?: ')
+            if flatpak_installed == 'y':
+                exit(0)
+                
+            if flatpak_installed == 'n':
+                os = input('What operating system is installed?: ')
+                
+                debian_distros = ('ubuntu', 'debian', 'raspberry pi')
+                no_setup = ('linux mint', 'manjaro', 'fedora', 'pop!_os', 'zorin os')
+                
+                if os in debian_distros:
+                    os.system('sudo apt install flatpak')
+                    os.system('flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo')
+                    
+                if os == 'endeavouros':
+                    os.system('sudo pacman -S install flatpak')
+                    os.system('flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo')
+                    
+                if os == 'arch':
+                    os.system('sudo pacman -S flatpak')
+                    
+                if os == 'rocky':
+                    os.system('sudo dnf install flatpak')
+                    os.system('flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo')
+                    
+                if os in no_setup:
+                    print('There is no need for setup.')
+                
+                else:
+                    exit(0)
+        
+        if package == '2':
+            print('\nPackage Managers')
+            print('-------------------------------------')
+            print('1. apt')
+            print('2. dnf')
+            print('3. pacman')
+            
+            package_manager = input('\nEnter package manager: ')
+            package = input('Enter name of package: ')
+            command = input('Want to install or remove package?: ')
+            
+            if package_manager == '1':
+                if command == 'install':
+                    os.system('sudo apt install ' + package)
+                if command == 'remove':
+                    os.system('sudo apt remove ' + package)
 
-        if package_manager == '2':
-            if command == 'install':
-                os.system('sudo dnf install ' + package)
-            if command == 'remove':
-                os.system('sudo dnf remove ' + package)
+            if package_manager == '2':
+                if command == 'install':
+                    os.system('sudo dnf install ' + package)
+                if command == 'remove':
+                    os.system('sudo dnf remove ' + package)
 
-        if package_manager == '3':
-            if command == 'install':
-                os.system('sudo pacman -S ' + package)
-            if command == 'remove':
-                os.system('sudo pacman -Rns ' + package)
-
+            if package_manager == '3':
+                if command == 'install':
+                    os.system('sudo pacman -S ' + package)
+                if command == 'remove':
+                    os.system('sudo pacman -Rns ' + package)
+                    
+        if package == '3':
+            print('\nPackage Managers')
+            print('-------------------------------------')
+            print('1. apt')
+            print('2. dnf')
+            print('3. pacman')
+                
+            package_manager = input('\nChoose an option: ')
+                
+            if package_manager == '1':
+                snapd_installed = input('Is snapd installed?: ')
+                if snapd_installed == 'y':
+                    os.system('snap list')
+                if snapd_installed == 'n':
+                    os.system('sudo apt install snapd')
+                else:
+                    exit(0)
+                        
+            if package_manager == '2':
+                snapd_installed = input('Is snapd installed?: ')
+                if snapd_installed == 'y':
+                    os.system('snap list')
+                if snapd_installed == 'n':
+                    os.system('sudo dnf install snapd')
+                else:
+                    exit(0)
+                        
+            if package_manager == '3':
+                snapd_installed = input('Is snapd installed?: ')
+                if snapd_installed == 'y':
+                    os.system('snap list')
+                if snapd_installed == 'n':
+                    os.system('sudo pacman -S install snapd')
+                else:
+                    exit(0)
+                
     if admin_tool == '11':
         os.system('pwd')
         
@@ -1408,7 +1485,7 @@ if category == '4':
             
 if category == '0':
 
-    command_list = ('passwd', 'usermod', 'sudo', 'su', 'df', 'free', 'echo', 'id', 'hostnamectl', 'htop', 'apt', 'dnf', 'pacman', 'install', 'remove', 'localectl', 'ls', 'lsblk', 'ls', 'lsblk', 'lscpu', 'lshw', 'lsmem', 'lsmod', 'lspci', 'lsusb', 'pwd', 'shutdown', 'systemctl', 'timedatectl', 'top', 'touch', 'rm', 'rmdir', 'chmod', 'cat', 'ufw', 'gufw', 'arp', 'dig', 'ifconfig', 'ip', 'netstat', 'nmap', 'nslookup', 'ping', 'tcpdump', 'traceroute', 'nano', 'vi', 'vim', 'tree', 'dmesg', 'journalctl', 'history', 'blkid', 'firewalld', 'iptables', 'ssh', 'timeshift', 'wc', 'man')
+    command_list = ('passwd', 'usermod', 'sudo', 'su', 'df', 'free', 'echo', 'id', 'hostnamectl', 'htop', 'apt', 'dnf', 'pacman', 'install', 'remove', 'localectl', 'ls', 'lsblk', 'ls', 'lsblk', 'lscpu', 'lshw', 'lsmem', 'lsmod', 'lspci', 'lsusb', 'pwd', 'shutdown', 'systemctl', 'timedatectl', 'top', 'touch', 'rm', 'rmdir', 'chmod', 'cat', 'ufw', 'gufw', 'arp', 'dig', 'ifconfig', 'ip', 'netstat', 'nmap', 'nslookup', 'ping', 'tcpdump', 'traceroute', 'nano', 'vi', 'vim', 'tree', 'dmesg', 'journalctl', 'history', 'blkid', 'firewalld', 'iptables', 'ssh', 'timeshift', 'wc', 'man', 'flatpak', 'snap')
     
     command = input('Enter command to need help with?: ')
     if command in command_list:
