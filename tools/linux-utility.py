@@ -487,18 +487,34 @@ if category == '1':
         os.system('pwd')
         
     if admin_tool == '12':
-        minutes = input("Enter minutes: ")
-        if minutes != '':
-            os.system('shutdown -r ' + minutes)
-        else:
-            os.system('reboot now')
+        minutes_time = input("Enter minutes or time: ")
+        if minutes_time == 'minutes':
+            minutes = input('Enter minutes: ')
+            if minutes != '':
+                os.system('shutdown -r ' + minutes)
+            else:
+                os.system('reboot now')
+        if minutes_time == 'time':
+            time = input('Enter time: ')
+            if time != '':
+                os.system('shutdown -r ' + time)
+            else:
+                os.system('reboot now')
         
     if admin_tool == '13':
-        minutes = input('Enter minutes: ')
-        if minutes != '':
-            os.system('shutdown -h ' + minutes)
-        else:
-            os.system('shutdown now')
+        minutes_time = input("Enter minutes or time: ")
+        if minutes_time == 'minutes':
+            minutes = input('Enter minutes: ')
+            if minutes != '':
+                os.system('shutdown -h ' + minutes)
+            else:
+                os.system('shutdown now')
+        if minutes_time == 'time':
+            time = input('Enter time: ')
+            if time != '':
+                os.system('shutdown -h ' + time)
+            else:
+                os.system('shutdown now')
         
     if admin_tool == '14':
         service = input('Enter service: ')
