@@ -1411,6 +1411,8 @@ if category == '4':
                 print('4. identify ufw status')
                 print('5. install ufw')
                 print('6. install gufw (graphical ufw)')
+                print('7. uninstall ufw')
+                print('8. uninstall gufw (graphical ufw')
                 
                 ufw_command = input('\nChoose an option: ')
                 
@@ -1486,6 +1488,46 @@ if category == '4':
 
                     if package_manager == '3':
                         os.system('sudo pacman -S gufw')
+                        
+                if ufw_comamnd == '7':
+                    print('\nPackage Managers')
+                    print('-------------------------------------')
+                    print('1. apt')
+                    print('2. dnf')
+                    print('3. pacman')
+               
+                    package_manager = input('\nEnter package manager: ')
+                
+                    if package_manager == '1':
+                        os.system('sudo apt remove ufw')
+
+                    if package_manager == '2':
+                        os.system('sudo dnf remove ufw')
+
+                    if package_manager == '3':
+                        os.system('sudo pacman -Rns ufw')
+                        
+                if ufw_comamnd == '7':
+                    print('\nPackage Managers')
+                    print('-------------------------------------')
+                    print('1. apt')
+                    print('2. dnf')
+                    print('3. pacman')
+               
+                    package_manager = input('\nEnter package manager: ')
+                
+                    if package_manager == '1':
+                        os.system('sudo apt remove gufw')
+
+                    if package_manager == '2':
+                        os.system('sudo dnf remove gufw')
+
+                    if package_manager == '3':
+                        os.system('sudo pacman -Rns gufw')
+                        
+                else:
+                    exit(0)
+                    
                         
     if tools == '2':
         print('\nOffensive Tools')
