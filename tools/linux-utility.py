@@ -491,30 +491,30 @@ if category == '1':
         if minutes_time == 'minutes':
             minutes = input('Enter minutes: ')
             if minutes != '':
-                os.system('shutdown -r ' + minutes)
+                os.system('sudo shutdown -r ' + minutes)
             else:
-                os.system('reboot now')
+                os.system('sudo reboot now')
         if minutes_time == 'time':
             time = input('Enter time: ')
             if time != '':
-                os.system('shutdown -r ' + time)
+                os.system('sudo shutdown -r ' + time)
             else:
-                os.system('reboot now')
+                os.system('sudo reboot now')
         
     if admin_tool == '13':
         minutes_time = input("Enter minutes or time: ")
         if minutes_time == 'minutes':
             minutes = input('Enter minutes: ')
             if minutes != '':
-                os.system('shutdown -h ' + minutes)
+                os.system('sudo shutdown -h ' + minutes)
             else:
-                os.system('shutdown now')
+                os.system('sudo shutdown now')
         if minutes_time == 'time':
             time = input('Enter time: ')
             if time != '':
-                os.system('shutdown -h ' + time)
+                os.system('sudo shutdown -h ' + time)
             else:
-                os.system('shutdown now')
+                os.system('sudo shutdown now')
         
     if admin_tool == '14':
         service = input('Enter service: ')
