@@ -487,34 +487,48 @@ if category == '1':
         os.system('pwd')
         
     if admin_tool == '12':
-        minutes_time = input("Enter minutes or time: ")
-        if minutes_time == 'minutes':
-            minutes = input('Enter minutes: ')
-            if minutes != '':
-                os.system('sudo shutdown -r ' + minutes)
-            else:
-                os.system('sudo reboot now')
-        if minutes_time == 'time':
-            time = input('Enter time: ')
-            if time != '':
-                os.system('sudo shutdown -r ' + time)
-            else:
-                os.system('sudo reboot now')
+            print('\nCommands')
+            print('-------------------------------------')
+            print('1. minutes')
+            print('2. time')
+                
+            minutes_time = input('\nChoose an option: ')
+            
+            if minutes_time == '1':
+                minutes = input('Enter minutes: ')
+                if minutes != '':
+                    os.system('sudo shutdown -r ' + minutes)
+                else:
+                    os.system('sudo reboot now')
+                    
+            if minutes_time == '2':
+                time = input('Enter time: ')
+                if time != '':
+                    os.system('sudo shutdown -r ' + time)
+                else:
+                    os.system('sudo reboot now')
         
     if admin_tool == '13':
-        minutes_time = input("Enter minutes or time: ")
-        if minutes_time == 'minutes':
-            minutes = input('Enter minutes: ')
-            if minutes != '':
-                os.system('sudo shutdown -h ' + minutes)
-            else:
-                os.system('sudo shutdown now')
-        if minutes_time == 'time':
-            time = input('Enter time: ')
-            if time != '':
-                os.system('sudo shutdown -h ' + time)
-            else:
-                os.system('sudo shutdown now')
+            print('\nCommands')
+            print('-------------------------------------')
+            print('1. minutes')
+            print('2. time')
+                
+            minutes_time = input('\nChoose an option: ')
+
+            if minutes_time == '1':
+                minutes = input('Enter minutes: ')
+                if minutes != '':
+                    os.system('sudo shutdown -h ' + minutes)
+                else:
+                    os.system('sudo shutdown now')
+            
+            if minutes_teme == '2':
+                time = input('Enter time: ')
+                if time != '':
+                    os.system('sudo shutdown -h ' + time)
+                else:
+                    os.system('sudo shutdown now')
         
     if admin_tool == '14':
         service = input('Enter service: ')
