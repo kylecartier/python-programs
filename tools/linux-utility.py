@@ -523,7 +523,7 @@ if category == '1':
                 else:
                     os.system('sudo shutdown now')
             
-            if minutes_teme == '2':
+            if minutes_time == '2':
                 time = input('Enter time: ')
                 if time != '':
                     os.system('sudo shutdown -h ' + time)
