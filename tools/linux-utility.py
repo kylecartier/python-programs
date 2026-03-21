@@ -1503,7 +1503,7 @@ if category == '4':
                     if package_manager == '3':
                         os.system('sudo pacman -S gufw')
                         
-                if ufw_comamnd == '7':
+                if ufw_command == '7':
                     print('\nPackage Managers')
                     print('-------------------------------------')
                     print('1. apt')
@@ -1521,7 +1521,7 @@ if category == '4':
                     if package_manager == '3':
                         os.system('sudo pacman -Rns ufw')
                         
-                if ufw_comamnd == '7':
+                if ufw_command == '7':
                     print('\nPackage Managers')
                     print('-------------------------------------')
                     print('1. apt')
