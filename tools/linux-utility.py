@@ -1101,12 +1101,18 @@ if category == '1':
 
     if admin_tool == '17':
         flag = input('Enter uname flag: ')
-        os.system('uname ' + flag)
+        if flag != '':
+            os.system('uname ' + flag)
+        else:
+            os.system('uname')
 
     if admin_tool == '18':
         flag = input('Enter uptime flag: ')
-        os.system('uptime ' + flag)
-
+        if flag != '':
+            os.system('uptime ' + flag)
+        else:
+            os.system('uptime')
+            
     if admin_tool == '19':
         print('\nCommands')
         print('-------------------------------------')
