@@ -1093,7 +1093,11 @@ if category == '1':
             exit(0)
         
     if admin_tool == '16':
-        os.system('top')
+        flag = input('Enter top flag: ')
+        if flag != '':
+            os.system('top ' + flag)
+        else:
+            os.system('top')
 
     if admin_tool == '17':
         flag = input('Enter uname flag: ')
