@@ -324,12 +324,12 @@ if category == '1':
         
         if ls_command == '1':
             flag = input('Enter ls flag: ')
-            directory = input('Enter directory to see contents of it: ') 
+            directory = input('Enter directory: ') 
             if directory != '' and flag != '':
                 os.system('ls ' + flag + ' ' + directory + '/')
-            if flag == '':
+            if flag == '' and directory != '':
                 os.system('ls ' + directory)
-            if directory == '':
+            if directory == '' and flag != '':
                 os.system('ls ' + flag)
             else:
                 exit(0)
