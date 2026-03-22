@@ -1360,6 +1360,7 @@ if category == '3':
     print('8.  ping')
     print('9.  tcpdump')
     print('10. traceroute')
+    print('11. whois')
     
     network_tool = input('\nChoose an option: ')
     
@@ -1412,6 +1413,13 @@ if category == '3':
     if network_tool == '10':
         address = input("Enter ip address: ")
         os.system('traceroute ' + address)
+
+    if network_tool == '11':
+        ip_url = input('Enter an ip or url: ')
+        if ip_url != '':
+            os.system('whois ' + ip_url)
+        else:
+            exit(0)
         
 # Security Tools
             
