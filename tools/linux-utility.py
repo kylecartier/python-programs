@@ -497,14 +497,20 @@ if category == '1':
             if minutes_time == '1':
                 minutes = input('Enter minutes: ')
                 if minutes != '':
-                    os.system('sudo shutdown -r ' + minutes)
+                    if ':' not in minutes:
+                        os.system('sudo shutdown -r ' + minutes)
+                    else:
+                        exit(0)
                 else:
                     os.system('sudo reboot now')
                     
             if minutes_time == '2':
                 time = input('Enter time: ')
                 if time != '':
-                    os.system('sudo shutdown -r ' + time)
+                    if ':' in time:
+                        os.system('sudo shutdown -r ' + time)
+                    else:
+                        exit(0)
                 else:
                     os.system('sudo reboot now')
         
@@ -519,14 +525,20 @@ if category == '1':
             if minutes_time == '1':
                 minutes = input('Enter minutes: ')
                 if minutes != '':
-                    os.system('sudo shutdown -h ' + minutes)
+                    if ':' not in minutes:
+                        os.system('sudo shutdown -h ' + minutes)
+                    else:
+                        exit(0)
                 else:
                     os.system('sudo shutdown now')
             
             if minutes_time == '2':
                 time = input('Enter time: ')
                 if time != '':
-                    os.system('sudo shutdown -h ' + time)
+                    if ':' in time:
+                        os.system('sudo shutdown -h ' + time)
+                    else:
+                        exit(0)
                 else:
                     os.system('sudo shutdown now')
         
@@ -1503,7 +1515,7 @@ if category == '4':
                     if package_manager == '3':
                         os.system('sudo pacman -S gufw')
                         
-                if ufw_command == '7':
+                if ufw_comamnd == '7':
                     print('\nPackage Managers')
                     print('-------------------------------------')
                     print('1. apt')
@@ -1521,7 +1533,7 @@ if category == '4':
                     if package_manager == '3':
                         os.system('sudo pacman -Rns ufw')
                         
-                if ufw_command == '7':
+                if ufw_comamnd == '7':
                     print('\nPackage Managers')
                     print('-------------------------------------')
                     print('1. apt')
