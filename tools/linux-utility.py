@@ -1584,6 +1584,7 @@ if category == '4':
         offensive_tool = input('\nChoose an option: ')
 
 if category == '5':
+    print('\nUtility Tools')
     print('-------------------------------------')
     print('1. cal')
     print('2. calc')
