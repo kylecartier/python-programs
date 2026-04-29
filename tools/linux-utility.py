@@ -146,58 +146,87 @@ if category == '1':
         if maintenance_command == '4':
             print('\nCommands')
             print('-------------------------------------')
-            print('1. disable ssh')
-            print('2. enable ssh')
-            print('3. identify status of ssh')
-            print('4. install ssh')
-            print('5. run ssh')
-            print('6. start ssh')
-            print('7. stop ssh')
+            print('1. ssh service')
+            print('2. ssh socket')
 
-            
-            ssh_command = input('\nChoose an option: ')
-            
-            if ssh_command == '1':
-                os.system('sudo systemctl disable ssh')
-            
-            if ssh_command == '2':
-                os.system('sudo systemctl enable ssh')
-                
-            if ssh_command == '3':
-                os.system('sudo systemctl is-active ssh')
-                os.system('sudo systemctl is-enabled ssh')
-                
-            if ssh_command == '4':
-                print('\nPackage Managers')
+            ssh_option = input('\nChoose an option: ')
+
+            if ssh_option == '1':
+                print('\nCommands')
                 print('-------------------------------------')
-                print('1. apt')
-                print('2. dnf')
-                print('3. pacman')
-               
-                package_manager = input('\nEnter package manager: ')
+                print('1. disable ssh')
+                print('2. enable ssh')
+                print('3. identify status of ssh')
+                print('4. install ssh')
+                print('5. run ssh')
+                print('6. start ssh')
+                print('7. stop ssh')
+
+                ssh_command = input('\nChoose an option: ')
                 
-                if package_manager == '1':
-                    os.system('sudo apt install ssh')
-
-                if package_manager == '2':
-                    os.system('sudo dnf install ssh')
-
-                if package_manager == '3':
-                    os.system('sudo pacman -S ssh')
-            
-            if ssh_command == '5':
-                username = input('What is the username?: ')
-                ip_address = input('What is the ip address?: ')
-                if username != '' and ip_address != '':
-                    os.system('ssh ' + username + '@' + ip_address)
-                else:
-                    exit(0)
+                if ssh_command == '1':
+                    os.system('sudo systemctl disable ssh')
+                
+                if ssh_command == '2':
+                    os.system('sudo systemctl enable ssh')
                     
-            if ssh_command == '6':
-                os.system('sudo systemctl start ssh')
+                if ssh_command == '3':
+                    os.system('sudo systemctl is-active ssh')
+                    os.system('sudo systemctl is-enabled ssh')
+                    
+                if ssh_command == '4':
+                    print('\nPackage Managers')
+                    print('-------------------------------------')
+                    print('1. apt')
+                    print('2. dnf')
+                    print('3. pacman')
+                   
+                    package_manager = input('\nEnter package manager: ')
+                    
+                    if package_manager == '1':
+                        os.system('sudo apt install ssh')
+
+                    if package_manager == '2':
+                        os.system('sudo dnf install ssh')
+
+                    if package_manager == '3':
+                        os.system('sudo pacman -S ssh')
                 
-            if ssh_command == '7':
-                os.system('sudo systemctl stop ssh')
+                if ssh_command == '5':
+                    username = input('What is the username?: ')
+                    ip_address = input('What is the ip address?: ')
+                    if username != '' and ip_address != '':
+                        os.system('ssh ' + username + '@' + ip_address)
+                    else:
+                        exit(0)
+                        
+                if ssh_command == '6':
+                    os.system('sudo systemctl start ssh')
+                    
+                if ssh_command == '7':
+                    os.system('sudo systemctl stop ssh')
+
+            if ssh_option == '2':
+                print('\nCommands')
+                print('-------------------------------------')
+                print('1. disable ssh socket')
+                print('2. enable ssh socket')
+                print('3. start ssh socket')
+                print('4. stop ssh socket')
+
+                ssh_socket = input('\nChoose an option: ')
+
+                if ssh_socket == '1':
+                    os.system('sudo systemctl disable ssh.socket')
+
+                if ssh_socket == '2':
+                    os.system('sudo systemctl enable ssh.socket')
+
+                if ssh_socket == '3':
+                    os.system('sudo systemctl start ssh.socket')
+
+                if ssh_socket == '4':
+                    os.system('sudo systemctl stop ssh.socket')
                 
         if maintenance_command == '5':
             print('\nCommands')
