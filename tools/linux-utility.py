@@ -154,13 +154,13 @@ if category == '1':
             if ssh_option == '1':
                 print('\nCommands')
                 print('-------------------------------------')
-                print('1. disable ssh')
-                print('2. enable ssh')
-                print('3. identify status of ssh')
-                print('4. install ssh')
-                print('5. run ssh')
-                print('6. start ssh')
-                print('7. stop ssh')
+                print('1. disable ssh service')
+                print('2. enable ssh service')
+                print('3. identify status of ssh service')
+                print('4. install ssh service')
+                print('5. run ssh service')
+                print('6. start ssh service')
+                print('7. stop ssh service')
 
                 ssh_command = input('\nChoose an option: ')
                 
@@ -211,8 +211,9 @@ if category == '1':
                 print('-------------------------------------')
                 print('1. disable ssh socket')
                 print('2. enable ssh socket')
-                print('3. start ssh socket')
-                print('4. stop ssh socket')
+                print('3. identify status of ssh socket')
+                print('4. start ssh socket')
+                print('5. stop ssh socket')
 
                 ssh_socket = input('\nChoose an option: ')
 
@@ -223,9 +224,13 @@ if category == '1':
                     os.system('sudo systemctl enable ssh.socket')
 
                 if ssh_socket == '3':
-                    os.system('sudo systemctl start ssh.socket')
+                    os.system('sudo systemctl is-active ssh.socket')
+                    os.system('sudo systemctl is-enabled ssh.socket')
 
                 if ssh_socket == '4':
+                    os.system('sudo systemctl start ssh.socket')
+
+                if ssh_socket == '5':
                     os.system('sudo systemctl stop ssh.socket')
                 
         if maintenance_command == '5':
