@@ -236,37 +236,37 @@ try:
         print("The subnet mask is:", (subnet_mask_25))
 
     if cidr_notation == "/26":
-        print("Number of networks if claa C ip:", format(cidr_net_26, ","))
+        print("Number of networks if class C ip:", format(cidr_net_26, ","))
         print("Number of usable hosts per network:", format(cidr_host_26, ","))
         print("The subnet mask is:", (subnet_mask_26))
 
     if cidr_notation == "/27":
-        print("Number of networks if claa C ip:", format(cidr_net_27, ","))
+        print("Number of networks if class C ip:", format(cidr_net_27, ","))
         print("Number of usable hosts per network:", format(cidr_host_27, ","))
         print("The subnet mask is:", (subnet_mask_27))
 
     if cidr_notation == "/28":
-        print("Number of networks if claa C ip:", format(cidr_net_28, ","))
+        print("Number of networks if class C ip:", format(cidr_net_28, ","))
         print("Number of usable hosts per network:", format(cidr_host_28, ","))
         print("The subnet mask is:", (subnet_mask_28))
 
     if cidr_notation == "/29":
-        print("Number of networks if claa C ip:", format(cidr_net_29, ","))
+        print("Number of networks if class C ip:", format(cidr_net_29, ","))
         print("Number of usable hosts per network:", format(cidr_host_29, ","))
         print("The subnet mask is:", (subnet_mask_29))
 
     if cidr_notation == "/30":
-        print("Number of networks if claa C ip:", format(cidr_net_30, ","))
+        print("Number of networks if class C ip:", format(cidr_net_30, ","))
         print("Number of usable hosts per network:", format(cidr_host_30, ","))
         print("The subnet mask is:", (subnet_mask_30))
 
     if cidr_notation == "/31":
-        print("Number of networks if claa C ip:", format(cidr_net_31, ","))
+        print("Number of networks if class C ip:", format(cidr_net_31, ","))
         print("Number of usable hosts per network:", format(cidr_host_31, ","))
         print("The subnet mask is:", (subnet_mask_31))
 
     if cidr_notation == "/32":
-        print("Number of networks if claa C ip:", format(cidr_net_32, ","))
+        print("Number of networks if class C ip:", format(cidr_net_32, ","))
         print("Number of usable hosts per network:", format(cidr_host_32, ","))
         print("The subnet mask is:", (subnet_mask_32))
 
