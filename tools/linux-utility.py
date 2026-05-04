@@ -1651,14 +1651,14 @@ if category == '5':
                 os.system('sudo dnf install cal')
                 
             if package_manager == '3':
-                os,system('sudo pacman -S cal')
+                os.system('sudo pacman -S cal')
 
         if cal_option == '2':
             
             flag = input('Enter cal flag: ')
             
             if flag != "":
-                os,system('cal' + flag)
+                os.system('cal' + flag)
             
             else:
                 os.system('cal')
@@ -1679,7 +1679,7 @@ if category == '5':
                 os.system('sudo dnf remove cal')
                     
             if package_manager == '3':
-                os,system('sudo pacman -Rns cal')
+                os.system('sudo pacman -Rns cal')
 
     if utility_tool == '2':
         print('\nOptions')
@@ -1706,14 +1706,14 @@ if category == '5':
                 os.system('sudo dnf install cal')
                 
             if package_manager == '3':
-                os,system('sudo pacman -S cal')
+                os.system('sudo pacman -S cal')
 
         if calc_option == '2':
             
             flag = input('Enter cal flag: ')
             
             if flag != "":
-                os,system('calc' + flag)
+                os.system('calc' + flag)
             
             else:
                 os.system('calc') 
@@ -1734,7 +1734,7 @@ if category == '5':
                 os.system('sudo dnf remove calc')
                     
             if package_manager == '3':
-                os,system('sudo pacman -Rns calc')
+                os.system('sudo pacman -Rns calc')
 
                     
 # Need some help?
