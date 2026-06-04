@@ -1,0 +1,75 @@
+import os
+
+# Welcome!
+
+# Windows Utility
+
+# Lists options or exit 
+
+print() 
+
+print('---------------------------------------------------')
+print('-                                                 -')
+print('-                    Welcome!                     -')
+print('-                                                 -')
+print('-                 Linux Utility                   -')
+print('-                                                 -')
+print('-                  Categories                     -')
+print('- ----------------------------------------------- -')
+print('-             1. Administration                   -')
+print('-             2. Files and Directories            -')
+print('-             3. Networking                       -')
+print('-             4. Security                         -')
+print('-             5. Utilities                        -')
+print('-                                                 -')
+print('-                Need some help?                  -')
+print('- ----------------------------------------------- -')
+print('-             0. Man Page                         -')
+print('-                                                 -')
+print('---------------------------------------------------')
+
+# Prompts user to enter a category or exit
+
+category = input('\nChoose an option: ')
+
+# Administration Tools
+
+if category == '1':
+    print('\nAdministration Tools')
+    print('-------------------------------------')
+    print('1.  copy')
+    print('2.  dir')
+    print('3.  ')
+    print('4.  ')
+    print('5.  ')
+    print('6.  ')
+    print('7.  ')
+    print('8.  ')
+    print('9.  ')
+    print('10. ')
+    print('11. ')
+    print('12. ')
+    print('13. ')
+    print('14. ')
+    print('15. ')
+    print('16. ')
+    print('17. ')
+    print('18. ')
+    print('19. ')
+    print('20. ')
+    
+    admin_tool = input('\nChoose an option: ')
+        
+    if admin_tool == '1':
+        file = input('Enter file to copy: ')
+        destination_dir = input('Enter directory to copy to: ')
+        if file and destination_dir != '':
+            os.system('copy' + ' ' + file + ' ' + destination_dir)
+        else:
+            os.system(exit(0))
+
+if category == '0':
+    command = input('Enter a command: ')
+    if command != '':
+        os.system(command + ' ' + '/?')
+        
