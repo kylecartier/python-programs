@@ -68,6 +68,15 @@ if category == '1':
         else:
             os.system(exit(0))
 
+    if admin_tool == '2':
+        directory = input('Enter a directory to list out its files: ')
+        if directory != '':
+            os.system('dir' + ' ' + directory)
+        else:
+            os.system(exit(0))
+
+    
+
 if category == '0':
     command = input('Enter a command: ')
     if command != '':
