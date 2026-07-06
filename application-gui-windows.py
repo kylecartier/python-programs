@@ -11,7 +11,7 @@ root = tk.Tk()
 # Make a Window and its characterisiics!
 
 root.title("Applications GUI")
-canvas = tk.Canvas(root, height=625, width=675, bg="#1d1d1d", borderwidth=0, highlightthickness=0)
+canvas = tk.Canvas(root, height=615, width=675, bg="#1d1d1d", borderwidth=0, highlightthickness=0)
 canvas.pack()
 
 # Disables the maximuze button
@@ -34,7 +34,7 @@ Label(frame, text="Main Apps", bg="#1d1d1d", fg="#555555").grid(row=3, column=1,
 Label(frame, text="Other Apps", bg="#1d1d1d", fg="#555555").grid(row=3, column=5, padx=3, pady=1)
 Label(frame, text="  ", bg="#1d1d1d", fg="#555555").grid(row=10, column=2, padx=3, pady=1)
 Label(frame, text="  ", bg="#1d1d1d", fg="#555555").grid(row=10, column=4, padx=3, pady=1)
-Label(frame, text="Click Exit to close the app", bg="#1d1d1d", fg="#555555").grid(row=11, column=3, padx=3, pady=1)
+Label(frame, text=" ", bg="#1d1d1d", fg="#555555").grid(row=11, column=3, padx=3, pady=1)
 
 # Define functions for buttons
 
