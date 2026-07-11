@@ -11,7 +11,7 @@ root = tk.Tk()
 # Make a Window and its characterisiics!
 
 root.title("Applications GUI")
-canvas = tk.Canvas(root, height=615, width=675, bg="#1d1d1d", borderwidth=0, highlightthickness=0)
+canvas = tk.Canvas(root, height=605, width=665, bg="#1d1d1d", borderwidth=0, highlightthickness=0)
 canvas.pack()
 
 # Disables the maximuze button
