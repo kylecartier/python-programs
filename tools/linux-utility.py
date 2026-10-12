@@ -1538,9 +1538,68 @@ if category == '4':
             print('2.     ')
             print('3. ufw (gufw too!)')
             
-            ufw_option = input('\nChoose an option: ')
+            firewall_option = input('\nChoose an option: ')
             
-            if ufw_option == '3':
+            if firewall_option == '1':
+
+                print('\nCommands')
+                print('-------------------------------------')
+                print('1. install firewalld')
+                print('2. run firewalld')
+                print('3. uninstall firewalld')
+
+                firewalld_option = input('\nChoose an option: ')
+
+                if firewalld_option == '1':
+                    
+                    print('\nPackage Managers')
+                    print('-------------------------------------')
+                    print('1. apt')
+                    print('2. dnf')
+                    print('3. pacman')
+
+                    package_manager = input('\nChoose an option: ')
+
+                    if package_manager == '1':
+                        os.system('sudo apt install firewalld')
+                    if package_manager == '2':
+                        os.system('sudo dnf install firewalld')
+                    if package_manager == '3':
+                        os.system('sudo pacman -S firewalld')
+
+
+
+
+
+
+
+
+
+                if firewalld_option == '3':
+
+                    print('\nPackage Managers')
+                    print('-------------------------------------')
+                    print('1. apt')
+                    print('2. dnf')
+                    print('3. pacman')
+
+                    package_manager = input('\nChoose an option: ')
+
+                    if package_manager == '1':
+                        os.system('sudo apt remove firewalld')
+                    if package_manager == '2':
+                        os.system('sudo dnf remove firewalld')
+                    if package_manager == '3':
+                        os.system('sudo pacman -Rns firewalld')
+
+
+
+
+
+
+
+
+            if firewall_option == '3':
                 print('\nCommands')
                 print('--------------------------------------')
                 print('1. allow, deny, limit, and reject rules')
