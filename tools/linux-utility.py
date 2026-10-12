@@ -1422,9 +1422,15 @@ if category == '3':
         os.system('netstat ' + flag)
         
     if network_tool == '6':
-        nmap_command = input('Enter nmap commnad: ')
-        os.system(nmap_command)
-        
+        nmap_flag = input('Enter nmap flag: ')
+        ip_address = input('Enter ip address: ')
+        if nmap_flag != '' and ip_address != '':
+            os.system('nmap ' + nmap_flag + ' ' + ip_address)
+        if nmap_flag == '' and ip_address != '':
+            os.system('nmap ' + ip_address)
+        else:
+            exit()
+
     if network_tool == '7':
         url = input("Enter url: ")
         os.system('nslookup ' + url)
