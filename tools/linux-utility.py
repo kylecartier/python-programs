@@ -385,12 +385,57 @@ if category == '1':
                 os.system('lscpu')
                 
         if ls_command == '4':
-            flag = input('Enter lshw flag: ')
-            if flag != '':
-                os.system('lshw' + ' ' + flag)
-            else:
-                os.system('lshw')
-                    
+            print('\nCommands.')
+            print('-------------------------------------')
+            print('1. install lshw')
+            print('2. run lshw')
+            print('3. uninstall lshw')
+            
+            lshw_option = input('\nChoose an option: ')
+
+            if lshw_option == '1':
+                print('\nPackage Managers')
+                print('-------------------------------------')
+                print('1. apt')
+                print('2. dnf')
+                print('3. pacman')
+
+                package_manager = input('\nChoose an option: ')
+                
+                if package_manager == '1':
+                    os.system('sudo apt install lshw')
+                if package_manager == '2':
+                    os.system('sudo dnf install lshw')
+                if package_manager == '3':
+                    os.system('sudo pacman -S lshw')
+                else:
+                    exit(0)
+
+            if lshw_option == '2':
+                flag = input('Enter lshw flag: ')
+                if flag != '':
+                    os.system('lshw' + ' ' + flag)
+                else:
+                    os.system('lshw')
+
+            if lshw_option == '3':
+                print('\nPackage Managers')
+                print('-------------------------------------')
+                print('1. apt')
+                print('2. dnf')
+                print('3. pacman')
+
+                package_manager = input('\nChoose an option: ')
+                
+                if package_manager == '1':
+                    os.system('sudo apt remove lshw')
+                if package_manager == '2':
+                    os.system('sudo dnf remove lshw')
+                if package_manager == '3':
+                    os.system('sudo pacman -Rns lshw')
+                else:
+                    exit(0)
+
         if ls_command == '5':
             flag = input('Enter lsmem flag: ')
             if flag != '':
