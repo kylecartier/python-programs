@@ -1424,6 +1424,8 @@ if category == '3':
     if network_tool == '6':
         nmap_flag = input('Enter nmap flag: ')
         ip_address = input('Enter ip address: ')
+        if nmap_flag == '-O':
+            os.system('sudo nmap ' + nmap_flag + ' ' + ip_address)
         if nmap_flag != '' and ip_address != '':
             os.system('nmap ' + nmap_flag + ' ' + ip_address)
         if nmap_flag == '' and ip_address != '':
