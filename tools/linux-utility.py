@@ -1208,31 +1208,31 @@ if category == '1':
 
         if user_command == '1':
             user = input('Enter user: ')
-            if user == '' or 'root':
-                os.system('passwd root')
-            else:
+            if user != '' or 'root':
                 os.system('passwd ' + user)
+            else:
+                os.system('passwd root')
 
         if user_command == '2':
             user = input('Enter user: ')
-            if user == '' or 'root':
-                os.system('sudo usermod -L root')
-            else:
+            if user != '' or 'root':
                 os.system('sudo usermod -L ' + user)
+            else:
+                os.system('sudo usermod -L root')
 
         if user_command == '3':
             user = input('Enter user: ')
-            if user == '' or 'root':
-                os.system('su')
-            else:
+            if user != '' or 'root':
                 os.system('su ' + user)
+            else:
+                os.system('su')
 
         if user_command == '4':
             user = input('Enter user: ')
-            if user == '' or 'root':
-                os.system('sudo usermod -L root')
-            else:
+            if user != '' or 'root':
                 os.system('sudo usermod -L ' + user)
+            else:
+                os.system('sudo usermod -L root')
 
     if admin_tool == '20':
         flag = input('Enter whoami flag: ')
