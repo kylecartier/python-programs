@@ -1501,7 +1501,8 @@ if category == '3':
             print('1. os scan')
             print('2. stealth scan')
             print('3. tcp scan')
-            print('4. version scan')
+            print('4. udp scan')
+            print('5. version scan')
 
             nmap_command = input('\nChoose an option: ')
             
@@ -1529,11 +1530,16 @@ if category == '3':
             if nmap_command == '4':
                 ip_address = input('Enter ip address: ')
                 if ip_address != '':
-                    os.system('nmap -sV ' + ip_address)
+                    os.system('sudo nmap -sU ' + ip_address)
                 else:
                     exit()
             
-            
+            if nmap_command == '5':
+                ip_address = input('Enter ip address: ')
+                if ip_address != '':
+                    os.system('nmap -sV ' + ip_address)
+                else:
+                    exit()
             
             
             
