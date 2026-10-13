@@ -1498,11 +1498,12 @@ if category == '3':
             
             print('\nCommands')
             print('-------------------------------------')
-            print('1. os scan')
-            print('2. stealth scan')
-            print('3. tcp scan')
-            print('4. udp scan')
-            print('5. version scan')
+            print('1. list scan (hosts)')
+            print('2. os scan')
+            print('3. stealth scan')
+            print('4. tcp scan')
+            print('5. udp scan')
+            print('6. version scan')
 
             nmap_command = input('\nChoose an option: ')
             
@@ -1516,25 +1517,32 @@ if category == '3':
             if nmap_command == '2':
                 ip_address = input('Enter ip address: ')
                 if ip_address != '':
-                    os.system('nmap -sS ' + ip_address)
+                    os.system('nmap -sL ' + ip_address)
                 else:
                     exit()
                     
             if nmap_command == '3':
                 ip_address = input('Enter ip address: ')
                 if ip_address != '':
-                    os.system('nmap -sT ' + ip_address)
+                    os.system('nmap -sS ' + ip_address)
                 else:
                     exit()
                     
             if nmap_command == '4':
                 ip_address = input('Enter ip address: ')
                 if ip_address != '':
+                    os.system('nmap -sT ' + ip_address)
+                else:
+                    exit()
+                    
+            if nmap_command == '5':
+                ip_address = input('Enter ip address: ')
+                if ip_address != '':
                     os.system('sudo nmap -sU ' + ip_address)
                 else:
                     exit()
             
-            if nmap_command == '5':
+            if nmap_command == '6':
                 ip_address = input('Enter ip address: ')
                 if ip_address != '':
                     os.system('nmap -sV ' + ip_address)
