@@ -1511,42 +1511,42 @@ if category == '3':
                 if ip_address != '':
                     os.system('sudo nmap -O ' + ip_address)
                 else:
-                    exit()
+                    exit(0)
                     
             if nmap_command == '2':
                 ip_address = input('Enter ip address: ')
                 if ip_address != '':
                     os.system('nmap -sL ' + ip_address)
                 else:
-                    exit()
+                    exit(0)
                     
             if nmap_command == '3':
                 ip_address = input('Enter ip address: ')
                 if ip_address != '':
                     os.system('nmap -sS ' + ip_address)
                 else:
-                    exit()
+                    exit(0)
                     
             if nmap_command == '4':
                 ip_address = input('Enter ip address: ')
                 if ip_address != '':
                     os.system('nmap -sT ' + ip_address)
                 else:
-                    exit()
+                    exit(0)
                     
             if nmap_command == '5':
                 ip_address = input('Enter ip address: ')
                 if ip_address != '':
                     os.system('sudo nmap -sU ' + ip_address)
                 else:
-                    exit()
+                    exit(0)
             
             if nmap_command == '6':
                 ip_address = input('Enter ip address: ')
                 if ip_address != '':
                     os.system('nmap -sV ' + ip_address)
                 else:
-                    exit()
+                    exit(0)
             
             
             
