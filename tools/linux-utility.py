@@ -1493,7 +1493,6 @@ if category == '3':
             if package_manager == '3':
                 os.system('sudo pacman -S nmap')
         
-        
         if nmap_option == '2':
             
             print('\nCommands')
