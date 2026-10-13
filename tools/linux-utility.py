@@ -1545,7 +1545,7 @@ if category == '3':
             print('2. dnf')
             print('3. pacman')
 
-            package_manager = input('Choose an option: ')
+            package_manager = input('\nChoose an option: ')
             
             if package_manager == '1':
                 os.system('sudo apt remove nmap')
