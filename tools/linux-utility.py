@@ -1467,16 +1467,92 @@ if category == '3':
         os.system('netstat ' + flag)
         
     if network_tool == '6':
-        nmap_flag = input('Enter nmap flag: ')
-        ip_address = input('Enter ip address: ')
-        if nmap_flag == '-O':
-            os.system('sudo nmap ' + nmap_flag + ' ' + ip_address)
-        if nmap_flag != '' and ip_address != '':
-            os.system('nmap ' + nmap_flag + ' ' + ip_address)
-        if nmap_flag == '' and ip_address != '':
-            os.system('nmap ' + ip_address)
-        else:
-            exit()
+        
+        print('\nCommands')
+        print('-------------------------------------')
+        print('1. install nmap')
+        print('2. run nmap')
+        print('3. uninstall nmap')
+        
+        nmap_option = input('\nChoose an option: ')
+        
+        if nmap_option == '1':
+            
+            print('\nPackage Managers')
+            print('-------------------------------------')
+            print('1. apt')
+            print('2. dnf')
+            print('3. pacman')
+
+            package_manager = input('\nChoose an option: ')
+            
+            if package_manager == '1':
+                os.system('sudo apt install nmap')
+            if package_manager == '2':
+                os.system('sudo dnf install nmap')
+            if package_manager == '3':
+                os.system('sudo pacman -S nmap')
+        
+        
+        if nmap_option == '2':
+            
+            print('\nCommands')
+            print('-------------------------------------')
+            print('1. os scan')
+            print('2. stealth scan')
+            print('3. tcp scan')
+            print('4. version scan')
+
+            nmap_command = input('\nChoose an option: ')
+            
+            if nmap_command == '1':
+                ip_address = input('Enter ip address: ')
+                if ip_address != '':
+                    os.system('sudo nmap -O ' + ip_address)
+                else:
+                    exit()
+                    
+            if nmap_command == '2':
+                ip_address = input('Enter ip address: ')
+                if ip_address != '':
+                    os.system('nmap -sS ' + ip_address)
+                else:
+                    exit()
+                    
+            if nmap_command == '3':
+                ip_address = input('Enter ip address: ')
+                if ip_address != '':
+                    os.system('nmap -sT ' + ip_address)
+                else:
+                    exit()
+                    
+            if nmap_command == '4':
+                ip_address = input('Enter ip address: ')
+                if ip_address != '':
+                    os.system('nmap -sV ' + ip_address)
+                else:
+                    exit()
+            
+            
+            
+            
+            
+        if nmap_option == '3':
+            
+            print('\nPackage Managers')
+            print('-------------------------------------')
+            print('1. apt')
+            print('2. dnf')
+            print('3. pacman')
+
+            package_manager = input('Choose an option: ')
+            
+            if package_manager == '1':
+                os.system('sudo apt remove nmap')
+            if package_manager == '2':
+                os.system('sudo dnf remove nmap')
+            if package_manager == '3':
+                os.system('sudo pacman -Rns nmap')
 
     if network_tool == '7':
         url = input("Enter url: ")
