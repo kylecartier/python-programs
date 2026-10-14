@@ -1617,6 +1617,9 @@ if category == '3':
             if flag != '' and interface == '':
                 os.system('sudo tcpdump ' + flag)
         
+            if flag == '' and interface == '':
+                os.system('sudo tcpdump')
+
             else:
                 exit(0)
             
