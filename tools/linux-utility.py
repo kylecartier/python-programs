@@ -385,7 +385,7 @@ if category == '1':
                 os.system('lscpu')
                 
         if ls_command == '4':
-            print('\nCommands.')
+            print('\nCommands')
             print('-------------------------------------')
             print('1. install lshw')
             print('2. run lshw')
