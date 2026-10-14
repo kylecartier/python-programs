@@ -1954,13 +1954,13 @@ if category == '5':
             package_manager = input('\nChoose an option: ')
 
             if package_manager == '1':
-                os.system('sudo apt install cal')
+                os.system('sudo apt install calc')
             
             if package_manager == '2':
-                os.system('sudo dnf install cal')
+                os.system('sudo dnf install calc')
                 
             if package_manager == '3':
-                os.system('sudo pacman -S cal')
+                os.system('sudo pacman -S calc')
 
         if calc_option == '2':
             
@@ -1972,7 +1972,7 @@ if category == '5':
             else:
                 os.system('calc') 
 
-        if cal_option == '3':
+        if calc_option == '3':
             print('\nPackage Managers')
             print('-------------------------------------')
             print('1. apt')
