@@ -1579,17 +1579,64 @@ if category == '3':
         else:
             os.system('ping ' + address)
         
-    if network_tool == '9':
-        flag = input('Enter tcpdump flag: ')
-        interface = input('Enter network interface: ')
-        if flag and interface != '':
-            os.system('sudo tcpdump ' + flag + ' ' + interface)
-            
-        if flag != '' and interface == '':
-            os.system('sudo tcpdump ' + flag)
+    if network_tool == '9': 
         
-        else:
-            exit(0)
+        print('\nCommands')
+        print('-------------------------------------')
+        print('1. install tcpdump')
+        print('2. run tcpdump')
+        print('3. uninstall tcpdump')
+
+        tcpdump_option = input('\nChoose an option: ')
+        
+        if tcpdump_option == '1':
+        
+            print('\nPackage Managers')
+            print('-------------------------------------')
+            print('1. apt')
+            print('2. dnf')
+            print('3. pacman')
+
+            package_manager = input('\nChoose an option: ')
+            
+            if package_manager == '1':
+                os.system('sudo apt install tcpdump')
+            if package_manager == '2':
+                os.system('sudo dnf install tcpdump')
+            if package_manager == '3':
+                os.system('sudo pacman -S tcpdump')
+        
+        
+        if tcpdump_option == '2':
+        
+            flag = input('Enter tcpdump flag: ')
+            interface = input('Enter network interface: ')
+            if flag and interface != '':
+                os.system('sudo tcpdump ' + flag + ' ' + interface)
+            
+            if flag != '' and interface == '':
+                os.system('sudo tcpdump ' + flag)
+        
+            else:
+                exit(0)
+            
+            
+        if tcpdump_option == '3':
+        
+            print('\nPackage Managers')
+            print('-------------------------------------')
+            print('1. apt')
+            print('2. dnf')
+            print('3. pacman')
+
+            package_manager = input('\nChoose an option: ')
+            
+            if package_manager == '1':
+                os.system('sudo apt remove tcpdump')
+            if package_manager == '2':
+                os.system('sudo dnf remove tcpdump')
+            if package_manager == '3':
+                os.system('sudo pacman -Rns tcpdump')
         
     if network_tool == '10':
         address = input("Enter ip address: ")
