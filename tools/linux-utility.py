@@ -1638,7 +1638,7 @@ if category == '3':
             if package_manager == '3':
                 os.system('sudo pacman -S bind9-dnsutils')
         
-        if dig_option == '2':
+        if nslookup_option == '2':
             ip_or_url = input("Enter ip address or url: ")
             os.system('nslookup ' + ip_or_url)
         
