@@ -1962,7 +1962,7 @@ if category == '5':
             if package_manager == '3':
                 os.system('sudo pacman -S ncal')
 
-        if calc_option == '2':
+        if ncal_option == '2':
             
             flag = input('Enter cal flag: ')
             
@@ -1972,7 +1972,7 @@ if category == '5':
             else:
                 os.system('calc') 
 
-        if calc_option == '3':
+        if ncal_option == '3':
             print('\nPackage Managers')
             print('-------------------------------------')
             print('1. apt')
