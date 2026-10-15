@@ -1509,14 +1509,14 @@ if category == '3':
             if nmap_command == '1':
                 ip_address = input('Enter ip address: ')
                 if ip_address != '':
-                    os.system('sudo nmap -O ' + ip_address)
+                    os.system('nmap -sL ' + ip_address)
                 else:
                     exit(0)
                     
             if nmap_command == '2':
                 ip_address = input('Enter ip address: ')
                 if ip_address != '':
-                    os.system('nmap -sL ' + ip_address)
+                    os.system('sudo nmap -O ' + ip_address)
                 else:
                     exit(0)
                     
