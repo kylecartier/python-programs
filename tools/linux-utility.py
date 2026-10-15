@@ -1453,8 +1453,52 @@ if category == '3':
         os.system('arp ' + flag)
         
     if network_tool == '2':
-        url = input("Enter url: ")
-        os.system('dig ' + url)
+
+        print('\nCommands')
+        print('-------------------------------------')
+        print('1. install dig (bind9-dnsutils)')
+        print('2. run dig')
+        print('3. uninstall dig (bind9-dnsutils)')
+                
+        dig_option = input('\nChoose an option: ')
+                
+        if dig_option == '1':
+                    
+            print('\nPackage Managers')
+            print('-------------------------------------')
+            print('1. apt')
+            print('2. dnf')
+            print('3. pacman')
+        
+            package_manager = input('\nChoose an option: ')
+                    
+            if package_manager == '1':
+                os.system('sudo apt install bind9-dnsutils')
+            if package_manager == '2':
+                os.system('sudo dnf install bind9-dnsutils')
+            if package_manager == '3':
+                os.system('sudo pacman -S bind9-dnsutils')
+
+        if dig_option == '2':
+            ip_or_url = input("Enter ip address or url: ")
+            os.system('dig ' + ip_or_url)
+
+        if dig_option == '1':
+                            
+            print('\nPackage Managers')
+            print('-------------------------------------')
+            print('1. apt')
+            print('2. dnf')
+            print('3. pacman')
+                
+            package_manager = input('\nChoose an option: ')
+                            
+            if package_manager == '1':
+                os.system('sudo apt remove bind9-dnsutils')
+            if package_manager == '2':
+                os.system('sudo dnf remove bind9-dnsutils')
+            if package_manager == '3':
+                os.system('sudo pacman -Rns bind9-dnsutils')
             
     if network_tool == '3':
         os.system('ifconfig')
@@ -1568,8 +1612,52 @@ if category == '3':
                 os.system('sudo pacman -Rns nmap')
 
     if network_tool == '7':
-        url = input("Enter url: ")
-        os.system('nslookup ' + url)
+
+        print('\nCommands')
+        print('-------------------------------------')
+        print('1. install nslookup (bind9-dnsutils)')
+        print('2. run nslookup')
+        print('3. uninstall nslookup (bind9-dnsutils)')
+                        
+        nslookup_option = input('\nChoose an option: ')
+                        
+        if nslookup_option == '1':
+                            
+            print('\nPackage Managers')
+            print('-------------------------------------')
+            print('1. apt')
+            print('2. dnf')
+            print('3. pacman')
+                
+            package_manager = input('\nChoose an option: ')
+                            
+            if package_manager == '1':
+                os.system('sudo apt install bind9-dnsutils')
+            if package_manager == '2':
+                os.system('sudo dnf install bind9-dnsutils')
+            if package_manager == '3':
+                os.system('sudo pacman -S bind9-dnsutils')
+        
+        if dig_option == '2':
+            ip_or_url = input("Enter ip address or url: ")
+            os.system('nslookup ' + ip_or_url)
+        
+        if nslookup_option == '1':
+                                    
+            print('\nPackage Managers')
+            print('-------------------------------------')
+            print('1. apt')
+            print('2. dnf')
+            print('3. pacman')
+                        
+            package_manager = input('\nChoose an option: ')
+                                    
+            if package_manager == '1':
+                os.system('sudo apt remove bind9-dnsutils')
+            if package_manager == '2':
+                os.system('sudo dnf remove bind9-dnsutils')
+            if package_manager == '3':
+                os.system('sudo pacman -Rns bind9-dnsutils')
         
     if network_tool == '8':
         address = input("Enter ip address: ")
@@ -1995,7 +2083,7 @@ if category == '5':
             
 if category == '0':
 
-    command_list = ('passwd', 'usermod', 'sudo', 'su', 'df', 'free', 'echo', 'id', 'hostnamectl', 'htop', 'apt', 'dnf', 'pacman', 'install', 'remove', 'localectl', 'ls', 'lsblk', 'ls', 'lsblk', 'lscpu', 'lshw', 'lsmem', 'lsmod', 'lspci', 'lsusb', 'pwd', 'shutdown', 'systemctl', 'timedatectl', 'top', 'touch', 'rm', 'rmdir', 'chmod', 'cat', 'ufw', 'gufw', 'arp', 'dig', 'ifconfig', 'ip', 'netstat', 'nmap', 'nslookup', 'ping', 'tcpdump', 'traceroute', 'nano', 'vi', 'vim', 'tree', 'dmesg', 'journalctl', 'history', 'blkid', 'firewalld', 'iptables', 'ssh', 'timeshift', 'wc', 'man', 'flatpak', 'snap', 'cal', 'calc')
+    command_list = ('passwd', 'usermod', 'sudo', 'su', 'df', 'free', 'echo', 'id', 'hostnamectl', 'htop', 'apt', 'dnf', 'pacman', 'install', 'remove', 'localectl', 'ls', 'lsblk', 'ls', 'lsblk', 'lscpu', 'lshw', 'lsmem', 'lsmod', 'lspci', 'lsusb', 'pwd', 'shutdown', 'systemctl', 'timedatectl', 'top', 'touch', 'rm', 'rmdir', 'chmod', 'cat', 'ufw', 'gufw', 'arp', 'dig', 'ifconfig', 'ip', 'netstat', 'nmap', 'nslookup', 'ping', 'tcpdump', 'traceroute', 'nano', 'vi', 'vim', 'tree', 'dmesg', 'journalctl', 'history', 'blkid', 'firewalld', 'iptables', 'ssh', 'timeshift', 'wc', 'man', 'flatpak', 'snap', 'ncal', 'calc')
     
     command = input('Enter command to need help with?: ')
     if command in command_list:
