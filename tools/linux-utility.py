@@ -1875,67 +1875,12 @@ if category == '4':
 if category == '5':
     print('\nUtility Tools')
     print('-------------------------------------')
-    print('1. cal')
-    print('2. calc')
+    print('1. calc')
+    print('2. ncal')
 
     utility_tool = input('\nChoose an option: ')
 
     if utility_tool == '1':
-        print('\nOptions')
-        print('-------------------------------------')
-        print('1. install cal')
-        print('2. run cal')
-        print('3. uninstall cal')
-
-        cal_option = input('\nChoose an option: ')
-
-        if cal_option == '1':
-            print('\nPackage Managers')
-            print('-------------------------------------')
-            print('1. apt')
-            print('2. dnf')
-            print('3. pacman')
-
-            package_manager = input('\nChoose an option: ')
-
-            if package_manager == '1':
-                os.system('sudo apt install cal')
-            
-            if package_manager == '2':
-                os.system('sudo dnf install cal')
-                
-            if package_manager == '3':
-                os.system('sudo pacman -S cal')
-
-        if cal_option == '2':
-            
-            flag = input('Enter cal flag: ')
-            
-            if flag != "":
-                os.system('cal' + flag)
-            
-            else:
-                os.system('cal')
-
-        if cal_option == '3':
-            print('\nPackage Managers')
-            print('-------------------------------------')
-            print('1. apt')
-            print('2. dnf')
-            print('3. pacman')
-
-            package_manager = input('\nChoose an option: ')
-
-            if package_manager == '1':
-                os.system('sudo apt remove cal')
-                
-            if package_manager == '2':
-                os.system('sudo dnf remove cal')
-                    
-            if package_manager == '3':
-                os.system('sudo pacman -Rns cal')
-
-    if utility_tool == '2':
         print('\nOptions')
         print('-------------------------------------')
         print('1. install calc')
@@ -1961,6 +1906,61 @@ if category == '5':
                 
             if package_manager == '3':
                 os.system('sudo pacman -S calc')
+
+        if calc_option == '2':
+            
+            flag = input('Enter cal flag: ')
+            
+            if flag != "":
+                os.system('calc' + flag)
+            
+            else:
+                os.system('calc')
+
+        if calc_option == '3':
+            print('\nPackage Managers')
+            print('-------------------------------------')
+            print('1. apt')
+            print('2. dnf')
+            print('3. pacman')
+
+            package_manager = input('\nChoose an option: ')
+
+            if package_manager == '1':
+                os.system('sudo apt remove calc')
+                
+            if package_manager == '2':
+                os.system('sudo dnf remove calc')
+                    
+            if package_manager == '3':
+                os.system('sudo pacman -Rns calc')
+
+    if utility_tool == '2':
+        print('\nOptions')
+        print('-------------------------------------')
+        print('1. install ncal')
+        print('2. run ncal')
+        print('3. uninstall ncal')
+
+        ncal_option = input('\nChoose an option: ')
+
+        if ncal_option == '1':
+            print('\nPackage Managers')
+            print('-------------------------------------')
+            print('1. apt')
+            print('2. dnf')
+            print('3. pacman')
+
+            package_manager = input('\nChoose an option: ')
+
+            if package_manager == '1':
+                os.system('sudo apt install ncal')
+            
+            if package_manager == '2':
+                os.system('sudo dnf install ncal')
+                
+            if package_manager == '3':
+                os.system('sudo pacman -S ncal')
 
         if calc_option == '2':
             
