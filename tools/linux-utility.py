@@ -1974,6 +1974,7 @@ if category == '5':
     print('-------------------------------------')
     print('1. calc')
     print('2. ncal')
+    print('3. rofi')
 
     utility_tool = input('\nChoose an option: ')
 
@@ -2087,12 +2088,83 @@ if category == '5':
             if package_manager == '3':
                 os.system('sudo pacman -Rns calc')
 
+    if utility_tool == '3':
+
+        print('\nOptions')
+        print('-------------------------------------')
+        print('1. install rofi')
+        print('2. run rofi')
+        print('3. uninstall rofi')
+
+    # Prompt user to install rofi, launch rofi for applications, files, and any open windows, change rofi theme, or uninstall rofi
+
+        rofi_command = input('\nChoose an option: ')
+
+    # Install rofi if it's not installed  (Debian, RHEL, or Arch based distributions)
+
+        if rofi_command == '1':
+            print('\nPackage Managers')
+            print('-------------------------------------')
+            print('1. apt')
+            print('2. dnf')
+            print('3. pacman')
+    
+            package_manager = input('\nChoose an option: ')
+    
+            if package_manager == '1':
+                os.system('sudo apt install rofi')
+        
+            if package_manager == '2':    
+                os.system('sudo dnf install rofi')
+    
+            if package_manager == '3':
+                os.system('sudo pacman -S rofi')
+        
+        if rofi_command == '2':
+            print('\nOptions')
+            print('-------------------------------------')
+            print('1. reload desktop drun cache')
+            print('2. run rofi with icons')
+            print('3. show open windows')
+            print('4. theme selector')
+    
+            options_command = input('\nChoose an option: ')
+    
+            if options_command == '1':
+                os.system('rofi -drun-reload-desktop-cache -show drun')
+    
+            if options_command == '2':
+                os.system('rofi -show drun -show-icons')
+        
+            if options_command == '3':
+                os.system('rofi -show window -show-icons')
+        
+            if options_command == '4':
+                os.system('rofi-theme-selector')
+        
+        if rofi_command == '3':
+            print('\nPackage Managers')
+            print('-------------------------------------')
+            print('1. apt')
+            print('2. dnf')
+            print('3. pacman')
+        
+            package_manager = input('\nChoose an option: ')
+            
+            if package_manager == '1':
+                os.system('sudo apt remove rofi && sudo apt autoremove')
+                
+            if package_manager == '2':    
+                os.system('sudo dnf remove rofi && sudo dnf autoremove')
+            
+            if package_manager == '3':
+                os.system('sudo pacman -Rns rofi')
                     
 # Need some help?
             
 if category == '0':
 
-    command_list = ('passwd', 'usermod', 'sudo', 'su', 'df', 'free', 'echo', 'id', 'hostnamectl', 'htop', 'apt', 'dnf', 'pacman', 'install', 'remove', 'localectl', 'ls', 'lsblk', 'ls', 'lsblk', 'lscpu', 'lshw', 'lsmem', 'lsmod', 'lspci', 'lsusb', 'pwd', 'shutdown', 'systemctl', 'timedatectl', 'top', 'touch', 'rm', 'rmdir', 'chmod', 'cat', 'ufw', 'gufw', 'arp', 'dig', 'ifconfig', 'ip', 'netstat', 'nmap', 'nslookup', 'ping', 'tcpdump', 'traceroute', 'nano', 'vi', 'vim', 'tree', 'dmesg', 'journalctl', 'history', 'blkid', 'firewalld', 'iptables', 'ssh', 'timeshift', 'wc', 'man', 'flatpak', 'snap', 'ncal', 'calc')
+    command_list = ('rofi', 'passwd', 'usermod', 'sudo', 'su', 'df', 'free', 'echo', 'id', 'hostnamectl', 'htop', 'apt', 'dnf', 'pacman', 'install', 'remove', 'localectl', 'ls', 'lsblk', 'ls', 'lsblk', 'lscpu', 'lshw', 'lsmem', 'lsmod', 'lspci', 'lsusb', 'pwd', 'shutdown', 'systemctl', 'timedatectl', 'top', 'touch', 'rm', 'rmdir', 'chmod', 'cat', 'ufw', 'gufw', 'arp', 'dig', 'ifconfig', 'ip', 'netstat', 'nmap', 'nslookup', 'ping', 'tcpdump', 'traceroute', 'nano', 'vi', 'vim', 'tree', 'dmesg', 'journalctl', 'history', 'blkid', 'firewalld', 'iptables', 'ssh', 'timeshift', 'wc', 'man', 'flatpak', 'snap', 'ncal', 'calc')
     
     command = input('Enter command to need help with?: ')
     if command in command_list:
