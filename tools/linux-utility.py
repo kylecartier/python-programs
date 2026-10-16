@@ -2027,7 +2027,7 @@ if category == '5':
         print('\nOptions')
         print('-------------------------------------')
         print('1. install ncal')
-        print('2. run ncal')
+        print('2. run cal (ncal)')
         print('3. uninstall ncal')
 
         ncal_option = input('\nChoose an option: ')
@@ -2055,10 +2055,10 @@ if category == '5':
             flag = input('Enter cal flag: ')
             
             if flag != "":
-                os.system('calc' + flag)
+                os.system('cal ' + flag)
             
             else:
-                os.system('calc') 
+                os.system('cal') 
 
         if ncal_option == '3':
             print('\nPackage Managers')
