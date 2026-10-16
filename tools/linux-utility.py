@@ -170,6 +170,7 @@ if category == '1':
                 print('5. run ssh service')
                 print('6. start ssh service')
                 print('7. stop ssh service')
+                print('8. uninstall ssh service')
 
                 ssh_command = input('\nChoose an option: ')
                 
@@ -214,6 +215,24 @@ if category == '1':
                     
                 if ssh_command == '7':
                     os.system('sudo systemctl stop ssh')
+
+                if ssh_command == '8':
+                    print('\nPackage Managers')
+                    print('-------------------------------------')
+                    print('1. apt')
+                    print('2. dnf')
+                    print('3. pacman')
+                                   
+                    package_manager = input('\nEnter package manager: ')
+                                    
+                    if package_manager == '1':
+                        os.system('sudo apt remove ssh')
+                
+                    if package_manager == '2':
+                        os.system('sudo dnf remove ssh')
+                
+                    if package_manager == '3':
+                        os.system('sudo pacman -Rns ssh')
 
             if ssh_option == '2':
                 print('\nCommands')
