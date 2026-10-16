@@ -1278,9 +1278,10 @@ if category == '2':
     print('2. add and delete directories')
     print('3. permissions')
     print('4. read files')
-    print('5. text editors')
-    print('6. tree')
-    print('7. wc')
+    print('5. search file')
+    print('6. text editors')
+    print('7. tree')
+    print('9. wc')
     
     files_command = input('\nChoose an option: ')
     
@@ -1407,8 +1408,19 @@ if category == '2':
             os.system('cat ' + file)
         if flag == '' and file == '':
             exit(0)
-    
+
     if files_command == '5':
+        grep_flag = input('Enter grep flag: ')
+        grep_files_dirs = input('Enter file: ')
+        grep_words = input('What word(s) do you want to look for?: ')
+        if grep_flag != '' and grep_files_dirs != '' and grep_words != '':
+            os.system('grep ' + grep_flag + ' ' + grep_words + ' ' + grep_files_dirs)
+        if grep_flag == '' and grep_files_dirs != '' and grep_words != '':
+            os.system('grep ' + grep_words + ' ' + grep_files_dirs)
+        else:
+            exit(0)
+    
+    if files_command == '6':
         print('\nCommands')
         print('-------------------------------------')
         print('1. nano')
@@ -1432,7 +1444,7 @@ if category == '2':
             if file != '':
                 os.system('vim ' + file)
                 
-    if files_command == '6':
+    if files_command == '7':
         flag = input('Enter tree flag: ')
         directory = input('Enter directory: ')
         if flag == '':
@@ -1447,7 +1459,7 @@ if category == '2':
         else:
             exit(0)
             
-    if files_command == '7':
+    if files_command == '8':
         file = input('Enter name of file: ')
         flag = input('Enter wc flag: ')
         if file != '' and flag == '':
