@@ -81,8 +81,17 @@ if category == '1':
             os.system('free')
         
     if admin_tool == '4':
-        os.system('hostnamectl')
+        hostname_option = input('Do you want to change the hostname of this system?: ')
+        if hostname_option == 'y':
+            new_hostname = input('Enter the new hostname: ')
+            os.system('sudo hostnamectl set-hostname ' + new_hostname)
         
+        if hostname_option == 'n':    
+            os.system('hostnamectl')
+
+        else:
+            exit(0)
+
     if admin_tool == '5':
         flag = input('Enter htop flag: ')
         if flag != '':
