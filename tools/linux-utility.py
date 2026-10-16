@@ -1605,22 +1605,22 @@ if category == '3':
                 nmap_port_command = input('\nChoose an option: ')
 
                 if nmap_port_command == '1':
-                    ip_address = input('Enter an ip address: ')
-                    port_number = input('Enter a port to scan: ')
+                    ip_address = input('Enter ip address: ')
+                    port_number = input('Enter port: ')
                     if ip_address and port_number != '':
                         os.system('nmap ' + ip_address + ' -sV -p' + port_number)
                     else:
                         exit(0)
 
                 if nmap_port_command == '2':
-                    ip_address = input('Enter an ip address: ')
-                    port_number_range = input('Enter a port range: ')
+                    ip_address = input('Enter ip address: ')
+                    port_number_range = input('Enter port range: ')
                     if ip_address != '' and '-' in port_number_range:
                         os.system('nmap ' + ip_address + ' -sV -p' + port_number_range)
                     else:
                         exit(0)
 
-                        
+
                     
             if nmap_command == '4':
                 ip_address = input('Enter ip address: ')
