@@ -1599,8 +1599,8 @@ if category == '3':
 
                 print('\nCommands')
                 print('-------------------------------------')
-                print('1. scan one port')
-                print('2. scan a port range')
+                print('1. scan port')
+                print('2. scan port range')
 
                 nmap_port_command = input('\nChoose an option: ')
 
