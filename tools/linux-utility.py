@@ -1620,7 +1620,7 @@ if category == '3':
                     ip_address = input('Enter ip address: ')
                     port_number = input('Enter port: ')
                     if ip_address and port_number != '':
-                        os.system('nmap ' + ip_address + ' -sV -p' + port_number)
+                        os.system('nmap ' + ip_address + ' -sV -p ' + port_number)
                     else:
                         exit(0)
 
@@ -1628,7 +1628,7 @@ if category == '3':
                     ip_address = input('Enter ip address: ')
                     port_number_range = input('Enter port range: ')
                     if ip_address != '' and '-' in port_number_range:
-                        os.system('nmap ' + ip_address + ' -sV -p' + port_number_range)
+                        os.system('nmap ' + ip_address + ' -sV -p ' + port_number_range)
                     else:
                         exit(0)
 
