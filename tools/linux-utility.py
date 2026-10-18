@@ -2067,6 +2067,9 @@ if category == '5':
         os.system('sudo apt autoremove')
         os.system('sudo apt install net-tools lshw htop vim ncal calc gcc ghc traceroute tcpdump nmap john rofi vlc  ')
         os.system('sudo flatpak install signal-desktop zoom discord google-chrome')
+        os.system('git clone https://github.com/vinceliuice/Tela-circle-icon-theme.git')
+        os.system('cd Tela-circle-icon-theme && ./install.sh -a')
+        os.system('cd .. && rm -rf Tela-circle-icon-theme')
         os.system('sudo ufw limit 22/tcp && sudo ufw enable')
         os.system('sudo shutdown -r 10')
 
