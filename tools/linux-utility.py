@@ -22,7 +22,8 @@ print('-             1. Administration                   -')
 print('-             2. Files and Directories            -')
 print('-             3. Networking                       -')
 print('-             4. Security                         -')
-print('-             5. Utilities                        -')
+print('-             5. Scripts                          -')
+print('-             6. Utilities                        -')
 print('-                                                 -')
 print('-                Need some help?                  -')
 print('- ----------------------------------------------- -')
@@ -2030,7 +2031,20 @@ if category == '4':
     
         offensive_tool = input('\nChoose an option: ')
 
+
+
 if category == '5':
+    print('\nScripts')
+    print('-------------------------------------')
+    print('1. EndeavourOS post installation')
+
+    run_script = input('\nChoose script to run: ')
+
+    if run_script == '1':
+        os.system('chmod +x ./endeavouros-post-install.py')
+        os.system('./endeavouros-post-install.py')
+
+if category == '6':
     print('\nUtility Tools')
     print('-------------------------------------')
     print('1. calc')
