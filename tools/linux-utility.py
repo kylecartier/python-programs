@@ -2042,6 +2042,7 @@ if category == '5':
         os.system('sudo pacman -Syyu')
         nvidia = input('Do you have a nvidia card?: ')
         if nvidia == 'y':
+            os.system('sudo usermod -L root')
             os.system('sudo pacman -S nvidia-settings nvidia-inst')
             os.system('nvidia-inst')
             os.system('sudo pacman -S libreoffice tela-circle-icon-theme-all net-tools lshw htop vim calc gcc ghc traceroute tcpdump nmap john virtualbox signal-desktop discord rofi ufw gufw gnome-disk-utility timeshift vlc steam bluez bluez-utils blueman flatpak ')
@@ -2051,6 +2052,7 @@ if category == '5':
             os.system('sudo ufw enable && sudo limit 22/tcp')
             os.system('sudo shutdown -r 10')
         if nvidia == 'n':
+            os.system('sudo usermod -L root')
             os.system('sudo pacman -S libreoffice tela-circle-icon-theme-all net-tools lshw htop vim calc gcc ghc traceroute tcpdump nmap john virtualbox signal-desktop discord rofi ufw gufw gnome-disk-utility timeshift vlc steam bluez bluez-utils blueman flatpak ')
             os.system('flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo')
             os.system('yay -S google-chrome zoom lightdm-settings  ')
