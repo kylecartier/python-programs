@@ -2067,10 +2067,10 @@ if category == '5':
         os.system('sudo apt autoremove')
         os.system('sudo apt install git net-tools lshw htop vim ncal calc gcc ghc traceroute tcpdump nmap zenmap john rofi vlc  ')
         os.system('sudo flatpak install zoom discord chrome')
-        so.system('curl https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg
-cat signal-desktop-keyring.gpg | sudo tee /usr/share/keyrings/signal-desktop-keyring.gpg > /dev/null')
-        os.system('curl -o signal-desktop.sources https://updates.signal.org/static/desktop/apt/signal-desktop.sources
-cat signal-desktop.sources | sudo tee /etc/apt/sources.list.d/signal-desktop.sources > /dev/null')
+        os.system('curl https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg')
+        os.system('cat signal-desktop-keyring.gpg | sudo tee /usr/share/keyrings/signal-desktop-keyring.gpg > /dev/null')
+        os.system('curl -o signal-desktop.sources https://updates.signal.org/static/desktop/apt/signal-desktop.sources')
+        os.system('cat signal-desktop.sources | sudo tee /etc/apt/sources.list.d/signal-desktop.sources > /dev/null')
         os.system('sudo apt update && sudo apt install signal-desktop')
         os.system('sudo cp ~/Downloads/signal-desktop-keyring.gpg /usr/share/keyrings/')
         os.system('rm ~/Downloads/signal-desktop-keyring.gpg')
