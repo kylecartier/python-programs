@@ -2065,7 +2065,7 @@ if category == '5':
     if run_script == '2':
         os.system('sudo apt update && sudo apt upgrade')
         os.system('sudo apt autoremove')
-        os.system('sudo apt install numlockx git net-tools lshw htop vim ncal calc gcc ghc traceroute tcpdump nmap zenmap john rofi vlc  ')
+        os.system('sudo apt install steam-installer numlockx git net-tools lshw htop vim ncal calc gcc ghc traceroute tcpdump nmap zenmap john rofi vlc  ')
         os.system('sudo flatpak install zoom discord chrome')
         os.system('curl https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg')
         os.system('cat signal-desktop-keyring.gpg | sudo tee /usr/share/keyrings/signal-desktop-keyring.gpg > /dev/null')
