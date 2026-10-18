@@ -514,11 +514,8 @@ if category == '1':
                     os.system('flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo')
                     
                 if os == 'endeavouros':
-                    os.system('sudo pacman -S install flatpak')
-                    os.system('flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo')
-                    
-                if os == 'arch':
                     os.system('sudo pacman -S flatpak')
+                    os.system('flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo')
                     
                 if os == 'rocky':
                     os.system('sudo dnf install flatpak')
@@ -2037,6 +2034,7 @@ if category == '5':
     print('\nScripts')
     print('-------------------------------------')
     print('1. EndeavourOS post installation')
+    print('2. Linux Mint post installation')
 
     run_script = input('\nChoose script to run: ')
 
@@ -2046,21 +2044,34 @@ if category == '5':
         if nvidia == 'y':
             os.system('sudo pacman -S nvidia-settings nvidia-inst')
             os.system('nvidia-inst')
-            os.system('sudo pacman -S libreoffice tela-circle-icon-theme-all net-tools lshw htop vim calc gcc ghc traceroute tcpdump nmap john virtualbox signal-desktop discord rofi ufw gufw gnome-disk-utility timeshift vlc steam bluez bluez-utils blueman  ')
+            os.system('sudo pacman -S libreoffice tela-circle-icon-theme-all net-tools lshw htop vim calc gcc ghc traceroute tcpdump nmap john virtualbox signal-desktop discord rofi ufw gufw gnome-disk-utility timeshift vlc steam bluez bluez-utils blueman flatpak ')
+            os.system('flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo')
             os.system('yay -S google-chrome zoom lightdm-settings  ')
             os.system('sudo systemctl enable --now bluetooth')
             os.system('sudo ufw enable && sudo limit 22/tcp')
             os.system('sudo shutdown -r 10')
         if nvidia == 'n':
-            os.system('sudo pacman -S libreoffice tela-circle-icon-theme-all net-tools lshw htop vim calc gcc ghc traceroute tcpdump nmap john virtualbox signal-desktop discord rofi ufw gufw gnome-disk-utility timeshift vlc steam bluez bluez-utils blueman  ')
+            os.system('sudo pacman -S libreoffice tela-circle-icon-theme-all net-tools lshw htop vim calc gcc ghc traceroute tcpdump nmap john virtualbox signal-desktop discord rofi ufw gufw gnome-disk-utility timeshift vlc steam bluez bluez-utils blueman flatpak ')
+            os.system('flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo')
             os.system('yay -S google-chrome zoom lightdm-settings  ')
             os.system('sudo systemctl enable --now bluetooth')
             os.system('sudo ufw enable && sudo limit 22/tcp')
             os.system('sudo shutdown -r 10')
         else:
             exit(0)
+
+    if run_script == '2':
+        os.system('sudo apt update && sudo apt upgrade')
+        os.system('sudo apt autoremove')
+        os.system('sudo apt install net-tools lshw htop vim ncal calc gcc ghc traceroute tcpdump nmap john rofi vlc  ')
+        os.system('sudo flatpak install signal-desktop zoom discord google-chrome')
+        os.system('sudo ufw enable && sudo limit 22/tcp')
+        os.system('sudo shutdown -r 10')
+
     else:
         exit(0)
+
+
 
 if category == '6':
     print('\nUtility Tools')
