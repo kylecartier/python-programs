@@ -2044,15 +2044,18 @@ if category == '5':
         os.system('sudo pacman -Syyu')
         nvidia = input('Do you have a nvidia card?: ')
         if nvidia == 'y':
-            os.system('sudo pacman -S libreoffice tela-circle-icon-theme-all net-tools lshw htop vim calc gcc ghc traceroute tcpdump nmap john virtualbox signal-desktop discord rofi ufw gufw nvidia-inst nvidia-settings gnome-disk-utility timeshift vlc steam bluez bluez-utils blueman  ')
+            os.system('sudo pacman -S nvidia-settings nvidia-inst')
+            os.system('nvidia-inst')
+            os.system('sudo pacman -S libreoffice tela-circle-icon-theme-all net-tools lshw htop vim calc gcc ghc traceroute tcpdump nmap john virtualbox signal-desktop discord rofi ufw gufw gnome-disk-utility timeshift vlc steam bluez bluez-utils blueman  ')
             os.system('yay -S google-chrome zoom lightdm-settings  ')
             os.system('sudo systemctl enable --now bluetooth')
-            os.system('nvidia-inst')
+            os.system('sudo ufw enable && sudo limit 22/tcp')
             os.system('sudo shutdown -r 10')
         if nvidia == 'n':
             os.system('sudo pacman -S libreoffice tela-circle-icon-theme-all net-tools lshw htop vim calc gcc ghc traceroute tcpdump nmap john virtualbox signal-desktop discord rofi ufw gufw gnome-disk-utility timeshift vlc steam bluez bluez-utils blueman  ')
             os.system('yay -S google-chrome zoom lightdm-settings  ')
             os.system('sudo systemctl enable --now bluetooth')
+            os.system('sudo ufw enable && sudo limit 22/tcp')
             os.system('sudo shutdown -r 10')
         else:
             exit(0)
