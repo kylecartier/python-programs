@@ -1820,6 +1820,7 @@ if category == '4':
 
     if run_script == '1':
         os.system('sudo pacman -Syu')
+        os.system('sudo pacman -Rns $(pacman -Qtdq)')
         nvidia = input('Do you have a nvidia card?: ')
         if nvidia == 'y':
             os.system('sudo usermod -L root')
