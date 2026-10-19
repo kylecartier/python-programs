@@ -2045,7 +2045,7 @@ if category == '5':
             os.system('sudo usermod -L root')
             os.system('sudo pacman -S nvidia-settings nvidia-inst')
             os.system('nvidia-inst')
-            os.system('sudo pacman -S numlockx git libreoffice tela-circle-icon-theme-all net-tools lshw htop vim calc gcc ghc traceroute tcpdump zenmap nmap john virtualbox signal-desktop discord rofi ufw gufw gnome-disk-utility timeshift vlc steam bluez bluez-utils blueman flatpak ')
+            os.system('sudo pacman -S numlockx git libreoffice tela-circle-icon-theme-all net-tools lshw htop vim calc gcc ghc traceroute tcpdump zenmap nmap john virtualbox signal-desktop discord rofi ufw gufw gnome-disk-utility timeshift vlc steam bluez bluez-utils blueman flatpak veracrypt ')
             os.system('flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo')
             os.system('yay -S google-chrome zoom lightdm-settings  ')
             os.system('sudo systemctl enable --now bluetooth')
@@ -2054,7 +2054,7 @@ if category == '5':
             os.system('sudo shutdown -r 10')
         if nvidia == 'n':
             os.system('sudo usermod -L root')
-            os.system('sudo pacman -S numlockx git libreoffice tela-circle-icon-theme-all net-tools lshw htop vim calc gcc ghc traceroute tcpdump zenmap nmap john virtualbox signal-desktop discord rofi ufw gufw gnome-disk-utility timeshift vlc steam bluez bluez-utils blueman flatpak ')
+            os.system('sudo pacman -S numlockx git libreoffice tela-circle-icon-theme-all net-tools lshw htop vim calc gcc ghc traceroute tcpdump zenmap nmap john virtualbox signal-desktop discord rofi ufw gufw gnome-disk-utility timeshift vlc steam bluez bluez-utils blueman flatpak veracrypt ')
             os.system('flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo')
             os.system('yay -S google-chrome zoom lightdm-settings  ')
             os.system('sudo systemctl enable --now bluetooth')
