@@ -1832,7 +1832,7 @@ if category == '4':
             os.system('sudo systemctl enable --now bluetooth')
             os.system('sudo ufw limit 22/tcp && sudo ufw enable')
             os.system('sudo usermod -aG vboxusers kyle')
-            os.system('sudo shutdown -r 10')
+            os.system('sudo shutdown -r 1')
         if nvidia == 'n':
             os.system('sudo usermod -L root')
             os.system('sudo pacman -S numlockx git libreoffice tela-circle-icon-theme-all net-tools lshw htop vim calc gcc ghc traceroute tcpdump zenmap nmap john virtualbox signal-desktop discord rofi ufw gufw gnome-disk-utility timeshift vlc steam bluez bluez-utils blueman flatpak veracrypt ')
@@ -1842,7 +1842,7 @@ if category == '4':
             os.system('sudo systemctl enable --now bluetooth')
             os.system('sudo ufw limit 22/tcp && sudo ufw enable')
             os.system('sudo usermod -aG vboxusers kyle')
-            os.system('sudo shutdown -r 10')
+            os.system('sudo shutdown -r 1')
         else:
             exit(0)
 
@@ -1864,7 +1864,7 @@ if category == '4':
         os.system('cd ..')
         os.system('rm -rf Tela-circle-icon-theme/')
         os.system('sudo ufw limit 22/tcp && sudo ufw enable')
-        os.system('sudo shutdown -r 10')
+        os.system('sudo shutdown -r 1')
 
     else:
         exit(0)
