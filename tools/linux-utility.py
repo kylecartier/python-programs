@@ -1826,7 +1826,7 @@ if category == '4':
             os.system('sudo usermod -L root')
             os.system('sudo pacman -S nvidia-settings nvidia-inst')
             os.system('nvidia-inst')
-            os.system('sudo pacman -S pacman-contrib base-devel numlockx git libreoffice tela-circle-icon-theme-all net-tools lshw htop vim calc ghc traceroute tcpdump zenmap nmap john virtualbox signal-desktop discord rofi ufw gufw gnome-disk-utility timeshift vlc steam bluez bluez-utils blueman flatpak veracrypt ')
+            os.system('sudo pacman -S pacman-contrib base-devel numlockx git libreoffice-still tela-circle-icon-theme-all net-tools lshw htop vim calc ghc traceroute tcpdump zenmap nmap john virtualbox signal-desktop discord rofi ufw gufw gnome-disk-utility timeshift vlc steam bluez bluez-utils blueman flatpak veracrypt ')
             os.system('yay -S lightdm-settings')
             os.system('flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo')
             os.system('sudo flatpak install chrome zoom')
@@ -1836,7 +1836,7 @@ if category == '4':
             os.system('sudo shutdown -r 1')
         if nvidia == 'n':
             os.system('sudo usermod -L root')
-            os.system('sudo pacman -S pacman-contrib base-devel numlockx git libreoffice tela-circle-icon-theme-all net-tools lshw htop vim calc ghc traceroute tcpdump zenmap nmap john virtualbox signal-desktop discord rofi ufw gufw gnome-disk-utility timeshift vlc steam bluez bluez-utils blueman flatpak veracrypt ')
+            os.system('sudo pacman -S pacman-contrib base-devel numlockx git libreoffice-still tela-circle-icon-theme-all net-tools lshw htop vim calc ghc traceroute tcpdump zenmap nmap john virtualbox signal-desktop discord rofi ufw gufw gnome-disk-utility timeshift vlc steam bluez bluez-utils blueman flatpak veracrypt ')
             os.system('yay -S lightdm-settings')
             os.system('flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo')
             os.system('sudo flatpak install chrome zoom')
