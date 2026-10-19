@@ -2050,6 +2050,7 @@ if category == '5':
             os.system('yay -S google-chrome zoom lightdm-settings  ')
             os.system('sudo systemctl enable --now bluetooth')
             os.system('sudo ufw limit 22/tcp && sudo ufw enable')
+            os.system('sudo usermod -aG vboxusers kyle')
             os.system('sudo shutdown -r 10')
         if nvidia == 'n':
             os.system('sudo usermod -L root')
@@ -2058,6 +2059,7 @@ if category == '5':
             os.system('yay -S google-chrome zoom lightdm-settings  ')
             os.system('sudo systemctl enable --now bluetooth')
             os.system('sudo ufw limit 22/tcp && sudo ufw enable')
+            os.system('sudo usermod -aG vboxusers kyle')
             os.system('sudo shutdown -r 10')
         else:
             exit(0)
