@@ -21,8 +21,8 @@ print('- ----------------------------------------------- -')
 print('-             1. Administration                   -')
 print('-             2. Files and Directories            -')
 print('-             3. Networking                       -')
-print('-             4. Security                         -')
-print('-             5. Scripts                          -')
+print('-             4. Scripts                         -')
+print('-             5. Security                          -')
 print('-             6. Utilities                        -')
 print('-                                                 -')
 print('-                Need some help?                  -')
@@ -1807,10 +1807,71 @@ if category == '3':
             os.system('whois ' + ip_url)
         else:
             exit(0)
+
+# Scripts
+
+if category == '4':
+    print('\nScripts')
+    print('-------------------------------------')
+    print('1. EndeavourOS post installation')
+    print('2. Linux Mint post installation')
+
+    run_script = input('\nChoose script to run: ')
+
+    if run_script == '1':
+        os.system('sudo pacman -Syyu')
+        nvidia = input('Do you have a nvidia card?: ')
+        if nvidia == 'y':
+            os.system('sudo usermod -L root')
+            os.system('sudo pacman -S nvidia-settings nvidia-inst')
+            os.system('nvidia-inst')
+            os.system('sudo pacman -S numlockx git libreoffice tela-circle-icon-theme-all net-tools lshw htop vim calc gcc ghc traceroute tcpdump zenmap nmap john virtualbox signal-desktop discord rofi ufw gufw gnome-disk-utility timeshift vlc steam bluez bluez-utils blueman flatpak veracrypt ')
+            os.system('yay -S lightdm-settings')
+            os.system('flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo')
+            os.system('sudo flatpak install chrome zoom')
+            os.system('sudo systemctl enable --now bluetooth')
+            os.system('sudo ufw limit 22/tcp && sudo ufw enable')
+            os.system('sudo usermod -aG vboxusers kyle')
+            os.system('sudo shutdown -r 10')
+        if nvidia == 'n':
+            os.system('sudo usermod -L root')
+            os.system('sudo pacman -S numlockx git libreoffice tela-circle-icon-theme-all net-tools lshw htop vim calc gcc ghc traceroute tcpdump zenmap nmap john virtualbox signal-desktop discord rofi ufw gufw gnome-disk-utility timeshift vlc steam bluez bluez-utils blueman flatpak veracrypt ')
+            os.system('yay -S lightdm-settings')
+            os.system('flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo')
+            os.system('sudo flatpak install chrome zoom')
+            os.system('sudo systemctl enable --now bluetooth')
+            os.system('sudo ufw limit 22/tcp && sudo ufw enable')
+            os.system('sudo usermod -aG vboxusers kyle')
+            os.system('sudo shutdown -r 10')
+        else:
+            exit(0)
+
+    if run_script == '2':
+        os.system('sudo apt update && sudo apt upgrade')
+        os.system('sudo apt autoremove')
+        os.system('sudo apt install steam-installer numlockx git net-tools lshw htop vim ncal calc gcc ghc traceroute tcpdump nmap zenmap john rofi vlc  ')
+        os.system('sudo flatpak install zoom discord chrome')
+        os.system('curl https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg')
+        os.system('cat signal-desktop-keyring.gpg | sudo tee /usr/share/keyrings/signal-desktop-keyring.gpg > /dev/null')
+        os.system('curl -o signal-desktop.sources https://updates.signal.org/static/desktop/apt/signal-desktop.sources')
+        os.system('cat signal-desktop.sources | sudo tee /etc/apt/sources.list.d/signal-desktop.sources > /dev/null')
+        os.system('sudo apt update && sudo apt install signal-desktop')
+        os.system('sudo cp ~/Downloads/signal-desktop-keyring.gpg /usr/share/keyrings/')
+        os.system('rm ~/Downloads/signal-desktop-keyring.gpg')
+        os.system('rm ~/Downloads/signal-desktop.sources')
+        os.system('git clone https://github.com/vinceliuice/Tela-circle-icon-theme.git')
+        os.system('cd Tela-circle-icon-theme && ./install.sh -a')
+        os.system('cd ..')
+        os.system('rm -rf Tela-circle-icon-theme/')
+        os.system('sudo ufw limit 22/tcp && sudo ufw enable')
+        os.system('sudo shutdown -r 10')
+
+    else:
+        exit(0)
         
 # Security Tools
             
-if category == '4':
+if category == '5':
     print('\nSecurity Tools')
     print('-------------------------------------')
     print('1. Defensive Tools')
@@ -2028,66 +2089,6 @@ if category == '4':
     
         offensive_tool = input('\nChoose an option: ')
 
-
-
-if category == '5':
-    print('\nScripts')
-    print('-------------------------------------')
-    print('1. EndeavourOS post installation')
-    print('2. Linux Mint post installation')
-
-    run_script = input('\nChoose script to run: ')
-
-    if run_script == '1':
-        os.system('sudo pacman -Syyu')
-        nvidia = input('Do you have a nvidia card?: ')
-        if nvidia == 'y':
-            os.system('sudo usermod -L root')
-            os.system('sudo pacman -S nvidia-settings nvidia-inst')
-            os.system('nvidia-inst')
-            os.system('sudo pacman -S numlockx git libreoffice tela-circle-icon-theme-all net-tools lshw htop vim calc gcc ghc traceroute tcpdump zenmap nmap john virtualbox signal-desktop discord rofi ufw gufw gnome-disk-utility timeshift vlc steam bluez bluez-utils blueman flatpak veracrypt ')
-            os.system('yay -S lightdm-settings')
-            os.system('flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo')
-            os.system('sudo flatpak install chrome zoom')
-            os.system('sudo systemctl enable --now bluetooth')
-            os.system('sudo ufw limit 22/tcp && sudo ufw enable')
-            os.system('sudo usermod -aG vboxusers kyle')
-            os.system('sudo shutdown -r 10')
-        if nvidia == 'n':
-            os.system('sudo usermod -L root')
-            os.system('sudo pacman -S numlockx git libreoffice tela-circle-icon-theme-all net-tools lshw htop vim calc gcc ghc traceroute tcpdump zenmap nmap john virtualbox signal-desktop discord rofi ufw gufw gnome-disk-utility timeshift vlc steam bluez bluez-utils blueman flatpak veracrypt ')
-            os.system('yay -S lightdm-settings')
-            os.system('flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo')
-            os.system('sudo flatpak install chrome zoom')
-            os.system('sudo systemctl enable --now bluetooth')
-            os.system('sudo ufw limit 22/tcp && sudo ufw enable')
-            os.system('sudo usermod -aG vboxusers kyle')
-            os.system('sudo shutdown -r 10')
-        else:
-            exit(0)
-
-    if run_script == '2':
-        os.system('sudo apt update && sudo apt upgrade')
-        os.system('sudo apt autoremove')
-        os.system('sudo apt install steam-installer numlockx git net-tools lshw htop vim ncal calc gcc ghc traceroute tcpdump nmap zenmap john rofi vlc  ')
-        os.system('sudo flatpak install zoom discord chrome')
-        os.system('curl https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg')
-        os.system('cat signal-desktop-keyring.gpg | sudo tee /usr/share/keyrings/signal-desktop-keyring.gpg > /dev/null')
-        os.system('curl -o signal-desktop.sources https://updates.signal.org/static/desktop/apt/signal-desktop.sources')
-        os.system('cat signal-desktop.sources | sudo tee /etc/apt/sources.list.d/signal-desktop.sources > /dev/null')
-        os.system('sudo apt update && sudo apt install signal-desktop')
-        os.system('sudo cp ~/Downloads/signal-desktop-keyring.gpg /usr/share/keyrings/')
-        os.system('rm ~/Downloads/signal-desktop-keyring.gpg')
-        os.system('rm ~/Downloads/signal-desktop.sources')
-        os.system('git clone https://github.com/vinceliuice/Tela-circle-icon-theme.git')
-        os.system('cd Tela-circle-icon-theme && ./install.sh -a')
-        os.system('cd ..')
-        os.system('rm -rf Tela-circle-icon-theme/')
-        os.system('sudo ufw limit 22/tcp && sudo ufw enable')
-        os.system('sudo shutdown -r 10')
-
-    else:
-        exit(0)
 
 
 
