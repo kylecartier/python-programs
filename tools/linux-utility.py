@@ -2210,7 +2210,7 @@ if category == '6':
                 os.system('sudo dnf remove ncal')
                     
             if package_manager == '3':
-                os.system('sudo pacman -Rns bsdmainutils')
+                os.system('yay -Rns bsdmainutils')
 
     if utility_tool == '3':
 
