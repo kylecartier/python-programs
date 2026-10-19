@@ -1826,8 +1826,8 @@ if category == '4':
             os.system('sudo usermod -L root')
             os.system('sudo pacman -S nvidia-settings nvidia-inst')
             os.system('nvidia-inst')
-            os.system('sudo pacman -S pacman-contrib base-devel numlockx git libreoffice-still tela-circle-icon-theme-all net-tools lshw htop vim calc ghc traceroute tcpdump zenmap nmap john virtualbox signal-desktop discord rofi ufw gufw gnome-disk-utility timeshift vlc steam bluez bluez-utils blueman flatpak veracrypt ')
-            os.system('yay -S lightdm-settings')
+            os.system('sudo pacman -S bsdmainutilspacman-contrib base-devel numlockx git libreoffice-still tela-circle-icon-theme-all net-tools lshw htop vim calc ghc traceroute tcpdump zenmap nmap john virtualbox signal-desktop discord rofi ufw gufw gnome-disk-utility timeshift vlc steam bluez bluez-utils blueman flatpak veracrypt ')
+            os.system('yay -S lightdm-settings bsdmainutils')
             os.system('flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo')
             os.system('sudo flatpak install chrome zoom')
             os.system('sudo systemctl enable --now bluetooth')
@@ -1836,8 +1836,8 @@ if category == '4':
             os.system('sudo shutdown -r 1')
         if nvidia == 'n':
             os.system('sudo usermod -L root')
-            os.system('sudo pacman -S pacman-contrib base-devel numlockx git libreoffice-still tela-circle-icon-theme-all net-tools lshw htop vim calc ghc traceroute tcpdump zenmap nmap john virtualbox signal-desktop discord rofi ufw gufw gnome-disk-utility timeshift vlc steam bluez bluez-utils blueman flatpak veracrypt ')
-            os.system('yay -S lightdm-settings')
+            os.system('sudo pacman -S bsdmainutils pacman-contrib base-devel numlockx git libreoffice-still tela-circle-icon-theme-all net-tools lshw htop vim calc ghc traceroute tcpdump zenmap nmap john virtualbox signal-desktop discord rofi ufw gufw gnome-disk-utility timeshift vlc steam bluez bluez-utils blueman flatpak veracrypt ')
+            os.system('yay -S lightdm-settings bsdmainutils')
             os.system('flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo')
             os.system('sudo flatpak install chrome zoom')
             os.system('sudo systemctl enable --now bluetooth')
@@ -2182,17 +2182,17 @@ if category == '6':
                 os.system('sudo dnf install ncal')
                 
             if package_manager == '3':
-                os.system('sudo pacman -S ncal')
+                os.system('yay -S bsdmainutils')
 
         if ncal_option == '2':
             
-            flag = input('Enter calc flag: ')
+            flag = input('Enter ncal flag: ')
             
             if flag != "":
-                os.system('calc' + flag)
+                os.system('ncal' + flag)
             
             else:
-                os.system('calc') 
+                os.system('ncal') 
 
         if ncal_option == '3':
             print('\nPackage Managers')
@@ -2204,13 +2204,13 @@ if category == '6':
             package_manager = input('\nChoose an option: ')
 
             if package_manager == '1':
-                os.system('sudo apt remove calc')
+                os.system('sudo apt remove ncal')
                 
             if package_manager == '2':
-                os.system('sudo dnf remove calc')
+                os.system('sudo dnf remove ncal')
                     
             if package_manager == '3':
-                os.system('sudo pacman -Rns calc')
+                os.system('sudo pacman -Rns bsdmainutils')
 
     if utility_tool == '3':
 
