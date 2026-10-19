@@ -1819,7 +1819,7 @@ if category == '4':
     run_script = input('\nChoose script to run: ')
 
     if run_script == '1':
-        os.system('sudo pacman -Syyu')
+        os.system('sudo pacman -Syu')
         nvidia = input('Do you have a nvidia card?: ')
         if nvidia == 'y':
             os.system('sudo usermod -L root')
