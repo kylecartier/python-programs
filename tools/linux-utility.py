@@ -354,32 +354,32 @@ if category == '1':
                     if delete_command == '2':
                         os.system('sudo timeshift --delete-all')
                 
-                    if options_command == '3':
-                        os.system('sudo timeshift --list')
+                if options_command == '3':
+                    os.system('sudo timeshift --list')
                     
-                    if options_command == '4':
-                        os.system('timeshift --version')
+                if options_command == '4':
+                    os.system('timeshift --version')
                     
-                if timeshift_command == '3':
-                    print('\nPackage Manager')
-                    print('-------------------------------------')
-                    print('1. apt')
-                    print('2. dnf')
-                    print('3. pacman')
+            if timeshift_command == '3':
+                print('\nPackage Manager')
+                print('-------------------------------------')
+                print('1. apt')
+                print('2. dnf')
+                print('3. pacman')
 
-                    uninstall_command = input('\nChoose an option: ')
+                uninstall_command = input('\nChoose an option: ')
                 
-                    if uninstall_command == '1':
-                        os.system('sudo apt remove timeshift && sudo apt autoremove')
+                if uninstall_command == '1':
+                    os.system('sudo apt remove timeshift && sudo apt autoremove')
 
-                    if uninstall_command == '2':
-                        os.system('sudo dnf remove timeshift && sudo dnf autoremove')
+                if uninstall_command == '2':
+                    os.system('sudo dnf remove timeshift && sudo dnf autoremove')
 
-                    if uninstall_command == '3':
-                        os.system('sudo pacman -Rns timeshfit')
+                if uninstall_command == '3':
+                    os.system('sudo pacman -Rns timeshfit')
                     
-                if timeshift_command == '0':
-                    os.system('sudo timeshift')   
+            if timeshift_command == '0':
+                os.system('sudo timeshift')   
 
             # Once the program is finished executing
                 
