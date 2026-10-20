@@ -376,7 +376,7 @@ if category == '1':
                     os.system('sudo dnf remove timeshift && sudo dnf autoremove')
 
                 if uninstall_command == '3':
-                    os.system('sudo pacman -Rns timeshfit')
+                    os.system('sudo pacman -Rns timeshift')
                     
             if timeshift_command == '0':
                 os.system('sudo timeshift')   
@@ -404,7 +404,7 @@ if category == '1':
 
             if package_manager == '3':
                 os.system('sudo pacman -Syu')
-                os.system('sudo pacman -Rns $(pacman -Qdtq)')
+                os.system('sudo pacman -Rns $(pacman -Qtdq)')
         
     if admin_tool == '8':
         os.system('localectl')
