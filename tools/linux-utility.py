@@ -388,39 +388,11 @@ if category == '1':
                 exit(0)
 
         if maintenance_command == '7':
-            print('\nPackage Managers')
-            print('-------------------------------------')
-            print('1. apt')
-            print('2. dnf')
-            print('3. pacman')
-
-            package_manager = input('\nChoose an option: ')
-
-            if package_manager == '1':
-                package = input('Enter package: ')
-                if package != '':
-                    os.sytem(package + ' ' + '--version')
-                else:
-                    exit(0)
-
-            if package_manager == '2':
-                package = input('Enter package: ')
-                if package != '':
-                    os.system('dnf list installed ' + package)
-                else:
-                    exit(9)
-
-            if package_manager == '3':
-                package = input('Enter package: ')
-                if package != '':
-                    os.system('pacman -Q ' + package)
-                else:
-                    exit(0)
-
+            package = input('Enter package: ')
+            if package != '':
+                os.sytem(package + ' ' + '--version')
             else:
-                exit(0)
-            
-            
+                exit(0)            
 
         if maintenance_command == '8':
             print('\nPackage Managers')
