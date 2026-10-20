@@ -117,8 +117,12 @@ if category == '1':
         
         if id_command == '2':
             flag = input('Enter id flag: ')
-            os.system('id ' + flag)
-        
+            if flag != '':
+                os.system('id ' + flag)
+            else:
+                os.system('id')
+
+
     if admin_tool == '7':
         print('\nCommands')
         print('-------------------------------------')
@@ -435,7 +439,7 @@ if category == '1':
             flag = input('Enter ls flag: ')
             directory = input('Enter directory: ') 
             if directory != '' and flag != '':
-                os.system('ls ' + flag + ' ' + directory + '/')
+                os.system('ls ' + flag + ' ' + directory)
             if flag == '' and directory != '':
                 os.system('ls ' + directory)
             if directory == '' and flag != '':
