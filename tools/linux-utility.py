@@ -1862,23 +1862,25 @@ if category == '4':
             os.system('sudo usermod -L root')
             os.system('sudo pacman -S nvidia-settings nvidia-inst')
             os.system('sudo nvidia-inst')
-            os.system('sudo pacman -S gparted tree pacman-contrib base-devel numlockx git libreoffice-still tela-circle-icon-theme-all net-tools lshw htop vim calc ghc traceroute tcpdump zenmap nmap john virtualbox signal-desktop discord rofi ufw gufw gnome-disk-utility timeshift vlc steam bluez bluez-utils blueman flatpak veracrypt ')
+            os.system('sudo pacman -S plocate gparted tree pacman-contrib base-devel numlockx git libreoffice-still tela-circle-icon-theme-all net-tools lshw htop vim calc ghc traceroute tcpdump zenmap nmap john virtualbox signal-desktop discord rofi ufw gufw gnome-disk-utility timeshift vlc steam bluez bluez-utils blueman flatpak veracrypt ')
             os.system('yay -S lightdm-settings bsdmainutils visual-studio-code-bin')
             os.system('flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo')
             os.system('sudo flatpak install chrome zoom')
             os.system('sudo systemctl enable --now bluetooth')
             os.system('sudo ufw limit 22/tcp && sudo ufw enable')
             os.system('sudo usermod -aG vboxusers kyle')
+            os.system('sudo updatedb')
             os.system('sudo shutdown -r 1')
         if nvidia == 'n':
             os.system('sudo usermod -L root')
-            os.system('sudo pacman -S gparted tree pacman-contrib base-devel numlockx git libreoffice-still tela-circle-icon-theme-all net-tools lshw htop vim calc ghc traceroute tcpdump zenmap nmap john virtualbox signal-desktop discord rofi ufw gufw gnome-disk-utility timeshift vlc steam bluez bluez-utils blueman flatpak veracrypt ')
+            os.system('sudo pacman -S plocate gparted tree pacman-contrib base-devel numlockx git libreoffice-still tela-circle-icon-theme-all net-tools lshw htop vim calc ghc traceroute tcpdump zenmap nmap john virtualbox signal-desktop discord rofi ufw gufw gnome-disk-utility timeshift vlc steam bluez bluez-utils blueman flatpak veracrypt ')
             os.system('yay -S lightdm-settings bsdmainutils visual-studio-code-bin')
             os.system('flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo')
             os.system('sudo flatpak install chrome zoom')
             os.system('sudo systemctl enable --now bluetooth')
             os.system('sudo ufw limit 22/tcp && sudo ufw enable')
             os.system('sudo usermod -aG vboxusers kyle')
+            os.system('sudo updatedb')
             os.system('sudo shutdown -r 1')
         else:
             exit(0)
@@ -1886,7 +1888,7 @@ if category == '4':
     if run_script == '2':
         os.system('sudo apt update && sudo apt upgrade')
         os.system('sudo apt autoremove')
-        os.system('sudo apt install gparted tree build-essential steam-installer numlockx git net-tools lshw htop vim ncal calc ghc traceroute tcpdump nmap zenmap john rofi vlc  ')
+        os.system('sudo apt install plocate gparted tree build-essential steam-installer numlockx git net-tools lshw htop vim ncal calc ghc traceroute tcpdump nmap zenmap john rofi vlc  ')
         os.system('sudo flatpak install zoom discord chrome')
         os.system('curl https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg')
         os.system('cat signal-desktop-keyring.gpg | sudo tee /usr/share/keyrings/signal-desktop-keyring.gpg > /dev/null')
@@ -1901,6 +1903,7 @@ if category == '4':
         os.system('cd ..')
         os.system('rm -rf Tela-circle-icon-theme/')
         os.system('sudo ufw limit 22/tcp && sudo ufw enable')
+        os.system('sudo updatedb')
         os.system('sudo shutdown -r 1')
 
     else:
@@ -2324,7 +2327,7 @@ if category == '6':
             
 if category == '0':
 
-    command_list = ('parted', 'ps', 'downgrade', 'paccache', 'grep', 'rofi', 'passwd', 'usermod', 'sudo', 'su', 'df', 'free', 'echo', 'id', 'hostnamectl', 'htop', 'apt', 'dnf', 'pacman', 'install', 'remove', 'localectl', 'ls', 'lsblk', 'lscpu', 'lshw', 'lsmem', 'lsmod', 'lspci', 'lsusb', 'pwd', 'shutdown', 'systemctl', 'timedatectl', 'top', 'touch', 'rm', 'rmdir', 'chmod', 'cat', 'ufw', 'gufw', 'arp', 'dig', 'ifconfig', 'ip', 'netstat', 'nmap', 'nslookup', 'ping', 'tcpdump', 'traceroute', 'nano', 'vi', 'vim', 'tree', 'dmesg', 'journalctl', 'history', 'blkid', 'firewalld', 'iptables', 'ssh', 'timeshift', 'wc', 'man', 'flatpak', 'snap', 'ncal', 'calc')
+    command_list = ('plocate', 'parted', 'ps', 'downgrade', 'paccache', 'grep', 'rofi', 'passwd', 'usermod', 'sudo', 'su', 'df', 'free', 'echo', 'id', 'hostnamectl', 'htop', 'apt', 'dnf', 'pacman', 'install', 'remove', 'localectl', 'ls', 'lsblk', 'lscpu', 'lshw', 'lsmem', 'lsmod', 'lspci', 'lsusb', 'pwd', 'shutdown', 'systemctl', 'timedatectl', 'top', 'touch', 'rm', 'rmdir', 'chmod', 'cat', 'ufw', 'gufw', 'arp', 'dig', 'ifconfig', 'ip', 'netstat', 'nmap', 'nslookup', 'ping', 'tcpdump', 'traceroute', 'nano', 'vi', 'vim', 'tree', 'dmesg', 'journalctl', 'history', 'blkid', 'firewalld', 'iptables', 'ssh', 'timeshift', 'wc', 'man', 'flatpak', 'snap', 'ncal', 'calc')
     
     command = input('Enter command: ')
     if command in command_list:
