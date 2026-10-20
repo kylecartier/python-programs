@@ -226,7 +226,7 @@ if category == '1':
                     print('2. dnf')
                     print('3. pacman')
                    
-                    package_manager = input('\nEnter package manager: ')
+                    package_manager = input('\nChoose an option: ')
                     
                     if package_manager == '1':
                         os.system('sudo apt install ssh')
@@ -258,7 +258,7 @@ if category == '1':
                     print('2. dnf')
                     print('3. pacman')
                                    
-                    package_manager = input('\nEnter package manager: ')
+                    package_manager = input('\nChoose an option: ')
                                     
                     if package_manager == '1':
                         os.system('sudo apt remove ssh')
@@ -393,16 +393,18 @@ if category == '1':
             print('2. dnf')
             print('3. pacman')
            
-            package_manager = input('\nEnter package manager: ')
+            package_manager = input('\nChoose an option: ')
             
             if package_manager == '1':
-                os.system('sudo apt update && sudo apt upgrade; sudo apt autoremove')
+                os.system('sudo apt update && sudo apt upgrade')
+                os.system('sudo apt autoremove')
 
             if package_manager == '2':
                 os.system('sudo dnf update && sudo dnf autoremove')
 
             if package_manager == '3':
                 os.system('sudo pacman -Syu')
+                os.system('sudo pacman -Rns $(pacman -Qdtq)')
         
     if admin_tool == '8':
         os.system('localectl')
