@@ -125,9 +125,10 @@ if category == '1':
         print('1. dmesg')
         print('2. history')
         print('3. journalctl')
-        print('4. ssh')
-        print('5. timeshift')
-        print('6. update repositories, upgrade packages, and remove no longer needed packages')
+        print('4. search for packages')
+        print('5. ssh')
+        print('6. timeshift')
+        print('7. update repositories, upgrade packages, and remove no longer needed packages')
         
         maintenance_command = input('\nChoose an option: ')
         
@@ -154,6 +155,39 @@ if category == '1':
                 os.system('journalctl')
 
         if maintenance_command == '4':
+            print('\nPackage Managers')
+            print('-------------------------------------')
+            print('1. apt')
+            print('2. dnf')
+            print('3. pacman')
+
+            package_manager = input('\nChoose an option: ')
+
+            if package_manager == '1':
+                package = input('Enter name of package to search: ')
+                if package != '':
+                    os.system('apt search ' + package)
+                else:
+                    exit(0)
+
+            if package_manager == '2':
+                package = input('Enter name of package to search: ')
+                if package != '':
+                    os.system('dnf search ' + package)
+                else:
+                    exit(0)
+
+            if package_manager == '3':
+                package = input('Enter name of package to search: ')
+                if package != '':
+                    os.system('pacman -Ss ' + package)
+                else:
+                    exit(0)
+
+            else:
+                exit(0)
+
+        if maintenance_command == '5':
             print('\nCommands')
             print('-------------------------------------')
             print('1. ssh service')
@@ -262,7 +296,7 @@ if category == '1':
                 if ssh_socket == '5':
                     os.system('sudo systemctl stop ssh.socket')
                 
-        if maintenance_command == '5':
+        if maintenance_command == '6':
             print('\nCommands')
             print('-------------------------------------')
             print('1. Installation')
@@ -276,22 +310,22 @@ if category == '1':
             timeshift_command = input('\nChoose an option: ')
 
             if timeshift_command == '1':
-                print('\nInstallation')
+                print('\nPackage Managers')
                 print('-------------------------------------')
-                print('1. installation on arch system')
-                print('2. installation on debian system')
-                print('3. installation on rhel system')
+                print('1. apt')
+                print('2. dnf')
+                print('3. pacman')
                 
                 install_command = input('\nChoose an option: ')
                 
                 if install_command == '1':
-                    os.system('sudo pacman -S timeshift -y')
+                    os.system('sudo apt install timeshift')
                     
                 if install_command == '2':    
-                    os.system('sudo apt install timeshift -y')
+                    os.system('sudo dnf install timeshift')
                 
                 if install_command == '3':
-                    os.system('sudo dnf install timeshift -y')
+                    os.system('sudo pacman -S timeshift')
                     
             if timeshift_command == '2':
                 print('\nOptions')
@@ -315,44 +349,44 @@ if category == '1':
                     delete_command = input('\nChoose an option: ')
                     
                     if delete_command == '1':
-                            os.system('sudo timeshift --delete')
+                        os.system('sudo timeshift --delete')
                             
                     if delete_command == '2':
                         os.system('sudo timeshift --delete-all')
                 
-                if options_command == '3':
-                    os.system('sudo timeshift --list')
+                    if options_command == '3':
+                        os.system('sudo timeshift --list')
                     
-                if options_command == '4':
-                    os.system('timeshift --version')
+                    if options_command == '4':
+                        os.system('timeshift --version')
                     
-            if timeshift_command == '3':
-                print('\nUninstall')
-                print('-------------------------------------')
-                print('1. uninstall on arch system')
-                print('2. uninstall on debian system')
-                print('3. uninstall on rhel system')
+                if timeshift_command == '3':
+                    print('\nPackage Manager')
+                    print('-------------------------------------')
+                    print('1. apt')
+                    print('2. dnf')
+                    print('3. pacman')
 
-                uninstall_command = input('\nChoose an option: ')
+                    uninstall_command = input('\nChoose an option: ')
                 
-                if uninstall_command == '1':
-                    os.system('sudo pacman -Rns timeshift -y')
+                    if uninstall_command == '1':
+                        os.system('sudo apt remove timeshift && sudo apt autoremove')
 
-                if uninstall_command == '2':
-                    os.system('sudo apt remove timeshift -y')
+                    if uninstall_command == '2':
+                        os.system('sudo dnf remove timeshift && sudo dnf autoremove')
 
-                if uninstall_command == '3':
-                    os.system('sudo dnf remove timeshift -y')
+                    if uninstall_command == '3':
+                        os.system('sudo pacman -Rns timeshfit')
                     
-            if timeshift_command == '0':
-                os.system('sudo timeshift')   
+                if timeshift_command == '0':
+                    os.system('sudo timeshift')   
 
             # Once the program is finished executing
                 
             else:
                 exit(0)
 
-        if maintenance_command == '6':
+        if maintenance_command == '7':
             print('\nPackage Managers')
             print('-------------------------------------')
             print('1. apt')
