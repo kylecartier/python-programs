@@ -390,7 +390,7 @@ if category == '1':
         if maintenance_command == '7':
             package = input('Enter package: ')
             if package != '':
-                os.sytem(package + ' ' + '--version')
+                os.system(package + ' ' + '--version')
             else:
                 exit(0)            
 
