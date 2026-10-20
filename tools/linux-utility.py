@@ -128,7 +128,8 @@ if category == '1':
         print('4. search for packages')
         print('5. ssh')
         print('6. timeshift')
-        print('7. update repositories, upgrade packages, and remove no longer needed packages')
+        print('7. version of a package')
+        print('8. update repositories, upgrade packages, and remove no longer needed packages')
         
         maintenance_command = input('\nChoose an option: ')
         
@@ -387,6 +388,41 @@ if category == '1':
                 exit(0)
 
         if maintenance_command == '7':
+            print('\nPackage Managers')
+            print('-------------------------------------')
+            print('1. apt')
+            print('2. dnf')
+            print('3. pacman')
+
+            package_manager = input('\nChoose an option: ')
+
+            if package_manager == '1':
+                package = input('Enter package: ')
+                if package != '':
+                    os.sytem(package + ' ' + '--version')
+                else:
+                    exit(0)
+
+            if package_manager == '2':
+                package = input('Enter package: ')
+                if package != '':
+                    os.system('dnf list installed ' + package)
+                else:
+                    exit(9)
+
+            if package_manager == '3':
+                package = input('Enter package: ')
+                if package != '':
+                    os.system('pacman -Q ' + package)
+                else:
+                    exit(0)
+
+            else:
+                exit(0)
+            
+            
+
+        if maintenance_command == '8':
             print('\nPackage Managers')
             print('-------------------------------------')
             print('1. apt')
