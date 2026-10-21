@@ -1900,7 +1900,7 @@ if category == '4':
     if run_script == '2':
         os.system('sudo apt update && sudo apt upgrade')
         os.system('sudo apt autoremove')
-        os.system('sudo apt install geany geany-plugins plocate gparted tree build-essential steam-installer numlockx git net-tools lshw htop vim ncal calc ghc traceroute tcpdump nmap zenmap john rofi vlc  ')
+        os.system('sudo apt install arc-theme geany geany-plugins plocate gparted tree build-essential steam-installer numlockx git net-tools lshw htop vim ncal calc ghc traceroute tcpdump nmap zenmap john rofi vlc  ')
         os.system('sudo flatpak install zoom discord chrome')
         os.system('curl https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg')
         os.system('cat signal-desktop-keyring.gpg | sudo tee /usr/share/keyrings/signal-desktop-keyring.gpg > /dev/null')
