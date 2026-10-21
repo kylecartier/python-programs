@@ -1872,7 +1872,7 @@ if category == '4':
         nvidia = input('Do you have a nvidia card?: ')
         if nvidia == 'y':
             os.system('sudo usermod -L root')
-            os.system('sudo pacman -S nvidia-settings nvidia-inst')
+            os.system('sudo pacman -S nvidia-inst')
             os.system('sudo nvidia-inst')
             os.system('sudo pacman -S geany geany-plugins plocate gparted tree pacman-contrib base-devel numlockx git libreoffice-still tela-circle-icon-theme-all net-tools lshw htop vim calc ghc traceroute tcpdump zenmap nmap john virtualbox signal-desktop discord rofi ufw gufw gnome-disk-utility timeshift vlc steam bluez bluez-utils blueman flatpak veracrypt ')
             os.system('yay -S lightdm-settings bsdmainutils visual-studio-code-bin')
