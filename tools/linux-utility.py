@@ -1869,7 +1869,7 @@ if category == '4':
     if run_script == '1':
         os.system('sudo pacman -Syu')
         os.system('sudo pacman -Rns $(pacman -Qtdq)')
-        clear_cache = input('Do you want to clear package cache: ')
+        clear_cache = input('Do you want to clear package cache?: ')
         if clear_cache == 'y':
             os.system('paccache -ruk0 && paccache -rk3')
         if clear_cache == 'n':
@@ -1906,7 +1906,7 @@ if category == '4':
     if run_script == '2':
         os.system('sudo apt update && sudo apt upgrade')
         os.system('sudo apt autoremove')
-        clear_cache = input('Do you want to clear package cache: ')
+        clear_cache = input('Do you want to clear package cache?: ')
         clear_disk_space = input('Do you need to clean up disk space?: ')
         if clear_cache == 'y' and clear_disk_space == 'n':
             os.system('sudo apt autoclean')
