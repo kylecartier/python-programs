@@ -1886,6 +1886,7 @@ if category == '4':
                     os.system('sudo pacman -S nvidia-inst')
                     os.system('sudo nvidia-inst --32')
                     os.system('sudo pacman -S ventoy spotify-launcher geany geany-plugins plocate gparted tree pacman-contrib base-devel numlockx git libreoffice-still tela-circle-icon-theme-all net-tools lshw htop vim calc ghc traceroute tcpdump zenmap nmap john virtualbox signal-desktop discord rofi ufw gufw gnome-disk-utility timeshift vlc steam bluez bluez-utils blueman flatpak veracrypt ')
+                    os.system('mkdir /home/kyle/.config/rofi/themes && cp Monokai-Pro-Octagon.rasi /home/kyle/.config/rofi/themes/')
                     os.system('gsettings set org.cinnamon.desktop.interface icon-theme "Tela-circle-nord-dark"')
                     os.system('yay -S lightdm-settings bsdmainutils visual-studio-code-bin xepub mintstick')
                     os.system('flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo')
@@ -1897,6 +1898,7 @@ if category == '4':
                     os.system('sudo shutdown -r 1')
                 if nvidia == 'n':
                     os.system('sudo usermod -L root')
+                    os.system('mkdir /home/kyle/.config/rofi/themes && cp Monokai-Pro-Octagon.rasi /home/kyle/.config/rofi/themes/')
                     os.system('sudo pacman -S ventoy spotify-launcher geany geany-plugins plocate gparted tree pacman-contrib base-devel numlockx git libreoffice-still tela-circle-icon-theme-all net-tools lshw htop vim calc ghc traceroute tcpdump zenmap nmap john virtualbox signal-desktop discord rofi ufw gufw gnome-disk-utility timeshift vlc steam bluez bluez-utils blueman flatpak veracrypt ')
                     os.system('gsettings set org.cinnamon.desktop.interface icon-theme "Tela-circle-nord-dark"')
                     os.system('yay -S lightdm-settings bsdmainutils visual-studio-code-bin xepub mintstick')
@@ -1914,6 +1916,7 @@ if category == '4':
                     os.system('sudo pacman -S nvidia-inst')
                     os.system('sudo nvidia-inst --32')
                     os.system('sudo pacman -S ventoy spotify-launcher geany geany-plugins plocate gparted tree pacman-contrib base-devel numlockx git libreoffice-still tela-circle-icon-theme-all net-tools lshw htop vim calc ghc traceroute tcpdump zenmap nmap john virtualbox signal-desktop discord rofi ufw gufw gnome-disk-utility timeshift vlc steam bluez bluez-utils blueman flatpak veracrypt ')
+                    os.system('mkdir /home/kyle/.config/rofi/themes && cp Monokai-Pro-Octagon.rasi /home/kyle/.config/rofi/themes/')
                     os.system('gsettings set org.cinnamon.desktop.interface icon-theme "Tela-circle-nord-dark"')
                     os.system('yay -S lightdm-settings bsdmainutils visual-studio-code-bin xepub mintstick')
                     os.system('flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo')
@@ -1926,6 +1929,7 @@ if category == '4':
                 if nvidia == 'n':
                     os.system('sudo usermod -L root')
                     os.system('sudo pacman -S ventoy spotify-launcher geany geany-plugins plocate gparted tree pacman-contrib base-devel numlockx git libreoffice-still tela-circle-icon-theme-all net-tools lshw htop vim calc ghc traceroute tcpdump zenmap nmap john virtualbox signal-desktop discord rofi ufw gufw gnome-disk-utility timeshift vlc steam bluez bluez-utils blueman flatpak veracrypt ')
+                    os.system('mkdir /home/kyle/.config/rofi/themes && cp Monokai-Pro-Octagon.rasi /home/kyle/.config/rofi/themes/')
                     os.system('gsettings set org.cinnamon.desktop.interface icon-theme "Tela-circle-nord-dark"')
                     os.system('yay -S lightdm-settings bsdmainutils visual-studio-code-bin xepub mintstick')
                     os.system('flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo')
@@ -1960,6 +1964,7 @@ if category == '4':
                 os.system('gsettings set org.cinnamon.desktop.background picture-uri "file:///home/kyle/Pictures/Desktop Walls/hacker.png"')
                 os.system('sudo cp -r ~/"Pictures/Desktop Walls/" /usr/share/backgrounds/')
                 os.system('sudo apt install arc-theme geany geany-plugins plocate gparted tree build-essential steam-installer numlockx git net-tools lshw htop vim ncal calc ghc traceroute tcpdump nmap zenmap john rofi vlc  ')
+                os.system('mkdir /home/kyle/.config/rofi/themes && cp Monokai-Pro-Octagon.rasi /home/kyle/.config/rofi/themes/')
                 os.system('gsettings set org.cinnamon.desktop.interface gtk-theme "Arc-Dark"')
                 os.system('flatpak install zoom discord chrome')
                 os.system('curl -sS https://download.spotify.com/debian/pubkey_5384CE82BA52C83A.asc | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg')
@@ -1986,6 +1991,7 @@ if category == '4':
                 os.system('sudo shutdown -r 1')
             if wallpapers == 'n':
                 os.system('sudo apt install arc-theme geany geany-plugins plocate gparted tree build-essential steam-installer numlockx git net-tools lshw htop vim ncal calc ghc traceroute tcpdump nmap zenmap john rofi vlc  ')
+                os.system('mkdir /home/kyle/.config/rofi/themes && cp Monokai-Pro-Octagon.rasi /home/kyle/.config/rofi/themes/')
                 os.system('gsettings set org.cinnamon.desktop.interface gtk-theme "Arc-Dark"')
                 os.system('flatpak install zoom discord chrome')
                 os.system('curl -sS https://download.spotify.com/debian/pubkey_5384CE82BA52C83A.asc | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg')
