@@ -1866,6 +1866,8 @@ if category == '4':
 
     run_script = input('\nChoose script to run: ')
 
+    # EndeavourOS script
+
     if run_script == '1':
         os.system('sudo pacman -Syu')
         os.system('sudo pacman -Rns $(pacman -Qtdq)')
@@ -1940,6 +1942,8 @@ if category == '4':
                 exit(0)
         else:
             exit(0)
+
+    # Linux Mint script (Install virtualbox, vscode, veracrypt, and ventoy manually)
 
     if run_script == '2':
         os.system('sudo apt update && sudo apt upgrade')
