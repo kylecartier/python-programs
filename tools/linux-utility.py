@@ -1878,6 +1878,7 @@ if category == '4':
         if clear_cache == 'n':
             wallpapers = input('Are all wallpapers in the Desktop Walls folder?: ')
             if wallpapers == 'y':
+                os.system('mkdir "/home/kyle/Pictures/Desktop Walls" && mv oranges.jpg hacker.png cloud-coffee.jpg flowers-3.jpg "/home/kyle/Pictures/Desktop Walls/"')
                 os.system('gsettings set org.cinnamon.desktop.background picture-uri "file:///home/kyle/Pictures/Desktop Walls/oranges.jpg"')
                 os.system('sudo cp -r ~/"Pictures/Desktop Walls/" /usr/share/backgrounds/')
                 nvidia = input('Do you have a nvidia card?: ')
@@ -1966,6 +1967,7 @@ if category == '4':
         if clear_cache == 'n' and clear_disk_space == 'n':
             wallpapers = input('Are all wallpapers in the Desktop Walls folder?: ')
             if wallpapers == 'y':
+                os.system('mkdir "/home/kyle/Pictures/Desktop Walls" && mv oranges.jpg hacker.png cloud-coffee.jpg flowers-3.jpg "/home/kyle/Pictures/Desktop Walls/"')
                 os.system('gsettings set org.cinnamon.desktop.background picture-uri "file:///home/kyle/Pictures/Desktop Walls/oranges.jpg"')
                 os.system('sudo cp -r ~/"Pictures/Desktop Walls/" /usr/share/backgrounds/')
                 os.system('sudo apt install arc-theme geany geany-plugins plocate gparted tree build-essential steam-installer numlockx git net-tools lshw htop vim ncal calc ghc traceroute tcpdump nmap zenmap john rofi vlc  ')
