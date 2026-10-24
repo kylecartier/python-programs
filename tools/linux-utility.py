@@ -1866,7 +1866,7 @@ if category == '4':
 
     run_script = input('\nChoose script to run: ')
 
-    # EndeavourOS script
+    # EndeavourOS script (Install the Faded-Dream theme from the themes section of the settings app)
 
     if run_script == '1':
         os.system('sudo pacman -Syu')
@@ -1948,6 +1948,7 @@ if category == '4':
             exit(0)
 
     # Linux Mint script (Install virtualbox, vscode, veracrypt, and ventoy manually)
+    # Install the Faded-Dream theme from the themes section of the settings app
 
     if run_script == '2':
         os.system('sudo apt update && sudo apt upgrade')
