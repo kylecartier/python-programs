@@ -1876,7 +1876,7 @@ if category == '4':
             os.system('sudo pacman -S pacman-contrib')
             os.system('paccache -ruk0 && paccache -rk3')
         if clear_cache == 'n':
-            wallpapers = input('Are all wallpapers in the Desktop Walls folder?: ')
+            wallpapers = input('Are all wallpapers downloaded?: ')
             if wallpapers == 'y':
                 os.system('mkdir "/home/kyle/Pictures/Desktop Walls" && mv oranges.jpg hacker.png cloud-coffee.jpg flowers-3.jpg "/home/kyle/Pictures/Desktop Walls/"')
                 os.system('gsettings set org.cinnamon.desktop.background picture-uri "file:///home/kyle/Pictures/Desktop Walls/oranges.jpg"')
@@ -1965,7 +1965,7 @@ if category == '4':
         if clear_cache == 'y' and clear_disk_space == 'y':
             os.system('sudo apt clean')
         if clear_cache == 'n' and clear_disk_space == 'n':
-            wallpapers = input('Are all wallpapers in the Desktop Walls folder?: ')
+            wallpapers = input('Are all wallpapers downloaded?: ')
             if wallpapers == 'y':
                 os.system('mkdir "/home/kyle/Pictures/Desktop Walls" && mv oranges.jpg hacker.png cloud-coffee.jpg flowers-3.jpg "/home/kyle/Pictures/Desktop Walls/"')
                 os.system('gsettings set org.cinnamon.desktop.background picture-uri "file:///home/kyle/Pictures/Desktop Walls/oranges.jpg"')
