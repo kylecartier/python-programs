@@ -1880,7 +1880,7 @@ if category == '4':
             if wallpapers == 'y':
                 os.system('sudo pacman -S --needed git')
                 os.system('git clone https://github.com/kylecartier/python-programs.git')
-                os.system('cd python-programs/tools/dotfiles/ && mv wallpapers "Desktop Walls" && mv "Desktop Walls" ~/Pictures/ && rm -rf ~/Downloads/python-programs/ && rm ~/Pictures/"Desktop Walls"/README.md && gsettings set org.cinnamon.desktop.background picture-uri "file://~/Pictures/Desktop Walls/oranges.jpg")
+                os.system('cd python-programs/tools/dotfiles/ && mv wallpapers "Desktop Walls" && mv "Desktop Walls" ~/Pictures/ && rm -rf ~/Downloads/python-programs/ && rm ~/Pictures/"Desktop Walls"/README.md')
                 os.system('gsettings set org.cinnamon.desktop.background picture-uri "file://$HOME/Pictures/Desktop Walls/oranges.jpg"')
                 os.system('sudo cp -r ~/Pictures/"Desktop Walls"/ /usr/share/backgrounds/')
                 nvidia = input('Do you have a nvidia card?: ')
@@ -1969,7 +1969,7 @@ if category == '4':
         if clear_cache == 'n' and clear_disk_space == 'n':
             wallpapers = input('Do you want my wallpapers?: ')
             if wallpapers == 'y':
-                os.system('sudo apt install --no-upgrade git')
+                os.system('sudo pacman -S --needed git')
                 os.system('git clone https://github.com/kylecartier/python-programs.git')
                 os.system('cd python-programs/tools/dotfiles/ && mv wallpapers "Desktop Walls" && mv "Desktop Walls" ~/Pictures/ && rm -rf ~/Downloads/python-programs/ && rm ~/Pictures/"Desktop Walls"/README.md')
                 os.system('gsettings set org.cinnamon.desktop.background picture-uri "file://$HOME/Pictures/Desktop Walls/oranges.jpg"')
