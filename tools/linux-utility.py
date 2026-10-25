@@ -1873,7 +1873,7 @@ if category == '4':
         os.system('sudo pacman -Rns $(pacman -Qtdq)')
         clear_cache = input('Do you want to clear package cache?: ')
         if clear_cache == 'y':
-            os.system('sudo pacman -S pacman-contrib')
+            os.system('sudo pacman -S --needed pacman-contrib')
             os.system('paccache -ruk0 && paccache -rk3')
         if clear_cache == 'n':
             wallpapers = input('Are all wallpapers downloaded?: ')
