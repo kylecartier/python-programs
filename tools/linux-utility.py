@@ -1969,7 +1969,7 @@ if category == '4':
         if clear_cache == 'n' and clear_disk_space == 'n':
             wallpapers = input('Do you want my wallpapers?: ')
             if wallpapers == 'y':
-                os.system('sudo apt install git')
+                os.system('sudo apt install --no-upgrade git')
                 os.system('git clone https://github.com/kylecartier/python-programs.git')
                 os.system('cd python-programs/tools/dotfiles/ && mv wallpapers "Desktop Walls" && mv "Desktop Walls" ~/Pictures/ && rm -rf ~/Downloads/python-programs/ && rm ~/Pictures/"Desktop Walls"/README.md')
                 os.system('gsettings set org.cinnamon.desktop.background picture-uri "file://~/Pictures/Desktop Walls/oranges.jpg"')
