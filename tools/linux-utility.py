@@ -1876,17 +1876,19 @@ if category == '4':
             os.system('sudo pacman -S --needed pacman-contrib')
             os.system('paccache -ruk0 && paccache -rk3')
         if clear_cache == 'n':
-            wallpapers = input('Are all wallpapers downloaded?: ')
+            wallpapers = input('Do you want my wallpapers?: ')
             if wallpapers == 'y':
-                os.system('mkdir "~/Pictures/Desktop Walls" && mv oranges.jpg hacker.png cloud-coffee.jpg flowers-3.jpg "~/Pictures/Desktop Walls/"')
+                os.system('sudo pacman -S --needed git')
+                os.system('git clone https://github.com/kylecartier/python-programs.git')
+                os.system('cd python-programs/tools/dotfiles/ && mv wallpapers "Desktop Walls" && mv "Desktop Walls" ~/Pictures/ && rm -rf ~/Downloads/python-programs/ && rm ~/Pictures/"Desktop Walls"/README.md')
                 os.system('gsettings set org.cinnamon.desktop.background picture-uri "file://~/Pictures/Desktop Walls/oranges.jpg"')
-                os.system('sudo cp -r ~/"Pictures/Desktop Walls/" /usr/share/backgrounds/')
+                os.system('sudo cp -r ~/Pictures/"Desktop Walls"/ /usr/share/backgrounds/')
                 nvidia = input('Do you have a nvidia card?: ')
                 if nvidia == 'y':
                     os.system('sudo usermod -L root')
                     os.system('sudo pacman -S nvidia-inst')
                     os.system('sudo nvidia-inst --32')
-                    os.system('sudo pacman -S spotify-launcher geany geany-plugins plocate gparted tree pacman-contrib base-devel numlockx git libreoffice-still tela-circle-icon-theme-all net-tools lshw htop vim calc ghc traceroute tcpdump zenmap nmap john virtualbox signal-desktop discord rofi ufw gufw gnome-disk-utility timeshift vlc steam bluez bluez-utils blueman flatpak veracrypt ')
+                    os.system('sudo pacman -S spotify-launcher geany geany-plugins plocate gparted tree pacman-contrib base-devel numlockx libreoffice-still tela-circle-icon-theme-all net-tools lshw htop vim calc ghc traceroute tcpdump zenmap nmap john virtualbox signal-desktop discord rofi ufw gufw gnome-disk-utility timeshift vlc steam bluez bluez-utils blueman flatpak veracrypt ')
                     os.system('mkdir ~/.config/rofi && mkdir ~/.config/rofi/themes && mv Monokai-Pro-Octagon.rasi ~/.config/rofi/themes/')
                     os.system('gsettings set org.cinnamon.desktop.interface icon-theme "Tela-circle-nord-dark"')
                     os.system('gsettings set org.cinnamon.theme name "faded-Dream"')
@@ -1965,12 +1967,14 @@ if category == '4':
         if clear_cache == 'y' and clear_disk_space == 'y':
             os.system('sudo apt clean')
         if clear_cache == 'n' and clear_disk_space == 'n':
-            wallpapers = input('Are all wallpapers downloaded?: ')
+            wallpapers = input('Do you want my wallpapers?: ')
             if wallpapers == 'y':
-                os.system('mkdir "~/Pictures/Desktop Walls" && mv oranges.jpg hacker.png cloud-coffee.jpg flowers-3.jpg "~/Pictures/Desktop Walls/"')
+                os.system('sudo apt install git')
+                os.system('git clone https://github.com/kylecartier/python-programs.git')
+                os.system('cd python-programs/tools/dotfiles/ && mv wallpapers "Desktop Walls" && mv "Desktop Walls" ~/Pictures/ && rm -rf ~/Downloads/python-programs/ && rm ~/Pictures/"Desktop Walls"/README.md')
                 os.system('gsettings set org.cinnamon.desktop.background picture-uri "file://~/Pictures/Desktop Walls/oranges.jpg"')
-                os.system('sudo cp -r ~/"Pictures/Desktop Walls/" /usr/share/backgrounds/')
-                os.system('sudo apt install arc-theme geany geany-plugins plocate gparted tree build-essential steam-installer numlockx git net-tools lshw htop vim ncal calc ghc traceroute tcpdump nmap zenmap john rofi vlc  ')
+                os.system('sudo cp -r ~/Pictures/"Desktop Walls"/ /usr/share/backgrounds/')
+                os.system('sudo apt install arc-theme geany geany-plugins plocate gparted tree build-essential steam-installer numlockx net-tools lshw htop vim ncal calc ghc traceroute tcpdump nmap zenmap john rofi vlc  ')
                 os.system('mkdir ~/.config/rofi && mkdir ~/.config/rofi/themes && mv Monokai-Pro-Octagon.rasi ~/.config/rofi/themes/')
                 os.system('gsettings set org.cinnamon.desktop.interface gtk-theme "Arc-Dark"')
                 os.system('gsettings set org.cinnamon.desktop.theme name "faded-Dream"')
