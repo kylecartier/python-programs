@@ -1,1 +1,1 @@
-This will be implied for rofi dotfiles
+This will be implied for rofi dotfiles.
