@@ -1870,11 +1870,12 @@ if category == '4':
 
     if run_script == '1':
         os.system('sudo pacman -Syu && yay -Syu')
+        os.system('yay -Yc')
         os.system('sudo pacman -Rns $(pacman -Qtdq)')
         clear_cache = input('Do you want to clear package cache?: ')
         if clear_cache == 'y':
             os.system('sudo pacman -S --needed pacman-contrib')
-            os.system('paccache -ruk0 && paccache -rk3')
+            os.system('paccache -ruk0 && paccache -rk3 && yay -Sc --aur')
         if clear_cache == 'n':
             wallpapers = input('Do you want my wallpapers?: ')
             if wallpapers == 'y':
