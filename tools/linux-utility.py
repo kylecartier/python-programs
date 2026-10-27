@@ -1881,7 +1881,7 @@ if category == '4':
                 os.system('sudo pacman -S --needed git')
                 os.system('git clone https://github.com/kylecartier/python-programs.git')
                 os.system('cd python-programs/tools/dotfiles/ && mv wallpapers "desktop-walls" && mv "desktop-walls" ~/Pictures/ && cd ../../.. && rm ~/Pictures/"desktop-walls"/README.md')
-                os.system('gsettings set org.cinnamon.desktop.background picture-uri "file://$HOME/Pictures/desktop-walls/oranges.jpg"')
+                os.system('gsettings set org.cinnamon.desktop.background picture-uri "file://$HOME/Pictures/desktop-walls/warm-trees.jpg"')
                 os.system('sudo cp -r ~/Pictures/"desktop-walls"/ /usr/share/backgrounds/')
                 nvidia = input('Do you have a nvidia card?: ')
                 if nvidia == 'y':
@@ -1974,7 +1974,7 @@ if category == '4':
                 os.system('sudo apt install --no-upgrade git')
                 os.system('git clone https://github.com/kylecartier/python-programs.git')
                 os.system('cd python-programs/tools/dotfiles/ && mv wallpapers "desktop-walls" && mv "desktop-walls" ~/Pictures/ && cd ../../.. && rm ~/Pictures/"desktop-walls"/README.md')
-                os.system('gsettings set org.cinnamon.desktop.background picture-uri "file://$HOME/Pictures/desktop-walls/oranges.jpg"')
+                os.system('gsettings set org.cinnamon.desktop.background picture-uri "file://$HOME/Pictures/desktop-walls/warm-trees.jpg"')
                 os.system('sudo cp -r ~/Pictures/"desktop-walls"/ /usr/share/backgrounds/')
                 os.system('sudo apt install --no-upgrade idevicerestore arc-theme geany geany-plugins plocate gparted tree build-essential steam-installer numlockx net-tools lshw htop vim ncal calc ghc traceroute tcpdump nmap zenmap john rofi vlc  ')
                 os.system('cd python-programs/tools/dotfiles/ && mv rofi ~/.config && cd ../../.. && rm -rf ~/Downloads/python-programs/ && rm ~/.config/rofi/README.md && rm ~/.config/rofi/themes/README.md')
