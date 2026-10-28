@@ -1871,11 +1871,18 @@ if category == '4':
     if run_script == '1':
         os.system('sudo pacman -Syu && yay -Syu')
         os.system('yay -Yc')
-        os.system('sudo pacman -Rns $(pacman -Qtdq)')
+        # os.system('sudo pacman -Rns $(pacman -Qtdq)')
         clear_cache = input('Do you want to clear package cache?: ')
         if clear_cache == 'y':
-            os.system('sudo pacman -S --needed pacman-contrib')
-            os.system('paccache -ruk0 && paccache -rk3 && yay -Sc --aur')
+            print('\nPackage Cache')
+            print('-------------------------------------')
+            print('1. aur cache')
+            print('2. pacman cache')
+            package_cache = input('\nChoose an option: ')
+            if package_cache == '1':
+                os.system('yay -Sc --aur')
+            if package_cache == '2':
+                os.system('sudo pacman -S --needed pacman-contrib && paccache -ruk0 && paccache -rk3')
         if clear_cache == 'n':
             wallpapers = input('Do you want my wallpapers?: ')
             if wallpapers == 'y':
