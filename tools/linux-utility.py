@@ -1900,7 +1900,7 @@ if category == '4':
                     os.system('cd python-programs/tools/dotfiles/ && mv rofi ~/.config && cd ../../.. && rm -rf ~/Downloads/python-programs/ && rm ~/.config/rofi/README.md && rm ~/.config/rofi/themes/README.md')
                     os.system('gsettings set org.cinnamon.desktop.interface icon-theme "Tela-circle-nord-dark"')
                     os.system('gsettings set org.cinnamon.theme name "Faded-Dream"')
-                    os.system('yay -S --needed lightdm-settings bsdmainutils visual-studio-code-bin xepub ventoy-bin idevicerestore-git')
+                    os.system('yay -S --needed lightdm-settings bsdmainutils visual-studio-code-bin xepub ventoy-bin')
                     os.system('flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo')
                     os.system('flatpak install chrome zoom')
                     os.system('export TERMINAL=gnome-terminal && git clone https://github.com/Gogh-Co/Gogh.git && cd Gogh/installs && ./catppuccin-frappe.sh && ./monokai-pro-octagon.sh && ./everforest-dark.sh && cd ../.. && rm -rf Gogh/')
@@ -1914,7 +1914,7 @@ if category == '4':
                     os.system('cd python-programs/tools/dotfiles/ && mv rofi ~/.config && cd ../../.. && rm -rf ~/Downloads/python-programs/ && rm ~/.config/rofi/README.md && rm ~/.config/rofi/themes/README.md')
                     os.system('gsettings set org.cinnamon.desktop.interface icon-theme "Tela-circle-nord-dark"')
                     os.system('gsettings set org.cinnamon.theme name "Faded-Dream"')
-                    os.system('yay -S --needed lightdm-settings bsdmainutils visual-studio-code-bin xepub ventoy-bin idevicerestore-git')
+                    os.system('yay -S --needed lightdm-settings bsdmainutils visual-studio-code-bin xepub ventoy-bin')
                     os.system('flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo')
                     os.system('flatpak install chrome zoom')
                     os.system('export TERMINAL=gnome-terminal && git clone https://github.com/Gogh-Co/Gogh.git && cd Gogh/installs && ./catppuccin-frappe.sh && ./monokai-pro-octagon.sh && ./everforest-dark.sh && cd ../.. && rm -rf Gogh/')
@@ -1934,7 +1934,7 @@ if category == '4':
                     os.system('cd python-programs/tools/dotfiles/ && mv rofi ~/.config && cd ../../.. && rm -rf ~/Downloads/python-programs/ && rm ~/.config/rofi/README.md && rm ~/.config/rofi/themes/README.md')
                     os.system('gsettings set org.cinnamon.desktop.interface icon-theme "Tela-circle-nord-dark"')
                     os.system('gsettings set org.cinnamon.theme name "Faded-Dream"')
-                    os.system('yay -S --needed lightdm-settings bsdmainutils visual-studio-code-bin xepub ventoy-bin idevicerestore-git')
+                    os.system('yay -S --needed lightdm-settings bsdmainutils visual-studio-code-bin xepub ventoy-bin')
                     os.system('flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo')
                     os.system('flatpak install chrome zoom')
                     os.system('export TERMINAL=gnome-terminal && git clone https://github.com/Gogh-Co/Gogh.git && cd Gogh/installs && ./catppuccin-frappe.sh && ./monokai-pro-octagon.sh && ./everforest-dark.sh && cd ../.. && rm -rf Gogh/')
@@ -1948,7 +1948,7 @@ if category == '4':
                     os.system('cd python-programs/tools/dotfiles/ && mv rofi ~/.config && cd ../../.. && rm -rf ~/Downloads/python-programs/ && rm ~/.config/rofi/README.md && rm ~/.config/rofi/themes/README.md')
                     os.system('gsettings set org.cinnamon.desktop.interface icon-theme "Tela-circle-nord-dark"')
                     os.system('gsettings set org.cinnamon.theme name "Faded-Dream"')
-                    os.system('yay -S --needed lightdm-settings bsdmainutils visual-studio-code-bin xepub ventoy-bin idevicerestore-git')
+                    os.system('yay -S --needed lightdm-settings bsdmainutils visual-studio-code-bin xepub ventoy-bin')
                     os.system('flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo')
                     os.system('flatpak install chrome zoom')
                     os.system('export TERMINAL=gnome-terminal && git clone https://github.com/Gogh-Co/Gogh.git && cd Gogh/installs && ./catppuccin-frappe.sh && ./monokai-pro-octagon.sh && ./everforest-dark.sh && cd ../.. && rm -rf Gogh/')
@@ -1984,7 +1984,7 @@ if category == '4':
                 os.system('cd python-programs/tools/dotfiles/ && mv wallpapers "desktop-walls" && mv "desktop-walls" ~/Pictures/ && cd ../../.. && rm ~/Pictures/"desktop-walls"/README.md')
                 os.system('gsettings set org.cinnamon.desktop.background picture-uri "file://$HOME/Pictures/desktop-walls/warm-trees.jpg"')
                 os.system('sudo cp -r ~/Pictures/"desktop-walls"/ /usr/share/backgrounds/')
-                os.system('sudo apt install --no-upgrade idevicerestore arc-theme geany geany-plugins plocate gparted tree build-essential steam-installer numlockx net-tools lshw htop vim ncal calc ghc traceroute tcpdump nmap zenmap john rofi vlc  ')
+                os.system('sudo apt install --no-upgrade arc-theme geany geany-plugins plocate gparted tree build-essential steam-installer numlockx net-tools lshw htop vim ncal calc ghc traceroute tcpdump nmap zenmap john rofi vlc  ')
                 os.system('cd python-programs/tools/dotfiles/ && mv rofi ~/.config && cd ../../.. && rm -rf ~/Downloads/python-programs/ && rm ~/.config/rofi/README.md && rm ~/.config/rofi/themes/README.md')
                 os.system('gsettings set org.cinnamon.desktop.interface gtk-theme "Arc-Dark"')
                 os.system('gsettings set org.cinnamon.theme name "Faded-Dream"')
@@ -2013,7 +2013,7 @@ if category == '4':
                 os.system('sudo shutdown -r 1')
             if wallpapers == 'n':
                 os.system('git clone https://github.com/kylecartier/python-programs.git')
-                os.system('sudo apt install --no-upgrade idevicerestore arc-theme geany geany-plugins plocate gparted tree build-essential steam-installer numlockx git net-tools lshw htop vim ncal calc ghc traceroute tcpdump nmap zenmap john rofi vlc  ')
+                os.system('sudo apt install --no-upgrade arc-theme geany geany-plugins plocate gparted tree build-essential steam-installer numlockx git net-tools lshw htop vim ncal calc ghc traceroute tcpdump nmap zenmap john rofi vlc  ')
                 os.system('cd python-programs/tools/dotfiles/ && mv rofi ~/.config && cd ../../.. && rm -rf ~/Downloads/python-programs/ && rm ~/.config/rofi/README.md && rm ~/.config/rofi/themes/README.md')
                 os.system('gsettings set org.cinnamon.desktop.interface gtk-theme "Arc-Dark"')
                 os.system('gsettings set org.cinnamon.theme name "Faded-Dream"')
@@ -2465,7 +2465,7 @@ if category == '6':
             
 if category == '0':
 
-    command_list = ('idevicerestore', 'plocate', 'parted', 'ps', 'downgrade', 'paccache', 'grep', 'rofi', 'passwd', 'usermod', 'sudo', 'su', 'df', 'free', 'echo', 'id', 'hostnamectl', 'htop', 'apt', 'dnf', 'pacman', 'install', 'remove', 'localectl', 'ls', 'lsblk', 'lscpu', 'lshw', 'lsmem', 'lsmod', 'lspci', 'lsusb', 'pwd', 'shutdown', 'systemctl', 'timedatectl', 'top', 'touch', 'rm', 'rmdir', 'chmod', 'cat', 'ufw', 'gufw', 'arp', 'dig', 'ifconfig', 'ip', 'netstat', 'nmap', 'nslookup', 'ping', 'tcpdump', 'traceroute', 'nano', 'vi', 'vim', 'tree', 'dmesg', 'journalctl', 'history', 'blkid', 'firewalld', 'iptables', 'ssh', 'timeshift', 'wc', 'man', 'flatpak', 'snap', 'ncal', 'calc')
+    command_list = ('plocate', 'parted', 'ps', 'downgrade', 'paccache', 'grep', 'rofi', 'passwd', 'usermod', 'sudo', 'su', 'df', 'free', 'echo', 'id', 'hostnamectl', 'htop', 'apt', 'dnf', 'pacman', 'install', 'remove', 'localectl', 'ls', 'lsblk', 'lscpu', 'lshw', 'lsmem', 'lsmod', 'lspci', 'lsusb', 'pwd', 'shutdown', 'systemctl', 'timedatectl', 'top', 'touch', 'rm', 'rmdir', 'chmod', 'cat', 'ufw', 'gufw', 'arp', 'dig', 'ifconfig', 'ip', 'netstat', 'nmap', 'nslookup', 'ping', 'tcpdump', 'traceroute', 'nano', 'vi', 'vim', 'tree', 'dmesg', 'journalctl', 'history', 'blkid', 'firewalld', 'iptables', 'ssh', 'timeshift', 'wc', 'man', 'flatpak', 'snap', 'ncal', 'calc')
     
     command = input('Enter command: ')
     if command in command_list:
