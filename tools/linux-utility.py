@@ -2046,7 +2046,8 @@ if category == '4':
         else:
             exit(0)
 
-    # Rocky Linux script (Install veracrypt, virtualbox, vscode, ventoy, and vlc manually)
+    # Rocky Linux script (Choose Workstation and choose GNOME Applications, Office Suite and Productivity, Graphical Administration Tools, Security Tools, and System Tools during installation) 
+    # Install veracrypt, virtualbox, vscode, ventoy, and vlc manually
 
     if run_script == '3':
         os.system('sudo dnf update && sudo dnf autoremove')
@@ -2058,17 +2059,17 @@ if category == '4':
             if wallpapers == 'y':
                 os.system('sudo dnf install git')
                 os.system('git clone https://github.com/kylecartier/python-programs.git')
+                os.system('cd python-programs/tools/dotfiles/ && mv wallpapers "desktop-walls" && mv "desktop-walls" ~/Pictures/ && cd ../../.. && rm ~/Pictures/"desktop-walls"/README.md')
+                os.system('gsettings set org.gnome.desktop.background picture-uri "file://$HOME/Pictures/desktop-walls/warm-trees.jpg"')
+                os.system('gsettings set org.gnome.desktop.background picture-uri=dark "file://$HOME/Pictures/desktop-walls/warm-trees.jpg"')
+                os.system('sudo cp -r ~/Pictures/"desktop-walls"/ /usr/share/backgrounds/')
                 nvidia = input('Do you have a nvidia card?: ')
                 if nvidia == 'y':
                     os.system('sudo dnf install kernel-devel-matched kernel-headers')
                     os.system('sudo dnf config-manager --set-enabled crb && sudo dnf install epel-release')
-                    os.system('dnf config-manager --add-repo https://developer.download.nvidia.com/compute/cuda/repos/<distribution>/<arch>/cuda-<distribution>.repo')
+                    os.system('sudo dnf config-manager --add-repo https://developer.download.nvidia.com/compute/cuda/repos/rhel9/x86_64/cuda-rhel9.repo')
                     os.system('sudo dnf module enable nvidia-driver:open-dkms')
                     os.system('sudo dnf install nvidia-open')
-                    os.system('cd python-programs/tools/dotfiles/ && mv wallpapers "desktop-walls" && mv "desktop-walls" ~/Pictures/ && cd ../../.. && rm ~/Pictures/"desktop-walls"/README.md')
-                    os.system('gsettings set org.gnome.desktop.background picture-uri "file://$HOME/Pictures/desktop-walls/warm-trees.jpg"')
-                    os.system('gsettings set org.gnome.desktop.background picture-uri=dark "file://$HOME/Pictures/desktop-walls/warm-trees.jpg"')
-                    os.system('sudo cp -r ~/Pictures/"desktop-walls"/ /usr/share/backgrounds/')
                     os.system('sudo dnf groupinstall "Development Tools" && sudo dnf install gtk3-devel')
                     os.system('sudo dnf install geany geany-plugins plocate gparted tree net-tools lshw htop vim ncal calc ghc traceroute tcpdump nmap zenmap john rofi vlc  ')
                     os.system('git clone https://github.com/horst3180/arc-theme.git')
@@ -2088,10 +2089,6 @@ if category == '4':
                     os.system('sudo updatedb')
                     os.system('sudo shutdown -r 1')
                 if nvidia == 'n':
-                    os.system('cd python-programs/tools/dotfiles/ && mv wallpapers "desktop-walls" && mv "desktop-walls" ~/Pictures/ && cd ../../.. && rm ~/Pictures/"desktop-walls"/README.md')
-                    os.system('gsettings set org.gnome.desktop.background picture-uri "file://$HOME/Pictures/desktop-walls/warm-trees.jpg"')
-                    os.system('gsettings set org.gnome.desktop.background picture-uri=dark "file://$HOME/Pictures/desktop-walls/warm-trees.jpg"')
-                    os.system('sudo cp -r ~/Pictures/"desktop-walls"/ /usr/share/backgrounds/')
                     os.system('sudo dnf groupinstall "Development Tools" && sudo dnf install gtk3-devel')
                     os.system('sudo dnf install geany geany-plugins plocate gparted tree net-tools lshw htop vim ncal calc ghc traceroute tcpdump nmap zenmap john rofi vlc  ')
                     os.system('git clone https://github.com/horst3180/arc-theme.git')
@@ -2117,7 +2114,7 @@ if category == '4':
                 if nvidia == 'y':
                     os.system('sudo dnf install kernel-devel-matched kernel-headers')
                     os.system('sudo dnf config-manager --set-enabled crb && sudo dnf install epel-release')
-                    os.system('dnf config-manager --add-repo https://developer.download.nvidia.com/compute/cuda/repos/<distribution>/<arch>/cuda-<distribution>.repo')
+                    os.system('sudo dnf config-manager --add-repo https://developer.download.nvidia.com/compute/cuda/repos/rhel9/x86_64/cuda-rhel9.repo')
                     os.system('sudo dnf module enable nvidia-driver:open-dkms')
                     os.system('sudo dnf install nvidia-open')
                     os.system('cd python-programs/tools/dotfiles/ && mv wallpapers "desktop-walls" && mv "desktop-walls" ~/Pictures/ && cd ../../.. && rm ~/Pictures/"desktop-walls"/README.md')
