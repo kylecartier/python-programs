@@ -2211,7 +2211,7 @@ if category == '4':
                 os.system('cd python-programs/tools/dotfiles/ && mv wallpapers "desktop-walls" && mv "desktop-walls" ~/Pictures/ && cd ../../.. && rm ~/Pictures/"desktop-walls"/README.md')
                 os.system('gsettings set org.gnome.desktop.background picture-uri "file://$HOME/Pictures/desktop-walls/warm-trees.jpg"')
                 os.system('sudo cp -r ~/Pictures/"desktop-walls"/ /usr/share/backgrounds/')
-                os.system('sudo apt install --no-upgrade brasero arc-theme geany geany-plugins plocate gparted tree build-essential steam-installer numlockx net-tools lshw htop vim ncal calc ghc traceroute tcpdump nmap zenmap john rofi vlc flatpak  ')
+                os.system('sudo apt install --no-upgrade brasero geany geany-plugins plocate gparted tree build-essential steam-installer numlockx net-tools lshw htop vim ncal calc ghc traceroute tcpdump nmap zenmap john rofi vlc flatpak  ')
                 os.system('cd python-programs/tools/dotfiles/ && mv rofi ~/.config && cd ../../.. && rm -rf ~/Downloads/python-programs/ && rm ~/.config/rofi/README.md && rm ~/.config/rofi/themes/README.md')
                 os.system('flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo')
                 os.system('flatpak install zoom discord chrome')
@@ -2239,7 +2239,7 @@ if category == '4':
                 os.system('sudo shutdown -r 1')
             if wallpapers == 'n':
                 os.system('git clone https://github.com/kylecartier/python-programs.git')
-                os.system('sudo apt install --no-upgrade brasero arc-theme geany geany-plugins plocate gparted tree build-essential steam-installer numlockx git net-tools lshw htop vim ncal calc ghc traceroute tcpdump nmap zenmap john rofi vlc  ')
+                os.system('sudo apt install --no-upgrade brasero geany geany-plugins plocate gparted tree build-essential steam-installer numlockx git net-tools lshw htop vim ncal calc ghc traceroute tcpdump nmap zenmap john rofi vlc flatpak  ')
                 os.system('cd python-programs/tools/dotfiles/ && mv rofi ~/.config && cd ../../.. && rm -rf ~/Downloads/python-programs/ && rm ~/.config/rofi/README.md && rm ~/.config/rofi/themes/README.md')
                 os.system('flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo')
                 os.system('flatpak install zoom discord chrome')
