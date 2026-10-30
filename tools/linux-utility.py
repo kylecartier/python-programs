@@ -2192,15 +2192,93 @@ if category == '4':
             else:
                 exit(0)
 
-
-
-
-
-
-
-                
+    # Ubuntu 24.04 script (Install virtualbox, vscode, veracrypt, and ventoy manually)
+    
+    if run_script == '4':
+        os.system('sudo apt update && sudo apt upgrade')
+        os.system('sudo apt autoremove')
+        clear_cache = input('Do you want to clear package cache?: ')
+        clear_disk_space = input('Do you need to clean up disk space?: ')
+        if clear_cache == 'y' and clear_disk_space == 'n':
+            os.system('sudo apt autoclean')
+        if clear_cache == 'y' and clear_disk_space == 'y':
+            os.system('sudo apt clean')
+        if clear_cache == 'n' and clear_disk_space == 'n':
+            wallpapers = input('Do you want my wallpapers?: ')
+            if wallpapers == 'y':
+                os.system('sudo apt install --no-upgrade git')
+                os.system('git clone https://github.com/kylecartier/python-programs.git')
+                os.system('cd python-programs/tools/dotfiles/ && mv wallpapers "desktop-walls" && mv "desktop-walls" ~/Pictures/ && cd ../../.. && rm ~/Pictures/"desktop-walls"/README.md')
+                os.system('gsettings set org.gnome.desktop.background picture-uri "file://$HOME/Pictures/desktop-walls/warm-trees.jpg"')
+                os.system('sudo cp -r ~/Pictures/"desktop-walls"/ /usr/share/backgrounds/')
+                os.system('sudo apt install --no-upgrade brasero geany geany-plugins plocate gparted tree build-essential steam-installer numlockx net-tools lshw htop vim ncal calc ghc traceroute tcpdump nmap zenmap john rofi vlc flatpak  ')
+                os.system('cd python-programs/tools/dotfiles/ && mv rofi ~/.config && cd ../../.. && rm -rf ~/Downloads/python-programs/ && rm ~/.config/rofi/README.md && rm ~/.config/rofi/themes/README.md')
+                os.system('flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo')
+                os.system('flatpak install zoom discord chrome')
+                os.system('curl -sS https://download.spotify.com/debian/pubkey_5384CE82BA52C83A.asc | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg')
+                os.system('echo "deb https://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list')
+                os.system('sudo apt-get update && sudo apt-get install spotify-client')
+                os.system('curl https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg')
+                os.system('cat signal-desktop-keyring.gpg | sudo tee /usr/share/keyrings/signal-desktop-keyring.gpg > /dev/null')
+                os.system('curl -o signal-desktop.sources https://updates.signal.org/static/desktop/apt/signal-desktop.sources')
+                os.system('cat signal-desktop.sources | sudo tee /etc/apt/sources.list.d/signal-desktop.sources > /dev/null')
+                os.system('sudo apt update && sudo apt install signal-desktop')
+                os.system('sudo cp ~/Downloads/signal-desktop-keyring.gpg /usr/share/keyrings/')
+                os.system('rm ~/Downloads/signal-desktop-keyring.gpg')
+                os.system('rm ~/Downloads/signal-desktop.sources')
+                os.system('git clone https://github.com/vinceliuice/Tela-circle-icon-theme.git')
+                os.system('cd Tela-circle-icon-theme && ./install.sh -a')
+                os.system('rm -rf Tela-circle-icon-theme/')
+                os.system('gsettings set org.gnome.desktop.interface icon-theme "Tela-circle-nord-dark"')
+                os.system('git clone https://github.com/geany/geany-themes.git')
+                os.system('cd geany-themes && ./install.sh')
+                os.system('rm -rf geany-themes/')
+                os.system('export TERMINAL=gnome-terminal && git clone https://github.com/Gogh-Co/Gogh.git && cd Gogh/installs && ./catppuccin-frappe.sh && ./monokai-pro-octagon.sh && ./everforest-dark.sh && cd ../.. && rm -rf Gogh/')
+                os.system('sudo ufw limit 22/tcp && sudo ufw enable')
+                os.system('sudo updatedb')
+                os.system('sudo shutdown -r 1')
+            if wallpapers == 'n':
+                os.system('git clone https://github.com/kylecartier/python-programs.git')
+                os.system('sudo apt install --no-upgrade brasero geany geany-plugins plocate gparted tree build-essential steam-installer numlockx git net-tools lshw htop vim ncal calc ghc traceroute tcpdump nmap zenmap john rofi vlc  ')
+                os.system('cd python-programs/tools/dotfiles/ && mv rofi ~/.config && cd ../../.. && rm -rf ~/Downloads/python-programs/ && rm ~/.config/rofi/README.md && rm ~/.config/rofi/themes/README.md')
+                os.system('flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo')
+                os.system('flatpak install zoom discord chrome')
+                os.system('curl -sS https://download.spotify.com/debian/pubkey_5384CE82BA52C83A.asc | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg')
+                os.system('echo "deb https://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list')
+                os.system('sudo apt-get update && sudo apt-get install spotify-client')
+                os.system('curl https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg')
+                os.system('cat signal-desktop-keyring.gpg | sudo tee /usr/share/keyrings/signal-desktop-keyring.gpg > /dev/null')
+                os.system('curl -o signal-desktop.sources https://updates.signal.org/static/desktop/apt/signal-desktop.sources')
+                os.system('cat signal-desktop.sources | sudo tee /etc/apt/sources.list.d/signal-desktop.sources > /dev/null')
+                os.system('sudo apt update && sudo apt install signal-desktop')
+                os.system('sudo cp ~/Downloads/signal-desktop-keyring.gpg /usr/share/keyrings/')
+                os.system('rm ~/Downloads/signal-desktop-keyring.gpg')
+                os.system('rm ~/Downloads/signal-desktop.sources')
+                os.system('git clone https://github.com/vinceliuice/Tela-circle-icon-theme.git')
+                os.system('cd Tela-circle-icon-theme && ./install.sh -a')
+                os.system('rm -rf Tela-circle-icon-theme/')
+                os.system('gsettings set org.gnone.desktop.interface icon-theme "Tela-circle-nord-dark"')
+                os.system('git clone https://github.com/geany/geany-themes.git')
+                os.system('cd geany-themes && ./install.sh')
+                os.system('rm -rf geany-themes/')
+                os.system('export TERMINAL=gnome-terminal && git clone https://github.com/Gogh-Co/Gogh.git && cd Gogh/installs && ./catppuccin-frappe.sh && ./monokai-pro-octagon.sh && ./everforest-dark.sh && cd ../.. && rm -rf Gogh/')
+                os.system('sudo ufw limit 22/tcp && sudo ufw enable')
+                os.system('sudo updatedb')
+                os.system('sudo shutdown -r 1')
+            else:
+                exit(0)
         else:
             exit(0)
+    
+        
+
+
+
+
+
+
+
+
     else:
         exit(0)
         
