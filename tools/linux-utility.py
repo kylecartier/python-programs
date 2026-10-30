@@ -1864,6 +1864,7 @@ if category == '4':
     print('1. EndeavourOS post installation')
     print('2. Linux Mint post installation')
     print('3. Rocky Linux 9 post installation')
+    print('4. Ubuntu 24.04 post installation')
 
     run_script = input('\nChoose script to run: ')
 
@@ -1897,7 +1898,7 @@ if category == '4':
                     os.system('sudo usermod -L root')
                     os.system('sudo pacman -S --needed nvidia-inst')
                     os.system('sudo nvidia-inst --32')
-                    os.system('sudo pacman -S --needed spotify-launcher geany geany-plugins plocate gparted tree pacman-contrib base-devel numlockx libreoffice-still tela-circle-icon-theme-all net-tools lshw htop vim calc ghc traceroute tcpdump zenmap nmap john virtualbox signal-desktop discord rofi ufw gufw gnome-disk-utility timeshift vlc steam bluez bluez-utils blueman flatpak veracrypt ')
+                    os.system('sudo pacman -S --needed brasero spotify-launcher geany geany-plugins plocate gparted tree pacman-contrib base-devel numlockx libreoffice-still tela-circle-icon-theme-all net-tools lshw htop vim calc ghc traceroute tcpdump zenmap nmap john virtualbox signal-desktop discord rofi ufw gufw gnome-disk-utility timeshift vlc steam bluez bluez-utils blueman flatpak veracrypt ')
                     os.system('cd python-programs/tools/dotfiles/ && mv rofi ~/.config && cd ../../.. && rm -rf ~/Downloads/python-programs/ && rm ~/.config/rofi/README.md && rm ~/.config/rofi/themes/README.md')
                     os.system('gsettings set org.cinnamon.desktop.interface icon-theme "Tela-circle-nord-dark"')
                     os.system('gsettings set org.cinnamon.theme name "Faded-Dream"')
@@ -1911,7 +1912,7 @@ if category == '4':
                     os.system('sudo shutdown -r 1')
                 if nvidia == 'n':
                     os.system('sudo usermod -L root')
-                    os.system('sudo pacman -S --needed spotify-launcher geany geany-plugins plocate gparted tree pacman-contrib base-devel numlockx libreoffice-still tela-circle-icon-theme-all net-tools lshw htop vim calc ghc traceroute tcpdump zenmap nmap john virtualbox signal-desktop discord rofi ufw gufw gnome-disk-utility timeshift vlc bluez bluez-utils blueman flatpak veracrypt ')
+                    os.system('sudo pacman -S --needed brasero spotify-launcher geany geany-plugins plocate gparted tree pacman-contrib base-devel numlockx libreoffice-still tela-circle-icon-theme-all net-tools lshw htop vim calc ghc traceroute tcpdump zenmap nmap john virtualbox signal-desktop discord rofi ufw gufw gnome-disk-utility timeshift vlc bluez bluez-utils blueman flatpak veracrypt ')
                     os.system('cd python-programs/tools/dotfiles/ && mv rofi ~/.config && cd ../../.. && rm -rf ~/Downloads/python-programs/ && rm ~/.config/rofi/README.md && rm ~/.config/rofi/themes/README.md')
                     os.system('gsettings set org.cinnamon.desktop.interface icon-theme "Tela-circle-nord-dark"')
                     os.system('gsettings set org.cinnamon.theme name "Faded-Dream"')
@@ -1931,7 +1932,7 @@ if category == '4':
                     os.system('sudo usermod -L root')
                     os.system('sudo pacman -S --needed nvidia-inst')
                     os.system('sudo nvidia-inst --32')
-                    os.system('sudo pacman -S --needed spotify-launcher geany geany-plugins plocate gparted tree pacman-contrib base-devel numlockx libreoffice-still tela-circle-icon-theme-all net-tools lshw htop vim calc ghc traceroute tcpdump zenmap nmap john virtualbox signal-desktop discord rofi ufw gufw gnome-disk-utility timeshift vlc steam bluez bluez-utils blueman flatpak veracrypt ')
+                    os.system('sudo pacman -S --needed brasero spotify-launcher geany geany-plugins plocate gparted tree pacman-contrib base-devel numlockx libreoffice-still tela-circle-icon-theme-all net-tools lshw htop vim calc ghc traceroute tcpdump zenmap nmap john virtualbox signal-desktop discord rofi ufw gufw gnome-disk-utility timeshift vlc steam bluez bluez-utils blueman flatpak veracrypt ')
                     os.system('cd python-programs/tools/dotfiles/ && mv rofi ~/.config && cd ../../.. && rm -rf ~/Downloads/python-programs/ && rm ~/.config/rofi/README.md && rm ~/.config/rofi/themes/README.md')
                     os.system('gsettings set org.cinnamon.desktop.interface icon-theme "Tela-circle-nord-dark"')
                     os.system('gsettings set org.cinnamon.theme name "Faded-Dream"')
@@ -1945,7 +1946,7 @@ if category == '4':
                     os.system('sudo shutdown -r 1')
                 if nvidia == 'n':
                     os.system('sudo usermod -L root')
-                    os.system('sudo pacman -S -needed spotify-launcher geany geany-plugins plocate gparted tree pacman-contrib base-devel numlockx libreoffice-still tela-circle-icon-theme-all net-tools lshw htop vim calc ghc traceroute tcpdump zenmap nmap john virtualbox signal-desktop discord rofi ufw gufw gnome-disk-utility timeshift vlc bluez bluez-utils blueman flatpak veracrypt ')
+                    os.system('sudo pacman -S -needed brasero spotify-launcher geany geany-plugins plocate gparted tree pacman-contrib base-devel numlockx libreoffice-still tela-circle-icon-theme-all net-tools lshw htop vim calc ghc traceroute tcpdump zenmap nmap john virtualbox signal-desktop discord rofi ufw gufw gnome-disk-utility timeshift vlc bluez bluez-utils blueman flatpak veracrypt ')
                     os.system('cd python-programs/tools/dotfiles/ && mv rofi ~/.config && cd ../../.. && rm -rf ~/Downloads/python-programs/ && rm ~/.config/rofi/README.md && rm ~/.config/rofi/themes/README.md')
                     os.system('gsettings set org.cinnamon.desktop.interface icon-theme "Tela-circle-nord-dark"')
                     os.system('gsettings set org.cinnamon.theme name "Faded-Dream"')
@@ -1985,7 +1986,7 @@ if category == '4':
                 os.system('cd python-programs/tools/dotfiles/ && mv wallpapers "desktop-walls" && mv "desktop-walls" ~/Pictures/ && cd ../../.. && rm ~/Pictures/"desktop-walls"/README.md')
                 os.system('gsettings set org.cinnamon.desktop.background picture-uri "file://$HOME/Pictures/desktop-walls/warm-trees.jpg"')
                 os.system('sudo cp -r ~/Pictures/"desktop-walls"/ /usr/share/backgrounds/')
-                os.system('sudo apt install --no-upgrade arc-theme geany geany-plugins plocate gparted tree build-essential steam-installer numlockx net-tools lshw htop vim ncal calc ghc traceroute tcpdump nmap zenmap john rofi vlc  ')
+                os.system('sudo apt install --no-upgrade brasero arc-theme geany geany-plugins plocate gparted tree build-essential steam-installer numlockx net-tools lshw htop vim ncal calc ghc traceroute tcpdump nmap zenmap john rofi vlc  ')
                 os.system('cd python-programs/tools/dotfiles/ && mv rofi ~/.config && cd ../../.. && rm -rf ~/Downloads/python-programs/ && rm ~/.config/rofi/README.md && rm ~/.config/rofi/themes/README.md')
                 os.system('gsettings set org.cinnamon.desktop.interface gtk-theme "Arc-Dark"')
                 os.system('gsettings set org.cinnamon.theme name "Faded-Dream"')
@@ -2014,7 +2015,7 @@ if category == '4':
                 os.system('sudo shutdown -r 1')
             if wallpapers == 'n':
                 os.system('git clone https://github.com/kylecartier/python-programs.git')
-                os.system('sudo apt install --no-upgrade arc-theme geany geany-plugins plocate gparted tree build-essential steam-installer numlockx git net-tools lshw htop vim ncal calc ghc traceroute tcpdump nmap zenmap john rofi vlc  ')
+                os.system('sudo apt install --no-upgrade brasero arc-theme geany geany-plugins plocate gparted tree build-essential steam-installer numlockx git net-tools lshw htop vim ncal calc ghc traceroute tcpdump nmap zenmap john rofi vlc  ')
                 os.system('cd python-programs/tools/dotfiles/ && mv rofi ~/.config && cd ../../.. && rm -rf ~/Downloads/python-programs/ && rm ~/.config/rofi/README.md && rm ~/.config/rofi/themes/README.md')
                 os.system('gsettings set org.cinnamon.desktop.interface gtk-theme "Arc-Dark"')
                 os.system('gsettings set org.cinnamon.theme name "Faded-Dream"')
