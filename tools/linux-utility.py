@@ -2186,7 +2186,7 @@ if category == '4':
                     os.system('sudo ufw limit 22/tcp && sudo ufw enable')
                     os.system('sudo updatedb')
                     os.system('sudo shutdown -r 1')
-				else:
+                else:
                     exit(0)
             else:
                 exit(0)
@@ -2195,6 +2195,9 @@ if category == '4':
 
 
 
+
+
+                
         else:
             exit(0)
     else:
