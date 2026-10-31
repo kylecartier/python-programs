@@ -2048,7 +2048,7 @@ if category == '4':
             exit(0)
 
     # Rocky Linux script (Choose Workstation and choose GNOME Applications, Graphical Administration Tools, Security Tools, and System Tools during installation) 
-    # Install libreoffice, steam, veracrypt, virtualbox, vscode, and ventoy manually
+    # Install libreoffice (run sudo rpm -ih *.rpm in RPM directory), steam, veracrypt, virtualbox, vscode, and ventoy manually
 
     if run_script == '3':
         os.system('sudo dnf update && sudo dnf autoremove')
@@ -2091,7 +2091,7 @@ if category == '4':
                     os.system('cd geany-themes && ./install.sh')
                     os.system('rm -rf geany-themes/')
                     os.system('export TERMINAL=gnome-terminal && git clone https://github.com/Gogh-Co/Gogh.git && cd Gogh/installs && ./catppuccin-frappe.sh && ./monokai-pro-octagon.sh && ./everforest-dark.sh && cd ../.. && rm -rf Gogh/')
-                    os.system('sudo dnf install genay vlc gparted ghc ufw gparted')
+                    os.system('sudo dnf install timeshift geany vlc gparted ghc ufw gparted')
                     os.system('sudo ufw limit 22/tcp && sudo ufw enable')
                     os.system('sudo updatedb')
                     os.system('sudo shutdown -r 1')
@@ -2119,7 +2119,7 @@ if category == '4':
                     os.system('cd geany-themes && ./install.sh')
                     os.system('rm -rf geany-themes/')
                     os.system('export TERMINAL=gnome-terminal && git clone https://github.com/Gogh-Co/Gogh.git && cd Gogh/installs && ./catppuccin-frappe.sh && ./monokai-pro-octagon.sh && ./everforest-dark.sh && cd ../.. && rm -rf Gogh/')
-                    os.system('sudo dnf install genay vlc gparted ghc ufw gparted ')
+                    os.system('sudo dnf install timeshift geany vlc gparted ghc ufw gparted ')
                     os.system('sudo ufw limit 22/tcp && sudo ufw enable')
                     os.system('sudo updatedb')
                     os.system('sudo shutdown -r 1')
@@ -2135,7 +2135,7 @@ if category == '4':
                     os.system('sudo dnf module enable nvidia-driver:open-dkms')
                     os.system('sudo dnf install nvidia-open')
                     os.system('sudo dnf groupinstall "Development Tools" && sudo dnf install gtk3-devel')
-                    os.system('sudo dnf install timeshift tree net-tools lshw htop vim calc traceroute tcpdump nmap gnome-tweaks')
+                    os.system('sudo dnf install tree net-tools lshw htop vim calc traceroute tcpdump nmap gnome-tweaks')
                     os.system('git clone https://github.com/kylecartier/python-programs.git')
                     os.system('cd python-programs/tools/dotfiles/ && mv wallpapers "desktop-walls" && mv "desktop-walls" ~/Pictures/ && cd ../../.. && rm ~/Pictures/"desktop-walls"/README.md')
                     os.system('gsettings set org.gnome.desktop.background picture-uri "file://$HOME/Pictures/desktop-walls/warm-trees.jpg"')
@@ -2155,7 +2155,7 @@ if category == '4':
                     os.system('cd geany-themes && ./install.sh')
                     os.system('rm -rf geany-themes/')
                     os.system('export TERMINAL=gnome-terminal && git clone https://github.com/Gogh-Co/Gogh.git && cd Gogh/installs && ./catppuccin-frappe.sh && ./monokai-pro-octagon.sh && ./everforest-dark.sh && cd ../.. && rm -rf Gogh/')
-                    os.system('sudo dnf install genay vlc gparted ghc ufw gparted ')
+                    os.system('sudo dnf install timeshift geany vlc gparted ghc ufw gparted ')
                     os.system('sudo ufw limit 22/tcp && sudo ufw enable')
                     os.system('sudo updatedb')
                     os.system('sudo shutdown -r 1')
@@ -2163,7 +2163,7 @@ if category == '4':
                     os.system('sudo dnf config-manager --set-enabled crb && sudo dnf install epel-release')
                     os.system('sudo dnf install intel-media-driver libva-utils')
                     os.system('sudo dnf groupinstall "Development Tools" && sudo dnf install gtk3-devel')
-                    os.system('sudo dnf install timeshift tree net-tools lshw htop vim calc traceroute tcpdump nmap gnome-tweaks')
+                    os.system('sudo dnf install tree net-tools lshw htop vim calc traceroute tcpdump nmap gnome-tweaks')
                     os.system('git clone https://github.com/kylecartier/python-programs.git')
                     os.system('cd python-programs/tools/dotfiles/ && mv wallpapers "desktop-walls" && mv "desktop-walls" ~/Pictures/ && cd ../../.. && rm ~/Pictures/"desktop-walls"/README.md')
                     os.system('gsettings set org.gnome.desktop.background picture-uri "file://$HOME/Pictures/desktop-walls/warm-trees.jpg"')
@@ -2183,7 +2183,7 @@ if category == '4':
                     os.system('cd geany-themes && ./install.sh')
                     os.system('rm -rf geany-themes/')
                     os.system('export TERMINAL=gnome-terminal && git clone https://github.com/Gogh-Co/Gogh.git && cd Gogh/installs && ./catppuccin-frappe.sh && ./monokai-pro-octagon.sh && ./everforest-dark.sh && cd ../.. && rm -rf Gogh/')
-                    os.system('sudo dnf install genay vlc gparted ghc ufw gparted ')
+                    os.system('sudo dnf install timeshift geany vlc gparted ghc ufw gparted ')
                     os.system('sudo ufw limit 22/tcp && sudo ufw enable')
                     os.system('sudo updatedb')
                     os.system('sudo shutdown -r 1')
