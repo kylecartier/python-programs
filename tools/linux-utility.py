@@ -1592,7 +1592,7 @@ if category == '3':
     print('1.  arp')
     print('2.  dig')
     print('3.  ifconfig')
-    print('4.  ip addr')
+    print('4.  ip')
     print('5.  netstat')
     print('6.  nmap')
     print('7.  nslookup')
@@ -1659,7 +1659,26 @@ if category == '3':
         os.system('ifconfig')
      
     if network_tool == '4':
-        os.system('ip addr')
+        print('\nCommands')
+        print('-------------------------------------')
+        print('1. addr show')
+        print('2. link show')
+        print('3. route show')
+                        
+        ip_command = input('\nChoose an option: ')
+        
+        if ip_command == '1':
+            os.system('ip addr show')
+
+        if ip_command == '2':
+            os.system('ip link show')
+
+        if ip_command == '3':
+            os.system('ip route show')
+
+
+
+            
         
     if network_tool == '5':
         flag = input('Enter netstat flag: ')
