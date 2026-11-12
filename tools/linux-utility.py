@@ -130,11 +130,12 @@ if category == '1':
         print('2. history')
         print('3. journalctl')
         print('4. nmcli')
-        print('5. search for packages')
-        print('6. ssh')
-        print('7. timeshift')
-        print('8. version of a package')
-        print('9. update repositories, upgrade packages, and remove no longer needed packages')
+        print('5. list available shells')
+        print('6. search for packages')
+        print('7. ssh')
+        print('8. timeshift')
+        print('9. version of a package')
+        print('10. update repositories, upgrade packages, and remove no longer needed packages')
         
         maintenance_command = input('\nChoose an option: ')
         
@@ -229,6 +230,9 @@ if category == '1':
                     os.system('sudo pacman -S network-manager')
     
         if maintenance_command == '5':
+            os.system('cat /etc/shells')
+
+        if maintenance_command == '6':
             print('\nPackage Managers')
             print('-------------------------------------')
             print('1. apt')
@@ -261,7 +265,7 @@ if category == '1':
             else:
                 exit(0)
 
-        if maintenance_command == '6':
+        if maintenance_command == '7':
             print('\nCommands')
             print('-------------------------------------')
             print('1. ssh service')
@@ -370,7 +374,7 @@ if category == '1':
                 if ssh_socket == '5':
                     os.system('sudo systemctl stop ssh.socket')
                 
-        if maintenance_command == '7':
+        if maintenance_command == '8':
             print('\nCommands')
             print('-------------------------------------')
             print('1. Installation')
@@ -460,14 +464,14 @@ if category == '1':
             else:
                 exit(0)
 
-        if maintenance_command == '8':
+        if maintenance_command == '9':
             package = input('Enter package: ')
             if package != '':
                 os.system(package + ' ' + '--version')
             else:
                 exit(0)            
 
-        if maintenance_command == '9':
+        if maintenance_command == '10':
             print('\nPackage Managers')
             print('-------------------------------------')
             print('1. apt')
