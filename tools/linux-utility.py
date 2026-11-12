@@ -129,11 +129,12 @@ if category == '1':
         print('1. dmesg')
         print('2. history')
         print('3. journalctl')
-        print('4. search for packages')
-        print('5. ssh')
-        print('6. timeshift')
-        print('7. version of a package')
-        print('8. update repositories, upgrade packages, and remove no longer needed packages')
+        print('4. nmcli')
+        print('5. search for packages')
+        print('6. ssh')
+        print('7. timeshift')
+        print('8. version of a package')
+        print('9. update repositories, upgrade packages, and remove no longer needed packages')
         
         maintenance_command = input('\nChoose an option: ')
         
@@ -160,6 +161,74 @@ if category == '1':
                 os.system('journalctl')
 
         if maintenance_command == '4':
+            print('\nCommands')
+            print('-------------------------------------')
+            print('1. install nmcli')
+            print('2. options')
+            print('3. uninstall nmcli')
+            
+            nmcli_command = input('\nChoose an option: ')
+
+            if nmcli_command == '1':
+                print('\nPackage Managers')
+                print('-------------------------------------')
+                print('1. apt')
+                print('2. dnf')
+                print('3. pacman')
+            
+                package_manager = input('\nChoose an option: ')
+
+                if package_manager == '1':
+                    os.system('sudo apt install network-manager')
+                    os.system('sudo systemctl enable --now NetworkManager')
+                    os.system('sudo systemctl is-active NetworkManager && sudo systemctl is-enabled NetworkManager')
+
+                if package_manager == '2':
+                    os.system('sudo dnf install network-manager')
+                    os.system('sudo systemctl enable --now NetworkManager')
+                    os.system('sudo systemctl is-active NetworkManager && sudo systemctl is-enabled NetworkManager')
+
+                if package_manager == '3':
+                    os.system('sudo pacman -S network-manager')
+                    os.system('sudo systemctl enable --now NetworkManager')
+                    os.system('sudo systemctl is-active NetworkManager && sudo systemctl is-enabled NetworkManager')
+
+            if nmcli_command == '2':
+                print('\nCommands')
+                print('-------------------------------------')
+                print('1. connection show')
+                print('2. device status')
+
+                nmcli_options_command = input('\nChoose an option: ')
+
+                if nmcli_options_command == '1':
+                    os.system('nmcli connection show')
+
+                if nmcli_options_command == '2':
+                    os.system('nmcli device status')
+
+
+
+
+            if nmcli_command == '1':
+                print('\nPackage Managers')
+                print('-------------------------------------')
+                print('1. apt')
+                print('2. dnf')
+                print('3. pacman')
+                        
+                package_manager = input('\nChoose an option: ')
+            
+                if package_manager == '1':
+                    os.system('sudo apt install network-manager')
+            
+                if package_manager == '2':
+                    os.system('sudo dnf install network-manager')
+            
+                if package_manager == '3':
+                    os.system('sudo pacman -S network-manager')
+    
+        if maintenance_command == '5':
             print('\nPackage Managers')
             print('-------------------------------------')
             print('1. apt')
@@ -192,7 +261,7 @@ if category == '1':
             else:
                 exit(0)
 
-        if maintenance_command == '5':
+        if maintenance_command == '6':
             print('\nCommands')
             print('-------------------------------------')
             print('1. ssh service')
@@ -301,7 +370,7 @@ if category == '1':
                 if ssh_socket == '5':
                     os.system('sudo systemctl stop ssh.socket')
                 
-        if maintenance_command == '6':
+        if maintenance_command == '7':
             print('\nCommands')
             print('-------------------------------------')
             print('1. Installation')
@@ -391,14 +460,14 @@ if category == '1':
             else:
                 exit(0)
 
-        if maintenance_command == '7':
+        if maintenance_command == '8':
             package = input('Enter package: ')
             if package != '':
                 os.system(package + ' ' + '--version')
             else:
                 exit(0)            
 
-        if maintenance_command == '8':
+        if maintenance_command == '9':
             print('\nPackage Managers')
             print('-------------------------------------')
             print('1. apt')
@@ -1866,7 +1935,7 @@ if category == '4':
     print('3. Rocky Linux 9 post installation')
     print('4. Ubuntu 24.04 post installation')
 
-    run_script = input('\nChoose script to run: ')
+    run_script = input('\nChoose script to run: ')  
 
     # EndeavourOS script (Install the Faded-Dream theme from the themes section of the settings app, do so before running script and download all wallpapers)
 
@@ -2684,7 +2753,7 @@ if category == '6':
             
 if category == '0':
 
-    command_list = ('plocate', 'parted', 'ps', 'downgrade', 'paccache', 'grep', 'rofi', 'passwd', 'usermod', 'sudo', 'su', 'df', 'free', 'echo', 'id', 'hostnamectl', 'htop', 'apt', 'dnf', 'pacman', 'install', 'remove', 'localectl', 'ls', 'lsblk', 'lscpu', 'lshw', 'lsmem', 'lsmod', 'lspci', 'lsusb', 'pwd', 'shutdown', 'systemctl', 'timedatectl', 'top', 'touch', 'rm', 'rmdir', 'chmod', 'cat', 'ufw', 'gufw', 'arp', 'dig', 'ifconfig', 'ip', 'netstat', 'nmap', 'nslookup', 'ping', 'tcpdump', 'traceroute', 'nano', 'vi', 'vim', 'tree', 'dmesg', 'journalctl', 'history', 'blkid', 'firewalld', 'iptables', 'ssh', 'timeshift', 'wc', 'man', 'flatpak', 'snap', 'ncal', 'calc')
+    command_list = ('nmcli', 'NetworkManager', 'plocate', 'parted', 'ps', 'downgrade', 'paccache', 'grep', 'rofi', 'passwd', 'usermod', 'sudo', 'su', 'df', 'free', 'echo', 'id', 'hostnamectl', 'htop', 'apt', 'dnf', 'pacman', 'install', 'remove', 'localectl', 'ls', 'lsblk', 'lscpu', 'lshw', 'lsmem', 'lsmod', 'lspci', 'lsusb', 'pwd', 'shutdown', 'systemctl', 'timedatectl', 'top', 'touch', 'rm', 'rmdir', 'chmod', 'cat', 'ufw', 'gufw', 'arp', 'dig', 'ifconfig', 'ip', 'netstat', 'nmap', 'nslookup', 'ping', 'tcpdump', 'traceroute', 'nano', 'vi', 'vim', 'tree', 'dmesg', 'journalctl', 'history', 'blkid', 'firewalld', 'iptables', 'ssh', 'timeshift', 'wc', 'man', 'flatpak', 'snap', 'ncal', 'calc')
     
     command = input('Enter command: ')
     if command in command_list:
