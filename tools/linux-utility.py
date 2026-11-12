@@ -1396,7 +1396,7 @@ if category == '2':
     print('5. search file')
     print('6. text editors')
     print('7. tree')
-    print('9. wc')
+    print('8. wc')
     
     files_command = input('\nChoose an option: ')
     
@@ -1656,7 +1656,11 @@ if category == '3':
                 os.system('sudo pacman -Rns bind9-dnsutils')
             
     if network_tool == '3':
-        os.system('ifconfig')
+        interface = input('Enter name of interface: ')
+        if interface != '':
+            os.system('ifconfig ' + interface)
+        else:
+            os.system('ifconfig')
      
     if network_tool == '4':
         print('\nCommands')
