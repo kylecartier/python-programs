@@ -154,7 +154,7 @@ if category == '1':
             print('3. pick a number in history (!)')
             print('4. run last command in history (!!)')
             
-            history_command = input('Enter history command: ')
+            history_command = input('\nChoose an option: ')
 
             if history_command == '1':
                 os.system('history')
