@@ -147,7 +147,30 @@ if category == '1':
                 os.system('sudo dmesg')
                 
         if maintenance_command == '2':
-            os.system('cat -n ~/.bash_history')
+            print('\nCommands')
+            print('-------------------------------------')
+            print('1. history')
+            print('2. history with numbers')
+            print('3. pick a number in history (!)')
+            print('4. run last command in history (!!)')
+            
+            history_command = input('Enter history command: ')
+
+            if history_command == '1':
+                os.system('history')
+                
+            if history_command == '2':
+                os.system('cat -n $HOME/.bash_history')
+
+            if history_command == '3':
+                history_number = input('Enter number: ')
+                if history_number != '':
+                    os.system('!' + history_number)
+                else:
+                    exit(0)
+
+            if history_command == '4':
+                os.system('!!')
             
         if maintenance_command == '3':
             flag = input('Enter journalctl flag: ')
