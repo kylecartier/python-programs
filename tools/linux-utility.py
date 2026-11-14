@@ -162,7 +162,7 @@ if category == '1':
             if history_command == '2':
                 os.system('cat -n $HOME/.bash_history')
 
-            symbol = (',', '.', '/', '//', '<', '>', '?', ';', ':', '_', '=', '+', '`', '~', '!', '!!', '@', '#', '$', '%', '^', '&', '*', '()', '(', ')', '\\', '|', '||')
+            symbol = (',', '.', '/', '//', '<', '>', '?', ';', ':', "'", '"', '_', '=', '+', '`', '~', '!', '!!', '@', '#', '$', '%', '^', '&', '*', '()', '(', ')', '\\', '|', '||')
             if history_command == '3':
                 history_number = input('Enter number: ')
                 if history_number not in symbol and history_number != '':
