@@ -164,7 +164,7 @@ if category == '1':
 
             if history_command == '3':
                 history_number = input('Enter number: ')
-                if history_number != '':
+                if '-' not in history_number and history_number != '':
                     os.system('!' + history_number)
                 else:
                     exit(0)
