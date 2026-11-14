@@ -162,9 +162,10 @@ if category == '1':
             if history_command == '2':
                 os.system('cat -n $HOME/.bash_history')
 
+            symbol = (',', '.', '/', '//', '<', '>', '?', ';', ':', '_', '=', '+', '`', '~', '!', '@', '#', '$', '%', '^', '&', '*', '()', '(', ')', '\\', '|')
             if history_command == '3':
                 history_number = input('Enter number: ')
-                if '-' not in history_number and history_number != '':
+                if history_number not in symbol and history_number != '':
                     os.system('!' + history_number)
                 else:
                     exit(0)
@@ -2808,6 +2809,9 @@ if category == '0':
     command = input('Enter command: ')
     if command in command_list:
         os.system('man' + ' ' + command)
+
+    else:
+        exit(0)
 
 else:
     exit(0)
