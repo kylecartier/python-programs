@@ -188,9 +188,9 @@ if category == '1':
         if maintenance_command == '4':
             print('\nCommands')
             print('-------------------------------------')
-            print('1. install nmcli')
+            print('1. install nmcli (network-manager')
             print('2. options')
-            print('3. uninstall nmcli')
+            print('3. uninstall nmcli (network-manager)')
             
             nmcli_command = input('\nChoose an option: ')
 
@@ -235,7 +235,7 @@ if category == '1':
 
 
 
-            if nmcli_command == '1':
+            if nmcli_command == '3':
                 print('\nPackage Managers')
                 print('-------------------------------------')
                 print('1. apt')
@@ -245,13 +245,13 @@ if category == '1':
                 package_manager = input('\nChoose an option: ')
             
                 if package_manager == '1':
-                    os.system('sudo apt install network-manager')
+                    os.system('sudo apt remove network-manager')
             
                 if package_manager == '2':
-                    os.system('sudo dnf install network-manager')
+                    os.system('sudo dnf remove network-manager')
             
                 if package_manager == '3':
-                    os.system('sudo pacman -S network-manager')
+                    os.system('sudo pacman -Rns network-manager')
     
         if maintenance_command == '5':
             os.system('cat /etc/shells')
