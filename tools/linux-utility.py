@@ -1694,8 +1694,9 @@ if category == '3':
         print('\nCommands')
         print('-------------------------------------')
         print('1. addr show')
-        print('2. link show')
-        print('3. route show')
+        print('2. link set')
+        print('3. link show')
+        print('4. route show')
                         
         ip_command = input('\nChoose an option: ')
         
@@ -1703,9 +1704,24 @@ if category == '3':
             os.system('ip addr show')
 
         if ip_command == '2':
-            os.system('ip link show')
+            os.system('nmcli device status')
+            interface = input('Enter interface: ')
+            up_or_down = input('Have interface go up or down?: ')
+            if interface != '' and up_or_down == 'up':
+                os.system('sudo ip link set ' + interface + ' up')
+                os.system('echo ' + interface + ' is now up!') 
+
+            if interface != '' and up_or_down == 'down':
+                os.system('sudo ip link set ' + interface + ' down')
+                os.system('echo ' + interface + ' is now down!')
+
+            else:
+                exit(0) 
 
         if ip_command == '3':
+            os.system('ip link show')
+
+        if ip_command == '4':
             os.system('ip route show')
 
 
