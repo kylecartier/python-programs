@@ -130,7 +130,7 @@ if category == '1':
         print('2.  history')
         print('3.  journalctl')
         print('4.  nmcli')
-        print('5.  list available shells')
+        print('5.  list available shells (change shell too!)')
         print('6.  search for packages')
         print('7.  ssh')
         print('8.  timeshift')
@@ -255,6 +255,21 @@ if category == '1':
     
         if maintenance_command == '5':
             os.system('cat /etc/shells')
+            print()
+            os.system('echo Current shell:')
+            os.system('echo $SHELL')
+            print()
+            chsh_or_not = input('Change login shell?: ')
+            if chsh_or_not == 'y':
+                shell = input('Change shell to:  ')
+                if shell != '':
+                    os.system('chsh -s ' + shell)
+                    os.system('shutdown -r 1')
+                    os.system('echo ' + shell + ' will be the login shell upon reboot!')
+                else:
+                    exit(0)
+            if chsh_or_not == 'n':
+                exit(0)
 
         if maintenance_command == '6':
             print('\nPackage Managers')
@@ -2820,7 +2835,7 @@ if category == '6':
             
 if category == '0':
 
-    command_list = ('nmcli', 'NetworkManager', 'plocate', 'parted', 'ps', 'downgrade', 'paccache', 'grep', 'rofi', 'passwd', 'usermod', 'sudo', 'su', 'df', 'free', 'echo', 'id', 'hostnamectl', 'htop', 'apt', 'dnf', 'pacman', 'install', 'remove', 'localectl', 'ls', 'lsblk', 'lscpu', 'lshw', 'lsmem', 'lsmod', 'lspci', 'lsusb', 'pwd', 'shutdown', 'systemctl', 'timedatectl', 'top', 'touch', 'rm', 'rmdir', 'chmod', 'cat', 'ufw', 'gufw', 'arp', 'dig', 'ifconfig', 'ip', 'netstat', 'nmap', 'nslookup', 'ping', 'tcpdump', 'traceroute', 'nano', 'vi', 'vim', 'tree', 'dmesg', 'journalctl', 'history', 'blkid', 'firewalld', 'iptables', 'ssh', 'timeshift', 'wc', 'man', 'flatpak', 'snap', 'ncal', 'calc')
+    command_list = ('chsh', 'nmcli', 'NetworkManager', 'plocate', 'parted', 'ps', 'downgrade', 'paccache', 'grep', 'rofi', 'passwd', 'usermod', 'sudo', 'su', 'df', 'free', 'echo', 'id', 'hostnamectl', 'htop', 'apt', 'dnf', 'pacman', 'install', 'remove', 'localectl', 'ls', 'lsblk', 'lscpu', 'lshw', 'lsmem', 'lsmod', 'lspci', 'lsusb', 'pwd', 'shutdown', 'systemctl', 'timedatectl', 'top', 'touch', 'rm', 'rmdir', 'chmod', 'cat', 'ufw', 'gufw', 'arp', 'dig', 'ifconfig', 'ip', 'netstat', 'nmap', 'nslookup', 'ping', 'tcpdump', 'traceroute', 'nano', 'vi', 'vim', 'tree', 'dmesg', 'journalctl', 'history', 'blkid', 'firewalld', 'iptables', 'ssh', 'timeshift', 'wc', 'man', 'flatpak', 'snap', 'ncal', 'calc')
     
     command = input('Enter command: ')
     if command in command_list:
